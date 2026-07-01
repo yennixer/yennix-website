@@ -3,133 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cross Reference - Find Your YENNIX Equivalent</title>
-    <meta name="description" content="Find the YENNIX equivalent for John Crane, Burgmann, AESSEAL, Flowserve, Vulcan seals. Easy cross-reference search tool.">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Cross Reference — YENNIX</title>
+    <meta name="description" content="Find the YENNIX equivalent for John Crane, Burgmann, AESSEAL, Flowserve, Vulcan seals. Easy cross-reference search.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/custom.css">
-    <script>tailwind.config={theme:{extend:{colors:{primary:{50:'#eff6ff',100:'#dbeafe',200:'#bfdbfe',300:'#93c5fd',400:'#60a5fa',500:'#3b82f6',600:'#1e40af',700:'#1e3a8a',800:'#172554',900:'#0f172a'},accent:{400:'#fbbf24',500:'#f59e0b',600:'#d97706'}},fontFamily:{sans:['Inter','system-ui','sans-serif']}}}}</script>
 </head>
-<body class="font-sans text-gray-800 antialiased">
+<body>
 
-<nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="flex justify-between items-center h-16">
-        <div class="flex items-center space-x-2"><a href="/"><div class="w-8 h-8 bg-gradient-to-br from-primary-600 to-primary-800 rounded-lg flex items-center justify-center"><span class="text-white font-bold text-sm">Y</span></div></a><a href="/"><span class="text-xl font-bold text-primary-800 tracking-tight">YENNIX</span></a></div>
-        <div class="hidden lg:flex items-center space-x-6"><a href="/" class="nav-link text-gray-700 hover:text-primary-600 font-medium text-sm">Home</a><a href="/products/" class="nav-link text-gray-700 hover:text-primary-600 font-medium text-sm">Products</a><a href="/cross-reference/" class="nav-link text-primary-700 font-medium text-sm">Cross Reference</a><a href="/reverse-engineering/" class="nav-link text-gray-700 hover:text-primary-600 font-medium text-sm">Engineering</a><a href="/quality/" class="nav-link text-gray-700 hover:text-primary-600 font-medium text-sm">Quality</a><a href="/about/" class="nav-link text-gray-700 hover:text-primary-600 font-medium text-sm">About</a><a href="/contact/" class="bg-accent-500 hover:bg-accent-600 text-white px-5 py-2 rounded-lg font-medium text-sm transition-colors">Get a Quote</a></div>
-        <button id="mobile-menu-btn" class="lg:hidden p-2"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
-    </div></div>
-    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t"><div class="px-4 py-3 space-y-2"><a href="/" class="block py-2 text-gray-700">Home</a><a href="/products/" class="block py-2 text-gray-700">Products</a><a href="/cross-reference/" class="block py-2 text-primary-700 font-medium">Cross Reference</a><a href="/contact/" class="block py-2 text-accent-600 font-medium">Get a Quote</a></div></div>
-</nav>
+    <nav class="nav-main" id="navbar"><div class="nav-inner"><a href="/" class="nav-logo"><div class="nav-logo-mark">Y</div><span class="nav-logo-text">YENNIX</span></a><div class="nav-links"><a href="/">Home</a><a href="/products/">Products</a><a href="/cross-reference/" class="active">Cross Reference</a><a href="/reverse-engineering/">Engineering</a><a href="/quality/">Quality</a><a href="/about/">About</a><a href="/contact/" class="nav-cta">Get a Quote</a></div><button class="nav-mobile-btn" id="mobile-menu-btn"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg></button></div><div class="nav-mobile-menu" id="mobile-menu"><a href="/">Home</a><a href="/products/">Products</a><a href="/cross-reference/">Cross Reference</a><a href="/reverse-engineering/">Engineering</a><a href="/quality/">Quality</a><a href="/about/">About</a><a href="/contact/">Get a Quote</a></div></nav>
 
-<section class="hero-gradient pt-24 pb-16 relative">
-    <div class="absolute inset-0 seal-pattern opacity-20"></div>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="breadcrumb text-sm mb-4"><a href="/">Home</a> <span class="text-blue-300 mx-2">/</span> <span class="text-white">Cross Reference</span></div>
-        <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Cross Reference</h1>
-        <p class="text-blue-200 text-lg max-w-2xl">Find the YENNIX equivalent for any brand seal. Search by brand name, model number, or keyword.</p>
-    </div>
-</section>
-
-<!-- Search -->
-<section class="py-8 bg-white border-b sticky top-16 z-30">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col md:flex-row gap-4">
-            <div class="flex-1 relative">
-                <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-                <input id="xref-search" type="text" placeholder="Search by brand (John Crane, Burgmann...) or model (Type 21, M7N, MG12...)" class="search-input w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 focus:outline-none text-sm">
-            </div>
-            <select id="xref-brand" class="px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-primary-500 bg-white">
-                <option value="all">All Brands</option>
-                <option value="John Crane">John Crane</option>
-                <option value="Burgmann">Burgmann / EagleBurgmann</option>
-                <option value="AESSEAL">AESSEAL</option>
-                <option value="Flowserve">Flowserve</option>
-                <option value="Vulcan">Vulcan</option>
-                <option value="Flygt">Flygt (Xylem)</option>
-            </select>
+    <section class="page-header">
+        <div class="page-header-inner">
+            <div class="breadcrumb"><a href="/">Top</a> <span class="sep">/</span> <span class="current">Cross Reference</span></div>
+            <h1>Cross Reference</h1>
+            <p>Find the YENNIX equivalent for any brand seal. Search by brand name, model number, or keyword.</p>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Results -->
-<section class="py-12 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Brand cards -->
-        <div class="mb-12">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">Find by Brand</h2>
-            <div class="grid md:grid-cols-3 gap-6" id="brand-cards"></div>
+    <!-- Search -->
+    <div class="search-bar" style="max-width:1200px;margin:0 auto;padding-left:24px;padding-right:24px;">
+        <div style="position:relative;flex:1;">
+            <svg style="position:absolute;left:14px;top:50%;transform:translateY(-50%);width:18px;height:18px;color:var(--gray-400);" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            <input id="xref-search" type="text" placeholder="Search by brand or model (John Crane, Type 21, M7N, MG12...)" class="search-input" style="width:100%;">
         </div>
+        <select id="xref-brand" class="search-select">
+            <option value="all">All Brands</option>
+            <option value="John Crane">John Crane</option>
+            <option value="Burgmann">Burgmann / EagleBurgmann</option>
+            <option value="AESSEAL">AESSEAL</option>
+            <option value="Flowserve">Flowserve</option>
+            <option value="Vulcan">Vulcan</option>
+            <option value="Flygt">Flygt (Xylem)</option>
+        </select>
+    </div>
 
-        <!-- Full cross reference table -->
-        <div>
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">Complete Cross Reference Table</h2>
-            <div class="overflow-x-auto" id="xref-results">
-                <table class="w-full bg-white rounded-xl overflow-hidden shadow-sm">
-                    <thead><tr class="bg-primary-800 text-white"><th class="px-6 py-4 text-left text-sm font-semibold">Brand</th><th class="px-6 py-4 text-left text-sm font-semibold">Original Model</th><th class="px-6 py-4 text-left text-sm font-semibold">YENNIX Equivalent</th><th class="px-6 py-4 text-left text-sm font-semibold">Category</th><th class="px-6 py-4 text-left text-sm font-semibold">Action</th></tr></thead>
+    <!-- Brand Cards -->
+    <section class="section">
+        <div class="section-inner">
+            <div class="section-label">Find by Brand</div>
+            <h2 class="section-title">Major Brand Cross Reference</h2>
+            <div style="height:32px;"></div>
+            <div id="brand-cards" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:64px;"></div>
+
+            <!-- Full Table -->
+            <div class="section-label">Complete Table</div>
+            <h2 class="section-title" style="margin-bottom:24px;">All Cross References</h2>
+            <div style="overflow-x:auto;">
+                <table class="xref-table">
+                    <thead><tr><th>Brand</th><th>Original Model</th><th>YENNIX Equivalent</th><th>Category</th><th></th></tr></thead>
                     <tbody id="xref-table-body"></tbody>
                 </table>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<footer class="bg-primary-900 text-white py-12"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="grid md:grid-cols-4 gap-8"><div><div class="flex items-center space-x-2 mb-4"><div class="w-8 h-8 bg-gradient-to-br from-accent-400 to-accent-600 rounded-lg flex items-center justify-center"><span class="text-white font-bold text-sm">Y</span></div><span class="text-xl font-bold tracking-tight">YENNIX</span></div><p class="text-blue-300 text-sm">Professional mechanical seal supplier.</p></div><div><h4 class="font-semibold mb-4">Products</h4><ul class="space-y-2 text-sm text-blue-300"><li><a href="/products/component-seals.html" class="hover:text-white">Component Seals</a></li><li><a href="/products/cartridge-seals.html" class="hover:text-white">Cartridge Seals</a></li><li><a href="/products/custom-seals.html" class="hover:text-white">Custom & ODM</a></li><li><a href="/products/parts.html" class="hover:text-white">Seal Parts</a></li></ul></div><div><h4 class="font-semibold mb-4">Resources</h4><ul class="space-y-2 text-sm text-blue-300"><li><a href="/cross-reference/" class="hover:text-white">Cross Reference</a></li><li><a href="/reverse-engineering/" class="hover:text-white">Reverse Engineering</a></li><li><a href="/quality/" class="hover:text-white">Quality</a></li></ul></div><div><h4 class="font-semibold mb-4">Contact</h4><ul class="space-y-2 text-sm text-blue-300"><li><a href="mailto:sales@yennix.com" class="hover:text-white">sales@yennix.com</a></li><li><a href="/contact/" class="hover:text-white">Get a Quote</a></li></ul></div></div><div class="border-t border-blue-800 mt-12 pt-8 text-center text-blue-400 text-sm">&copy; 2026 YENNIX. All rights reserved.</div></div></footer>
+    <footer class="footer"><div class="footer-inner"><div class="footer-brand"><a href="/" class="nav-logo"><div class="nav-logo-mark">Y</div><span class="nav-logo-text">YENNIX</span></a><p>Professional mechanical seal supplier.</p></div><div><h4>Products</h4><ul><li><a href="/products/component-seals.html">Component Seals</a></li><li><a href="/products/cartridge-seals.html">Cartridge Seals</a></li><li><a href="/products/custom-seals.html">Custom &amp; ODM</a></li><li><a href="/products/parts.html">Seal Parts</a></li></ul></div><div><h4>Resources</h4><ul><li><a href="/cross-reference/">Cross Reference</a></li><li><a href="/reverse-engineering/">Reverse Engineering</a></li><li><a href="/quality/">Quality</a></li></ul></div><div><h4>Contact</h4><ul><li><a href="mailto:sales@yennix.com">sales@yennix.com</a></li><li><a href="/contact/">Get a Quote</a></li></ul></div></div><div class="footer-bottom" style="text-align:center;">&copy; 2026 YENNIX. All rights reserved.</div></footer>
 
-<script src="/js/products-data.js"></script>
-<script>
-    document.getElementById('mobile-menu-btn').addEventListener('click', function(){document.getElementById('mobile-menu').classList.toggle('hidden')});
+    <div id="scroll-top" class="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg></div>
 
-    // Brand cards
-    document.getElementById('brand-cards').innerHTML = YENNIX_CROSS_REF.map(xr => `
-        <div class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-primary-300 hover:shadow-lg transition-all">
-            <h3 class="font-bold text-gray-900 mb-3">${xr.brand}</h3>
-            <div class="flex flex-wrap gap-1 mb-4">${xr.models.map(m => `<span class="xref-tag bg-gray-100 text-gray-600 text-xs">${m}</span>`).join('')}</div>
-            <div class="text-sm text-gray-500 mb-3">YENNIX equivalents:</div>
-            <div class="flex flex-wrap gap-1">${xr.yennixProducts.map(p => `<a href="/product/${YENNIX_PRODUCTS.find(pp => pp.model === p)?.slug || ''}.html" class="xref-tag bg-primary-50 text-primary-700 text-xs font-semibold hover:bg-primary-100">${p}</a>`).join('')}</div>
-        </div>
-    `).join('');
+    <script src="/js/products-data.js"></script>
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click',function(){document.getElementById('mobile-menu').classList.toggle('open')});
+        window.addEventListener('scroll',function(){var nb=document.getElementById('navbar'),st=document.getElementById('scroll-top');if(window.scrollY>50)nb.classList.add('scrolled');else nb.classList.remove('scrolled');if(window.scrollY>400)st.classList.add('visible');else st.classList.remove('visible')});
 
-    // Build full cross reference table
-    function buildXRefTable(filterBrand, searchQuery) {
-        let rows = [];
-        YENNIX_CROSS_REF.forEach(xr => {
-            if (filterBrand && filterBrand !== 'all' && !xr.brand.includes(filterBrand)) return;
-            xr.models.forEach((model, idx) => {
-                const yennixModel = xr.yennixProducts[idx] || xr.yennixProducts[0];
-                const product = YENNIX_PRODUCTS.find(p => p.model === yennixModel);
-                if (searchQuery) {
-                    const q = searchQuery.toLowerCase();
-                    if (!xr.brand.toLowerCase().includes(q) && !model.toLowerCase().includes(q) && !yennixModel.toLowerCase().includes(q)) return;
-                }
-                const catLabels = {'component-seals':'Component','cartridge-seals':'Cartridge','custom-seals':'Custom/ODM','parts':'Parts'};
-                rows.push(`
-                    <tr class="${rows.length % 2 === 0 ? 'bg-white' : 'bg-gray-50'}">
-                        <td class="px-6 py-3 text-sm font-medium text-gray-900">${xr.brand}</td>
-                        <td class="px-6 py-3 text-sm text-gray-700">${model}</td>
-                        <td class="px-6 py-3"><a href="/product/${product?.slug || ''}.html" class="text-primary-700 font-semibold hover:text-primary-600 text-sm">${yennixModel}</a></td>
-                        <td class="px-6 py-3 text-sm text-gray-500">${product ? catLabels[product.category] || '' : ''}</td>
-                        <td class="px-6 py-3"><a href="/product/${product?.slug || ''}.html" class="text-primary-600 text-sm font-medium hover:text-primary-700">View &rarr;</a></td>
-                    </tr>
-                `);
+        // Brand cards
+        document.getElementById('brand-cards').innerHTML = YENNIX_CROSS_REF.map(function(xr){
+            return '<div style="border:1px solid var(--gray-200);padding:24px;">'+
+                '<h3 style="font-size:16px;font-weight:600;color:var(--gray-900);margin-bottom:12px;">'+xr.brand+'</h3>'+
+                '<div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;">'+xr.models.map(function(m){return '<span class="tag">'+m+'</span>';}).join('')+'</div>'+
+                '<div style="font-size:11px;color:var(--gray-400);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px;">YENNIX Equivalents</div>'+
+                '<div style="display:flex;flex-wrap:wrap;gap:6px;">'+xr.yennixProducts.map(function(p){
+                    var prod=YENNIX_PRODUCTS.find(function(pp){return pp.model===p});
+                    return '<a href="/product/'+(prod?prod.slug:'')+'.html" class="tag tag-gold" style="text-decoration:none;">'+p+'</a>';
+                }).join('')+'</div></div>';
+        }).join('');
+
+        // Table
+        var catLabels={'component-seals':'Component','cartridge-seals':'Cartridge','custom-seals':'Custom/ODM','parts':'Parts'};
+        function buildTable(filterBrand,query){
+            var rows=[];
+            YENNIX_CROSS_REF.forEach(function(xr){
+                if(filterBrand&&filterBrand!=='all'&&!xr.brand.includes(filterBrand)) return;
+                xr.models.forEach(function(model,idx){
+                    var yennixModel=xr.yennixProducts[idx]||xr.yennixProducts[0];
+                    var product=YENNIX_PRODUCTS.find(function(p){return p.model===yennixModel});
+                    if(query){
+                        var q=query.toLowerCase();
+                        if(!xr.brand.toLowerCase().includes(q)&&!model.toLowerCase().includes(q)&&!yennixModel.toLowerCase().includes(q)) return;
+                    }
+                    rows.push('<tr><td style="font-weight:500;">'+xr.brand+'</td><td>'+model+'</td><td><a href="/product/'+(product?product.slug:'')+'.html">'+yennixModel+'</a></td><td style="color:var(--gray-400);">'+(product?catLabels[product.category]||'':'')+'</td><td><a href="/product/'+(product?product.slug:'')+'.html" style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;">View</a></td></tr>');
+                });
             });
-        });
-        return rows.join('');
-    }
+            return rows.join('');
+        }
+        document.getElementById('xref-table-body').innerHTML=buildTable('all','');
 
-    document.getElementById('xref-table-body').innerHTML = buildXRefTable('all', '');
-
-    // Search/filter
-    const xrefSearch = document.getElementById('xref-search');
-    const xrefBrand = document.getElementById('xref-brand');
-
-    function doXRefSearch() {
-        document.getElementById('xref-table-body').innerHTML = buildXRefTable(xrefBrand.value, xrefSearch.value);
-    }
-
-    xrefSearch.addEventListener('input', doXRefSearch);
-    xrefBrand.addEventListener('change', doXRefSearch);
-</script>
+        var xrefSearch=document.getElementById('xref-search');
+        var xrefBrand=document.getElementById('xref-brand');
+        function doXRefSearch(){document.getElementById('xref-table-body').innerHTML=buildTable(xrefBrand.value,xrefSearch.value);}
+        xrefSearch.addEventListener('input',doXRefSearch);
+        xrefBrand.addEventListener('change',doXRefSearch);
+    </script>
 </body>
 </html>
