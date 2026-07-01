@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact YENNIX - Get a Free Quote</title>
+    <meta name="description" content="Contact YENNIX for mechanical seal inquiries. Free quotes within 12 hours. Email: sales@yennix.com.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/custom.css">
+    <script>tailwind.config={theme:{extend:{colors:{primary:{50:'#eff6ff',100:'#dbeafe',200:'#bfdbfe',300:'#93c5fd',400:'#60a5fa',500:'#3b82f6',600:'#1e40af',700:'#1e3a8a',800:'#172554',900:'#0f172a'},accent:{400:'#fbbf24',500:'#f59e0b',600:'#d97706'}},fontFamily:{sans:['Inter','system-ui','sans-serif']}}}}</script>
+</head>
+<body class="font-sans text-gray-800 antialiased">
+
+<nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="flex justify-between items-center h-16">
+        <div class="flex items-center space-x-2"><a href="/"><div class="w-8 h-8 bg-gradient-to-br from-primary-600 to-primary-800 rounded-lg flex items-center justify-center"><span class="text-white font-bold text-sm">Y</span></div></a><a href="/"><span class="text-xl font-bold text-primary-800 tracking-tight">YENNIX</span></a></div>
+        <div class="hidden lg:flex items-center space-x-6"><a href="/" class="nav-link text-gray-700 hover:text-primary-600 font-medium text-sm">Home</a><a href="/products/" class="nav-link text-gray-700 hover:text-primary-600 font-medium text-sm">Products</a><a href="/cross-reference/" class="nav-link text-gray-700 hover:text-primary-600 font-medium text-sm">Cross Reference</a><a href="/reverse-engineering/" class="nav-link text-gray-700 hover:text-primary-600 font-medium text-sm">Engineering</a><a href="/quality/" class="nav-link text-gray-700 hover:text-primary-600 font-medium text-sm">Quality</a><a href="/about/" class="nav-link text-gray-700 hover:text-primary-600 font-medium text-sm">About</a><a href="/contact/" class="bg-accent-500 hover:bg-accent-600 text-white px-5 py-2 rounded-lg font-medium text-sm transition-colors">Get a Quote</a></div>
+        <button id="mobile-menu-btn" class="lg:hidden p-2"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+    </div></div>
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t"><div class="px-4 py-3 space-y-2"><a href="/" class="block py-2 text-gray-700">Home</a><a href="/products/" class="block py-2 text-gray-700">Products</a><a href="/contact/" class="block py-2 text-accent-600 font-medium">Get a Quote</a></div></div>
+</nav>
+
+<section class="hero-gradient pt-24 pb-16 relative">
+    <div class="absolute inset-0 seal-pattern opacity-20"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="breadcrumb text-sm mb-4"><a href="/">Home</a> <span class="text-blue-300 mx-2">/</span> <span class="text-white">Contact</span></div>
+        <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Contact Us</h1>
+        <p class="text-blue-200 text-lg">Get your free quote within 12 hours.</p>
+    </div>
+</section>
+
+<section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-3 gap-12">
+            <!-- Contact Form -->
+            <div class="lg:col-span-2">
+                <div class="bg-gray-50 rounded-3xl p-8 md:p-12">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-2">Get Your Free Quote</h2>
+                    <p class="text-gray-600 mb-8">Tell us what you need — we'll respond within 12 hours with a detailed quote.</p>
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div><label class="block text-sm font-medium text-gray-700 mb-2">Your Name *</label><input type="text" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all" placeholder="John Smith"></div>
+                            <div><label class="block text-sm font-medium text-gray-700 mb-2">Company</label><input type="text" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all" placeholder="Your company name"></div>
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div><label class="block text-sm font-medium text-gray-700 mb-2">Email *</label><input type="email" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all" placeholder="you@company.com"></div>
+                            <div><label class="block text-sm font-medium text-gray-700 mb-2">Country</label><input type="text" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all" placeholder="Your country"></div>
+                        </div>
+                        <div><label class="block text-sm font-medium text-gray-700 mb-2">Product Interest</label>
+                            <select class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all bg-white">
+                                <option value="">Select a product category</option>
+                                <option>Component Seals</option>
+                                <option>Cartridge Seals</option>
+                                <option>Custom & ODM Seals</option>
+                                <option>Seal Parts & Accessories</option>
+                                <option>Reverse Engineering</option>
+                                <option>Other / Not Sure</option>
+                            </select>
+                        </div>
+                        <div><label class="block text-sm font-medium text-gray-700 mb-2">What do you need? *</label><textarea required rows="5" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all resize-none" placeholder="Describe the seal you need: model number, dimensions, quantity, application, original brand/model..."></textarea></div>
+                        <button type="submit" class="w-full bg-primary-700 hover:bg-primary-800 text-white py-4 rounded-xl font-semibold text-lg transition-colors shadow-lg shadow-primary-700/20">Submit Inquiry</button>
+                        <p class="text-center text-gray-500 text-xs">We typically respond within 12 hours. Your information is kept confidential.</p>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="space-y-6">
+                <div class="bg-primary-50 rounded-2xl p-6">
+                    <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-1">Email Us</h3>
+                    <a href="mailto:sales@yennix.com" class="text-primary-600 font-medium">sales@yennix.com</a>
+                </div>
+
+                <div class="bg-primary-50 rounded-2xl p-6">
+                    <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-1">Response Time</h3>
+                    <p class="text-primary-600 font-medium">Within 12 hours</p>
+                </div>
+
+                <div class="bg-primary-50 rounded-2xl p-6">
+                    <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-1">Location</h3>
+                    <p class="text-gray-600 text-sm">Hangzhou, Zhejiang Province, China</p>
+                </div>
+
+                <div class="bg-accent-50 rounded-2xl p-6">
+                    <h3 class="font-bold text-gray-900 mb-3">Quick Tips for Your Inquiry</h3>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 bg-accent-500 rounded-full mt-1.5 flex-shrink-0"></span>Include the original brand and model number if known</li>
+                        <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 bg-accent-500 rounded-full mt-1.5 flex-shrink-0"></span>Provide shaft diameter and operating conditions</li>
+                        <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 bg-accent-500 rounded-full mt-1.5 flex-shrink-0"></span>Specify material preferences (or let us recommend)</li>
+                        <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 bg-accent-500 rounded-full mt-1.5 flex-shrink-0"></span>Upload photos or drawings if available</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-primary-900 text-white py-12"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="border-t border-blue-800 pt-8 text-center text-blue-400 text-sm">&copy; 2026 YENNIX. All rights reserved.</div></div></footer>
+
+<script>
+    document.getElementById('mobile-menu-btn').addEventListener('click', function(){document.getElementById('mobile-menu').classList.toggle('hidden')});
+    document.getElementById('contact-form').addEventListener('submit', function(e){e.preventDefault();alert('Thank you for your inquiry! We will respond within 12 hours.');this.reset();});
+</script>
+</body>
+</html>

@@ -1,0 +1,228 @@
+/* YENNIX Custom Styles */
+
+.hero-gradient {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #1e40af 100%);
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.feature-card {
+  transition: all 0.3s ease;
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #f59e0b;
+  transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.seal-pattern {
+  background-image: radial-gradient(circle at 2px 2px, rgba(59,130,246,0.1) 1px, transparent 0);
+  background-size: 40px 40px;
+}
+
+/* Product card hover */
+.product-card {
+  transition: all 0.3s ease;
+  border: 1px solid #e5e7eb;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+  border-color: #3b82f6;
+}
+
+/* Cross-reference tag */
+.xref-tag {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin: 2px;
+  transition: all 0.2s;
+}
+
+.xref-tag:hover {
+  transform: scale(1.05);
+}
+
+/* Material code badge */
+.material-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid #e5e7eb;
+  transition: all 0.2s;
+}
+
+.material-badge:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 2px 8px rgba(59,130,246,0.15);
+}
+
+/* Dimension table */
+.dim-table th {
+  background: #1e3a8a;
+  color: white;
+  font-weight: 600;
+  font-size: 0.8rem;
+  padding: 10px 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.dim-table td {
+  padding: 8px 12px;
+  font-size: 0.85rem;
+  border-bottom: 1px solid #f3f4f6;
+  text-align: center;
+}
+
+.dim-table tr:hover td {
+  background: #eff6ff;
+}
+
+/* Breadcrumb */
+.breadcrumb a {
+  color: #6b7280;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.breadcrumb a:hover {
+  color: #1e40af;
+}
+
+/* Search input focus */
+.search-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.15);
+}
+
+/* Filter chip */
+.filter-chip {
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter-chip.active {
+  background: #1e40af;
+  color: white;
+  border-color: #1e40af;
+}
+
+/* Process step */
+.process-step {
+  position: relative;
+}
+
+.process-step::after {
+  content: '';
+  position: absolute;
+  top: 24px;
+  left: 48px;
+  width: calc(100% - 48px);
+  height: 2px;
+  background: linear-gradient(to right, #3b82f6, #f59e0b);
+}
+
+.process-step:last-child::after {
+  display: none;
+}
+
+/* Scroll to top */
+.scroll-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #1e40af;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 40;
+  box-shadow: 0 4px 12px rgba(30,64,175,0.3);
+}
+
+.scroll-top.visible {
+  opacity: 1;
+}
+
+.scroll-top:hover {
+  transform: scale(1.1);
+}
+
+/* Inquiry button pulse */
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgba(245,158,11,0.5); }
+  70% { box-shadow: 0 0 0 10px rgba(245,158,11,0); }
+  100% { box-shadow: 0 0 0 0 rgba(245,158,11,0); }
+}
+
+.inquiry-btn:hover {
+  animation: pulse-ring 1.5s infinite;
+}
+
+/* Placeholder image area */
+.placeholder-drawing {
+  background: linear-gradient(135deg, #f0f4ff 0%, #e8edf5 100%);
+  border: 2px dashed #c7d2e0;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  color: #6b7280;
+}
+
+/* Tab system */
+.tab-btn {
+  padding: 10px 20px;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  color: #6b7280;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.tab-btn.active {
+  color: #1e40af;
+  border-bottom-color: #1e40af;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
