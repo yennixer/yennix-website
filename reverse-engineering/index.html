@@ -3,223 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reverse Engineering - YENNIX</title>
-    <meta name="description" content="YENNIX reverse engineering service: from sample to production in 15-25 days. Precision measurement, CAD drafting, and manufacturing of custom mechanical seals.">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Reverse Engineering — YENNIX</title>
+    <meta name="description" content="YENNIX reverse engineering: from sample to production in 15-25 days. Precision measurement, CAD drafting, and manufacturing.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/custom.css">
-    <script>tailwind.config={theme:{extend:{colors:{primary:{50:'#eff6ff',100:'#dbeafe',200:'#bfdbfe',300:'#93c5fd',400:'#60a5fa',500:'#3b82f6',600:'#1e40af',700:'#1e3a8a',800:'#172554',900:'#0f172a'},accent:{400:'#fbbf24',500:'#f59e0b',600:'#d97706'}},fontFamily:{sans:['Inter','system-ui','sans-serif']}}}}</script>
 </head>
-<body class="font-sans text-gray-800 antialiased">
+<body>
 
-<nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="flex justify-between items-center h-16">
-        <div class="flex items-center space-x-2"><a href="/"><div class="w-8 h-8 bg-gradient-to-br from-primary-600 to-primary-800 rounded-lg flex items-center justify-center"><span class="text-white font-bold text-sm">Y</span></div></a><a href="/"><span class="text-xl font-bold text-primary-800 tracking-tight">YENNIX</span></a></div>
-        <div class="hidden lg:flex items-center space-x-6"><a href="/" class="nav-link text-gray-700 hover:text-primary-600 font-medium text-sm">Home</a><a href="/products/" class="nav-link text-gray-700 hover:text-primary-600 font-medium text-sm">Products</a><a href="/cross-reference/" class="nav-link text-gray-700 hover:text-primary-600 font-medium text-sm">Cross Reference</a><a href="/reverse-engineering/" class="nav-link text-primary-700 font-medium text-sm">Engineering</a><a href="/quality/" class="nav-link text-gray-700 hover:text-primary-600 font-medium text-sm">Quality</a><a href="/about/" class="nav-link text-gray-700 hover:text-primary-600 font-medium text-sm">About</a><a href="/contact/" class="bg-accent-500 hover:bg-accent-600 text-white px-5 py-2 rounded-lg font-medium text-sm transition-colors">Get a Quote</a></div>
-        <button id="mobile-menu-btn" class="lg:hidden p-2"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
-    </div></div>
-    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t"><div class="px-4 py-3 space-y-2"><a href="/" class="block py-2 text-gray-700">Home</a><a href="/products/" class="block py-2 text-gray-700">Products</a><a href="/reverse-engineering/" class="block py-2 text-primary-700 font-medium">Engineering</a><a href="/contact/" class="block py-2 text-accent-600 font-medium">Get a Quote</a></div></div>
-</nav>
+    <nav class="nav-main" id="navbar"><div class="nav-inner"><a href="/" class="nav-logo"><div class="nav-logo-mark">Y</div><span class="nav-logo-text">YENNIX</span></a><div class="nav-links"><a href="/">Home</a><a href="/products/">Products</a><a href="/cross-reference/">Cross Reference</a><a href="/reverse-engineering/" class="active">Engineering</a><a href="/quality/">Quality</a><a href="/about/">About</a><a href="/contact/" class="nav-cta">Get a Quote</a></div><button class="nav-mobile-btn" id="mobile-menu-btn"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg></button></div><div class="nav-mobile-menu" id="mobile-menu"><a href="/">Home</a><a href="/products/">Products</a><a href="/cross-reference/">Cross Reference</a><a href="/reverse-engineering/">Engineering</a><a href="/quality/">Quality</a><a href="/about/">About</a><a href="/contact/">Get a Quote</a></div></nav>
 
-<!-- Hero -->
-<section class="hero-gradient pt-24 pb-16 relative">
-    <div class="absolute inset-0 seal-pattern opacity-20"></div>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="breadcrumb text-sm mb-4"><a href="/">Home</a> <span class="text-blue-300 mx-2">/</span> <span class="text-white">Reverse Engineering</span></div>
-        <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Reverse Engineering</h1>
-        <p class="text-blue-200 text-lg max-w-2xl">Send us your sample. We'll measure, draft, manufacture, and deliver — typically in 15-25 days.</p>
-    </div>
-</section>
-
-<!-- Process -->
-<section class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-            <span class="text-primary-600 font-semibold text-sm uppercase tracking-wider">Our Process</span>
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-3 mb-4">From Sample to Delivery</h2>
-            <p class="text-gray-600 max-w-2xl mx-auto">Our streamlined reverse engineering process ensures accuracy and speed at every stage.</p>
+    <section class="page-header">
+        <div class="page-header-inner">
+            <div class="breadcrumb"><a href="/">Top</a> <span class="sep">/</span> <span class="current">Reverse Engineering</span></div>
+            <h1>Reverse Engineering</h1>
+            <p>Send us your sample. We'll measure, draft, manufacture, and deliver — typically in 15-25 days.</p>
         </div>
+    </section>
 
-        <div class="grid md:grid-cols-5 gap-6">
-            <div class="text-center">
-                <div class="w-16 h-16 mx-auto bg-primary-100 rounded-2xl flex items-center justify-center mb-4 relative">
-                    <span class="text-2xl font-bold text-primary-700">1</span>
-                    <div class="hidden md:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-primary-300 to-primary-100"></div>
-                </div>
-                <h3 class="font-bold text-gray-900 mb-2">Sample Received</h3>
-                <p class="text-sm text-gray-500">Send us your seal sample or used component for analysis</p>
+    <!-- Process -->
+    <section class="section">
+        <div class="section-inner">
+            <div style="text-align:center;margin-bottom:48px;">
+                <div class="section-label">Our Process</div>
+                <h2 class="section-title">From Sample to Delivery</h2>
+                <p class="section-desc" style="margin:16px auto 0;">Our streamlined reverse engineering process ensures accuracy and speed at every stage.</p>
             </div>
-            <div class="text-center">
-                <div class="w-16 h-16 mx-auto bg-primary-100 rounded-2xl flex items-center justify-center mb-4 relative">
-                    <span class="text-2xl font-bold text-primary-700">2</span>
-                    <div class="hidden md:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-primary-300 to-primary-100"></div>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="process-step-num">1</div>
+                    <div class="process-step-line"></div>
+                    <h3>Sample Received</h3>
+                    <p>Send us your seal sample or used component for analysis</p>
                 </div>
-                <h3 class="font-bold text-gray-900 mb-2">Precision Measuring</h3>
-                <p class="text-sm text-gray-500">Every dimension measured using precision instruments (CMM, profilometer)</p>
-            </div>
-            <div class="text-center">
-                <div class="w-16 h-16 mx-auto bg-accent-100 rounded-2xl flex items-center justify-center mb-4 relative">
-                    <span class="text-2xl font-bold text-accent-700">3</span>
-                    <div class="hidden md:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-accent-300 to-accent-100"></div>
+                <div class="process-step">
+                    <div class="process-step-num">2</div>
+                    <div class="process-step-line"></div>
+                    <h3>Precision Measuring</h3>
+                    <p>Every dimension measured using CMM, profilometer, and optical systems</p>
                 </div>
-                <h3 class="font-bold text-gray-900 mb-2">CAD Drafting</h3>
-                <p class="text-sm text-gray-500">Complete engineering drawings with GD&T for manufacturing</p>
-            </div>
-            <div class="text-center">
-                <div class="w-16 h-16 mx-auto bg-green-100 rounded-2xl flex items-center justify-center mb-4 relative">
-                    <span class="text-2xl font-bold text-green-700">4</span>
-                    <div class="hidden md:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-green-300 to-green-100"></div>
+                <div class="process-step">
+                    <div class="process-step-num">3</div>
+                    <div class="process-step-line"></div>
+                    <h3>CAD Drafting</h3>
+                    <p>Complete engineering drawings with GD&amp;T for manufacturing</p>
                 </div>
-                <h3 class="font-bold text-gray-900 mb-2">Manufacturing</h3>
-                <p class="text-sm text-gray-500">CNC machining, lapping, and assembly with quality control at each step</p>
-            </div>
-            <div class="text-center">
-                <div class="w-16 h-16 mx-auto bg-purple-100 rounded-2xl flex items-center justify-center mb-4">
-                    <span class="text-2xl font-bold text-purple-700">5</span>
+                <div class="process-step">
+                    <div class="process-step-num">4</div>
+                    <div class="process-step-line"></div>
+                    <h3>Manufacturing</h3>
+                    <p>CNC machining, lapping, and assembly with quality control at each step</p>
                 </div>
-                <h3 class="font-bold text-gray-900 mb-2">Delivery</h3>
-                <p class="text-sm text-gray-500">Inspected, packaged, and shipped to your door. 6-month warranty.</p>
+                <div class="process-step">
+                    <div class="process-step-num">5</div>
+                    <h3>Delivery</h3>
+                    <p>Inspected, packaged, and shipped. 6-month warranty included.</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Capabilities -->
-<section class="py-20 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
+    <!-- Capabilities + Stats -->
+    <section class="section section-light">
+        <div class="section-inner" style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;">
             <div>
-                <span class="text-primary-600 font-semibold text-sm uppercase tracking-wider">Capabilities</span>
-                <h2 class="text-3xl font-bold text-gray-900 mt-3 mb-6">Our Engineering Capabilities</h2>
-                <p class="text-gray-600 mb-8">With over 9 years of experience and 100+ successfully completed projects, our engineering team can handle virtually any mechanical seal challenge.</p>
-
-                <div class="space-y-6">
-                    <div class="flex gap-4">
-                        <div class="w-12 h-12 bg-primary-50 rounded-xl flex items-center justify-center flex-shrink-0">
-                            <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg>
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-gray-900 mb-1">Precision Measurement</h3>
-                            <p class="text-sm text-gray-600">CMM, profilometer, and optical measurement systems for sub-micron accuracy</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-4">
-                        <div class="w-12 h-12 bg-accent-50 rounded-xl flex items-center justify-center flex-shrink-0">
-                            <svg class="w-6 h-6 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"/></svg>
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-gray-900 mb-1">Material Analysis</h3>
-                            <p class="text-sm text-gray-600">Identify original materials and recommend optimal alternatives for your operating conditions</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-4">
-                        <div class="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center flex-shrink-0">
-                            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-gray-900 mb-1">Rapid Prototyping</h3>
-                            <p class="text-sm text-gray-600">First articles produced within 10-15 days for your testing and approval</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-4">
-                        <div class="w-12 h-12 bg-purple-50 rounded-xl flex items-center justify-center flex-shrink-0">
-                            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-gray-900 mb-1">Quality Verification</h3>
-                            <p class="text-sm text-gray-600">Each reverse-engineered seal undergoes the same inspection as our standard products</p>
-                        </div>
-                    </div>
-                </div>
+                <div class="section-label">Capabilities</div>
+                <h2 class="section-title">Our Engineering Capabilities</h2>
+                <p class="section-desc" style="margin-top:16px;">With over 9 years of experience and 100+ successfully completed projects, our engineering team can handle virtually any mechanical seal challenge.</p>
+                <div style="height:32px;"></div>
+                <ul class="feature-list">
+                    <li><svg class="feature-check" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg>Precision Measurement — CMM, profilometer, and optical systems for sub-micron accuracy</li>
+                    <li><svg class="feature-check" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"/></svg>Material Analysis — Identify original materials and recommend optimal alternatives</li>
+                    <li><svg class="feature-check" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>Rapid Prototyping — First articles produced within 10-15 days</li>
+                    <li><svg class="feature-check" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>Quality Verification — Same inspection standards as our standard products</li>
+                </ul>
             </div>
-
-            <!-- Stats -->
-            <div class="grid grid-cols-2 gap-6">
-                <div class="bg-primary-800 rounded-2xl p-8 text-center">
-                    <div class="text-4xl font-bold text-accent-400">100+</div>
-                    <div class="text-blue-200 text-sm mt-2">Projects Completed</div>
+            <div class="big-numbers" style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+                <div style="background:var(--navy);padding:40px;text-align:center;">
+                    <div class="big-number-value" style="font-size:48px;">100<span class="gold">+</span></div>
+                    <div class="big-number-label">Projects Completed</div>
                 </div>
-                <div class="bg-primary-800 rounded-2xl p-8 text-center">
-                    <div class="text-4xl font-bold text-accent-400">15-25</div>
-                    <div class="text-blue-200 text-sm mt-2">Days Lead Time</div>
+                <div style="background:var(--navy);padding:40px;text-align:center;">
+                    <div class="big-number-value" style="font-size:48px;">15<span class="gold">-25</span></div>
+                    <div class="big-number-label">Days Lead Time</div>
                 </div>
-                <div class="bg-primary-800 rounded-2xl p-8 text-center">
-                    <div class="text-4xl font-bold text-accent-400">1 PC</div>
-                    <div class="text-blue-200 text-sm mt-2">Minimum Order</div>
+                <div style="background:var(--navy);padding:40px;text-align:center;">
+                    <div class="big-number-value" style="font-size:48px;">1 <span class="gold">PC</span></div>
+                    <div class="big-number-label">Minimum Order</div>
                 </div>
-                <div class="bg-primary-800 rounded-2xl p-8 text-center">
-                    <div class="text-4xl font-bold text-accent-400">98%</div>
-                    <div class="text-blue-200 text-sm mt-2">Customer Satisfaction</div>
+                <div style="background:var(--navy);padding:40px;text-align:center;">
+                    <div class="big-number-value" style="font-size:48px;">98<span class="gold">%</span></div>
+                    <div class="big-number-label">Satisfaction Rate</div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Case Studies -->
-<section class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-            <span class="text-primary-600 font-semibold text-sm uppercase tracking-wider">Case Studies</span>
-            <h2 class="text-3xl font-bold text-gray-900 mt-3 mb-4">Our Works at a Glance</h2>
-        </div>
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-gray-50 rounded-2xl overflow-hidden">
-                <div class="placeholder-drawing h-48 rounded-none !min-h-0 border-0 border-b-2 border-dashed rounded-t-2xl">
-                    <svg class="w-10 h-10 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+    <!-- Case Studies -->
+    <section class="section">
+        <div class="section-inner">
+            <div style="text-align:center;margin-bottom:48px;">
+                <div class="section-label">Case Studies</div>
+                <h2 class="section-title">Our Works at a Glance</h2>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+                <div style="border:1px solid var(--gray-200);overflow:hidden;">
+                    <div class="placeholder-drawing" style="min-height:180px;border-left:0;border-right:0;border-top:0;border-radius:0;border-bottom:1px dashed var(--gray-300);">
+                        <svg fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24" style="width:40px;height:40px;color:var(--gray-300);"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                    </div>
+                    <div style="padding:24px;">
+                        <span class="tag tag-gold" style="margin-bottom:12px;display:inline-block;">Water Treatment</span>
+                        <h3 style="font-size:16px;font-weight:600;color:var(--gray-900);margin-bottom:8px;">Custom Seal for KSB Pump</h3>
+                        <p style="font-size:13px;color:var(--gray-500);line-height:1.6;margin-bottom:12px;">Reverse engineered a discontinued KSB pump seal with no available drawings. Delivered in 18 days.</p>
+                        <div style="font-size:11px;color:var(--gray-400);letter-spacing:0.05em;">Lead time: 18 days &middot; Qty: 50 sets</div>
+                    </div>
                 </div>
-                <div class="p-6">
-                    <div class="xref-tag bg-blue-50 text-primary-700 text-xs mb-3">Water Treatment</div>
-                    <h3 class="font-bold text-gray-900 mb-2">Custom Seal for KSB Pump</h3>
-                    <p class="text-sm text-gray-600 mb-3">Reverse engineered a discontinued KSB pump seal with no available drawings. Delivered in 18 days.</p>
-                    <div class="text-xs text-gray-400">Lead time: 18 days | Qty: 50 sets</div>
+                <div style="border:1px solid var(--gray-200);overflow:hidden;">
+                    <div class="placeholder-drawing" style="min-height:180px;border-left:0;border-right:0;border-top:0;border-radius:0;border-bottom:1px dashed var(--gray-300);">
+                        <svg fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24" style="width:40px;height:40px;color:var(--gray-300);"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                    </div>
+                    <div style="padding:24px;">
+                        <span class="tag tag-gold" style="margin-bottom:12px;display:inline-block;">Chemical Processing</span>
+                        <h3 style="font-size:16px;font-weight:600;color:var(--gray-900);margin-bottom:8px;">Hastelloy Double Seal</h3>
+                        <p style="font-size:13px;color:var(--gray-500);line-height:1.6;margin-bottom:12px;">Custom double cartridge seal in Hastelloy C276 for aggressive chemical service.</p>
+                        <div style="font-size:11px;color:var(--gray-400);letter-spacing:0.05em;">Lead time: 22 days &middot; Qty: 10 sets</div>
+                    </div>
+                </div>
+                <div style="border:1px solid var(--gray-200);overflow:hidden;">
+                    <div class="placeholder-drawing" style="min-height:180px;border-left:0;border-right:0;border-top:0;border-radius:0;border-bottom:1px dashed var(--gray-300);">
+                        <svg fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24" style="width:40px;height:40px;color:var(--gray-300);"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                    </div>
+                    <div style="padding:24px;">
+                        <span class="tag tag-gold" style="margin-bottom:12px;display:inline-block;">Mining</span>
+                        <h3 style="font-size:16px;font-weight:600;color:var(--gray-900);margin-bottom:8px;">Submersible Pump Seal</h3>
+                        <p style="font-size:13px;color:var(--gray-500);line-height:1.6;margin-bottom:12px;">Special submersible seal for mining dewatering pump with dual SiC faces.</p>
+                        <div style="font-size:11px;color:var(--gray-400);letter-spacing:0.05em;">Lead time: 20 days &middot; Qty: 25 sets</div>
+                    </div>
                 </div>
             </div>
-            <div class="bg-gray-50 rounded-2xl overflow-hidden">
-                <div class="placeholder-drawing h-48 rounded-none !min-h-0 border-0 border-b-2 border-dashed rounded-t-2xl">
-                    <svg class="w-10 h-10 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                </div>
-                <div class="p-6">
-                    <div class="xref-tag bg-amber-50 text-accent-700 text-xs mb-3">Chemical Processing</div>
-                    <h3 class="font-bold text-gray-900 mb-2">Hastelloy Double Seal</h3>
-                    <p class="text-sm text-gray-600 mb-3">Custom double cartridge seal in Hastelloy C276 for aggressive chemical service. Measured from worn sample.</p>
-                    <div class="text-xs text-gray-400">Lead time: 22 days | Qty: 10 sets</div>
-                </div>
-            </div>
-            <div class="bg-gray-50 rounded-2xl overflow-hidden">
-                <div class="placeholder-drawing h-48 rounded-none !min-h-0 border-0 border-b-2 border-dashed rounded-t-2xl">
-                    <svg class="w-10 h-10 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                </div>
-                <div class="p-6">
-                    <div class="xref-tag bg-green-50 text-green-700 text-xs mb-3">Mining</div>
-                    <h3 class="font-bold text-gray-900 mb-2">Submersible Pump Seal</h3>
-                    <p class="text-sm text-gray-600 mb-3">Special submersible seal for mining dewatering pump with dual SiC faces. Challenging geometry reverse engineered.</p>
-                    <div class="text-xs text-gray-400">Lead time: 20 days | Qty: 25 sets</div>
-                </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div style="max-width:640px;margin:0 auto;">
+            <h2>Ready to Send Your Sample?</h2>
+            <p>Contact our engineering team to discuss your reverse engineering needs. We respond within 12 hours.</p>
+            <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+                <a href="/contact/" class="btn-primary">Send Your Sample</a>
+                <a href="mailto:sales@yennix.com" class="btn-outline">Email Us</a>
             </div>
         </div>
-        <p class="text-center text-sm text-gray-400 mt-6">* Case study images are placeholders. Actual photos will be added.</p>
-    </div>
-</section>
+    </section>
 
-<!-- CTA -->
-<section class="py-16 bg-primary-900">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl font-bold text-white mb-4">Ready to Send Your Sample?</h2>
-        <p class="text-blue-200 mb-8">Contact our engineering team to discuss your reverse engineering needs. We respond within 12 hours.</p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/contact/" class="bg-accent-500 hover:bg-accent-600 text-white px-8 py-3.5 rounded-lg font-semibold text-center transition-colors">Send Your Sample</a>
-            <a href="mailto:sales@yennix.com" class="border-2 border-white/30 hover:border-white/60 text-white px-8 py-3.5 rounded-lg font-semibold text-center transition-colors">Email Us</a>
-        </div>
-    </div>
-</section>
+    <footer class="footer"><div class="footer-inner"><div class="footer-brand"><a href="/" class="nav-logo"><div class="nav-logo-mark">Y</div><span class="nav-logo-text">YENNIX</span></a><p>Professional mechanical seal supplier.</p></div><div><h4>Products</h4><ul><li><a href="/products/component-seals.html">Component Seals</a></li><li><a href="/products/cartridge-seals.html">Cartridge Seals</a></li><li><a href="/products/custom-seals.html">Custom &amp; ODM</a></li><li><a href="/products/parts.html">Seal Parts</a></li></ul></div><div><h4>Resources</h4><ul><li><a href="/cross-reference/">Cross Reference</a></li><li><a href="/reverse-engineering/">Reverse Engineering</a></li><li><a href="/quality/">Quality</a></li></ul></div><div><h4>Contact</h4><ul><li><a href="mailto:sales@yennix.com">sales@yennix.com</a></li><li><a href="/contact/">Get a Quote</a></li></ul></div></div><div class="footer-bottom" style="text-align:center;">&copy; 2026 YENNIX. All rights reserved.</div></footer>
 
-<footer class="bg-primary-900 text-white py-12"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="border-t border-blue-800 pt-8 text-center text-blue-400 text-sm">&copy; 2026 YENNIX. All rights reserved.</div></div></footer>
+    <div id="scroll-top" class="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg></div>
 
-<script>
-    document.getElementById('mobile-menu-btn').addEventListener('click', function(){document.getElementById('mobile-menu').classList.toggle('hidden')});
-</script>
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click',function(){document.getElementById('mobile-menu').classList.toggle('open')});
+        window.addEventListener('scroll',function(){var nb=document.getElementById('navbar'),st=document.getElementById('scroll-top');if(window.scrollY>50)nb.classList.add('scrolled');else nb.classList.remove('scrolled');if(window.scrollY>400)st.classList.add('visible');else st.classList.remove('visible')});
+    </script>
 </body>
 </html>

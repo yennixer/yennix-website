@@ -3,525 +3,345 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YENNIX - Professional Mechanical Seals | Industrial Seal Solutions</title>
-    <meta name="description" content="YENNIX - Your trusted partner for high-quality mechanical seals. Component seals, cartridge seals, custom solutions, fast delivery, global shipping.">
-    <meta name="keywords" content="mechanical seals, industrial seals, pump seals, YN109, YN21, YN708, OEM seals, custom seals, cartridge seals">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>YENNIX — Precision Mechanical Seals</title>
+    <meta name="description" content="YENNIX — Professional mechanical seals. Component seals, cartridge seals, custom solutions. Fast delivery, 1 set MOQ, 50+ countries served.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/custom.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: { 50:'#eff6ff',100:'#dbeafe',200:'#bfdbfe',300:'#93c5fd',400:'#60a5fa',500:'#3b82f6',600:'#1e40af',700:'#1e3a8a',800:'#172554',900:'#0f172a' },
-                        accent: { 400:'#fbbf24',500:'#f59e0b',600:'#d97706' }
-                    },
-                    fontFamily: { sans: ['Inter','system-ui','sans-serif'] }
-                }
-            }
-        }
-    </script>
 </head>
-<body class="font-sans text-gray-800 antialiased">
+<body>
 
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center space-x-2">
-                    <div class="w-8 h-8 bg-gradient-to-br from-primary-600 to-primary-800 rounded-lg flex items-center justify-center">
-                        <span class="text-white font-bold text-sm">Y</span>
-                    </div>
-                    <span class="text-xl font-bold text-primary-800 tracking-tight">YENNIX</span>
-                </div>
-                <div class="hidden lg:flex items-center space-x-6">
-                    <a href="/" class="nav-link text-primary-700 hover:text-primary-600 font-medium text-sm">Home</a>
-                    <div class="relative group">
-                        <a href="/products/" class="nav-link text-gray-700 hover:text-primary-600 font-medium text-sm flex items-center gap-1">
-                            Products
-                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                        </a>
-                        <div class="absolute left-0 top-full mt-1 w-56 bg-white rounded-xl shadow-xl border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                            <div class="py-2">
-                                <a href="/products/component-seals.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-primary-50 hover:text-primary-700">Component Seals</a>
-                                <a href="/products/cartridge-seals.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-primary-50 hover:text-primary-700">Cartridge Seals</a>
-                                <a href="/products/custom-seals.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-primary-50 hover:text-primary-700">Custom & ODM Seals</a>
-                                <a href="/products/parts.html" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-primary-50 hover:text-primary-700">Seal Parts & Accessories</a>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="/cross-reference/" class="nav-link text-gray-700 hover:text-primary-600 font-medium text-sm">Cross Reference</a>
-                    <a href="/reverse-engineering/" class="nav-link text-gray-700 hover:text-primary-600 font-medium text-sm">Engineering</a>
-                    <a href="/quality/" class="nav-link text-gray-700 hover:text-primary-600 font-medium text-sm">Quality</a>
-                    <a href="/about/" class="nav-link text-gray-700 hover:text-primary-600 font-medium text-sm">About</a>
-                    <a href="/contact/" class="bg-accent-500 hover:bg-accent-600 text-white px-5 py-2 rounded-lg font-medium text-sm transition-colors">Get a Quote</a>
-                </div>
-                <button id="mobile-menu-btn" class="lg:hidden p-2">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-                </button>
+    <nav class="nav-main" id="navbar">
+        <div class="nav-inner">
+            <a href="/" class="nav-logo">
+                <div class="nav-logo-mark">Y</div>
+                <span class="nav-logo-text">YENNIX</span>
+            </a>
+            <div class="nav-links">
+                <a href="/" class="active">Home</a>
+                <a href="/products/">Products</a>
+                <a href="/cross-reference/">Cross Reference</a>
+                <a href="/reverse-engineering/">Engineering</a>
+                <a href="/quality/">Quality</a>
+                <a href="/about/">About</a>
+                <a href="/contact/" class="nav-cta">Get a Quote</a>
             </div>
+            <button class="nav-mobile-btn" id="mobile-menu-btn">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
         </div>
-        <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t">
-            <div class="px-4 py-3 space-y-2">
-                <a href="/" class="block py-2 text-gray-700 font-medium">Home</a>
-                <a href="/products/" class="block py-2 text-gray-700">Products</a>
-                <a href="/products/component-seals.html" class="block py-2 pl-4 text-gray-500 text-sm">Component Seals</a>
-                <a href="/products/cartridge-seals.html" class="block py-2 pl-4 text-gray-500 text-sm">Cartridge Seals</a>
-                <a href="/products/custom-seals.html" class="block py-2 pl-4 text-gray-500 text-sm">Custom & ODM Seals</a>
-                <a href="/products/parts.html" class="block py-2 pl-4 text-gray-500 text-sm">Parts & Accessories</a>
-                <a href="/cross-reference/" class="block py-2 text-gray-700">Cross Reference</a>
-                <a href="/reverse-engineering/" class="block py-2 text-gray-700">Engineering</a>
-                <a href="/quality/" class="block py-2 text-gray-700">Quality</a>
-                <a href="/about/" class="block py-2 text-gray-700">About</a>
-                <a href="/contact/" class="block py-2 text-accent-600 font-medium">Get a Quote</a>
-            </div>
+        <div class="nav-mobile-menu" id="mobile-menu">
+            <a href="/">Home</a>
+            <a href="/products/">Products</a>
+            <a href="/cross-reference/">Cross Reference</a>
+            <a href="/reverse-engineering/">Engineering</a>
+            <a href="/quality/">Quality</a>
+            <a href="/about/">About</a>
+            <a href="/contact/">Get a Quote</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero-gradient min-h-screen flex items-center relative overflow-hidden">
-        <div class="absolute inset-0 seal-pattern opacity-30"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 relative z-10">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <div class="inline-flex items-center px-4 py-1.5 bg-white/10 rounded-full mb-6">
-                        <span class="w-2 h-2 bg-accent-400 rounded-full mr-2 animate-pulse"></span>
-                        <span class="text-blue-200 text-sm font-medium">Trusted Industrial Seal Partner</span>
-                    </div>
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
-                        Precision <span class="text-accent-400">Mechanical Seals</span> for Every Industry
-                    </h1>
-                    <p class="text-lg text-blue-200 mb-8 leading-relaxed max-w-xl">
-                        High-quality mechanical seal solutions with fast global delivery. From standard replacements to custom-engineered seals — we keep your equipment running.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="/products/" class="bg-accent-500 hover:bg-accent-600 text-white px-8 py-3.5 rounded-lg font-semibold text-center transition-colors shadow-lg shadow-amber-500/20">
-                            Explore Products
-                        </a>
-                        <a href="/cross-reference/" class="border-2 border-white/30 hover:border-white/60 text-white px-8 py-3.5 rounded-lg font-semibold text-center transition-colors">
-                            Cross Reference Search
-                        </a>
-                    </div>
-                    <div class="mt-12 grid grid-cols-3 gap-6">
-                        <div>
-                            <div class="text-3xl font-bold text-white">35,000+</div>
-                            <div class="text-blue-300 text-sm mt-1">SKUs in Stock</div>
-                        </div>
-                        <div>
-                            <div class="text-3xl font-bold text-white">12h</div>
-                            <div class="text-blue-300 text-sm mt-1">Fast Quote</div>
-                        </div>
-                        <div>
-                            <div class="text-3xl font-bold text-white">1 PC</div>
-                            <div class="text-blue-300 text-sm mt-1">Min. Order</div>
-                        </div>
-                    </div>
+    <!-- Hero -->
+    <section class="hero-section">
+        <div class="hero-inner">
+            <div class="hero-label">Precision Mechanical Seals</div>
+            <h1 class="hero-title">Essential <strong>Sealing</strong> Solutions</h1>
+            <p class="hero-subtitle">High-quality mechanical seal solutions with fast global delivery — from standard replacements to custom-engineered seals.</p>
+            <div class="hero-buttons">
+                <a href="/products/" class="btn-primary">Explore Products</a>
+                <a href="/contact/" class="btn-outline">Get a Quote</a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="hero-stat-value">35,000<span class="gold">+</span></div>
+                    <div class="hero-stat-label">SKUs in Stock</div>
                 </div>
-                <div class="hidden lg:flex justify-center">
-                    <div class="relative">
-                        <div class="w-80 h-80 bg-gradient-to-br from-blue-400/20 to-blue-600/20 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/10">
-                            <div class="w-56 h-56 bg-gradient-to-br from-blue-400/30 to-blue-600/30 rounded-full flex items-center justify-center border border-white/10">
-                                <div class="text-center">
-                                    <div class="w-20 h-20 mx-auto bg-gradient-to-br from-accent-400 to-accent-600 rounded-2xl flex items-center justify-center shadow-xl mb-4">
-                                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
-                                        </svg>
-                                    </div>
-                                    <div class="text-white font-bold text-lg">Precision Sealing</div>
-                                    <div class="text-blue-300 text-sm">Engineered to Perfection</div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Floating badges -->
-                        <div class="absolute top-8 right-0 bg-white/10 backdrop-blur-md rounded-xl px-4 py-2 border border-white/20">
-                            <div class="text-accent-400 text-xs font-semibold">ISO 9001</div>
-                            <div class="text-white text-xs">Certified</div>
-                        </div>
-                        <div class="absolute bottom-12 left-0 bg-white/10 backdrop-blur-md rounded-xl px-4 py-2 border border-white/20">
-                            <div class="text-accent-400 text-xs font-semibold">50+</div>
-                            <div class="text-white text-xs">Countries</div>
-                        </div>
-                    </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value">12<span class="gold">h</span></div>
+                    <div class="hero-stat-label">Quote Response</div>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value">1 <span class="gold">Set</span></div>
+                    <div class="hero-stat-label">Minimum Order</div>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value">50<span class="gold">+</span></div>
+                    <div class="hero-stat-label">Countries Served</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Product Categories -->
-    <section class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <span class="text-primary-600 font-semibold text-sm uppercase tracking-wider">Product Range</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-3 mb-4">Comprehensive Seal Solutions</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">From standard component seals to custom-engineered solutions, YENNIX covers the full spectrum of mechanical sealing needs.</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <!-- Our Products -->
+    <section class="section">
+        <div class="section-inner">
+            <div class="section-label">Our Products</div>
+            <h2 class="section-title">Comprehensive Seal Solutions</h2>
+            <p class="section-desc">From standard component seals to custom-engineered solutions, YENNIX covers the full spectrum of mechanical sealing needs.</p>
+            <div style="height: 48px;"></div>
+            <div class="product-grid">
                 <!-- Component Seals -->
-                <a href="/products/component-seals.html" class="product-card bg-white rounded-2xl p-6 group cursor-pointer">
-                    <div class="w-14 h-14 bg-primary-50 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary-100 transition-colors">
-                        <svg class="w-7 h-7 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
-                        </svg>
+                <a href="/products/component-seals.html" class="product-card">
+                    <div class="product-card-icon">
+                        <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
                     </div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Component Seals</h3>
-                    <p class="text-gray-600 text-sm mb-4">Direct replacements for John Crane, Burgmann, AESSEAL, and more. Fitting KSB, Grundfos, Ebara, Lowara pumps.</p>
-                    <div class="flex flex-wrap gap-1">
-                        <span class="xref-tag bg-blue-50 text-primary-700">YN109</span>
-                        <span class="xref-tag bg-blue-50 text-primary-700">YN21</span>
-                        <span class="xref-tag bg-blue-50 text-primary-700">YN1</span>
-                        <span class="xref-tag bg-blue-50 text-primary-700">YN502</span>
+                    <h3>Component Seals</h3>
+                    <p>Bellows and pusher type seals for general industrial pumps — direct replacements for major brands.</p>
+                    <div class="product-card-tags">
+                        <span class="tag tag-gold">YN109</span>
+                        <span class="tag tag-gold">YN21</span>
+                        <span class="tag tag-gold">YN1</span>
+                        <span class="tag tag-gold">YN502</span>
                     </div>
-                    <div class="mt-4 text-primary-600 text-sm font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">
-                        View Products <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-                    </div>
+                    <span class="product-card-link">View Products <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></span>
                 </a>
-
                 <!-- Cartridge Seals -->
-                <a href="/products/cartridge-seals.html" class="product-card bg-white rounded-2xl p-6 group cursor-pointer">
-                    <div class="w-14 h-14 bg-accent-50 rounded-xl flex items-center justify-center mb-5 group-hover:bg-accent-100 transition-colors">
-                        <svg class="w-7 h-7 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
-                        </svg>
+                <a href="/products/cartridge-seals.html" class="product-card">
+                    <div class="product-card-icon">
+                        <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
                     </div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Cartridge Seals</h3>
-                    <p class="text-gray-600 text-sm mb-4">Pre-assembled single and double cartridge seals for easy installation. API 682 compliant options available.</p>
-                    <div class="flex flex-wrap gap-1">
-                        <span class="xref-tag bg-amber-50 text-accent-700">YN708</span>
-                        <span class="xref-tag bg-amber-50 text-accent-700">YN560</span>
-                        <span class="xref-tag bg-amber-50 text-accent-700">YN780</span>
+                    <h3>Cartridge Seals</h3>
+                    <p>Pre-assembled single and double cartridge seals for easy installation. API 682 compliant options.</p>
+                    <div class="product-card-tags">
+                        <span class="tag tag-gold">YN708</span>
+                        <span class="tag tag-gold">YN560</span>
+                        <span class="tag tag-gold">YN780</span>
                     </div>
-                    <div class="mt-4 text-primary-600 text-sm font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">
-                        View Products <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-                    </div>
+                    <span class="product-card-link">View Products <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></span>
                 </a>
-
-                <!-- Custom & ODM Seals -->
-                <a href="/products/custom-seals.html" class="product-card bg-white rounded-2xl p-6 group cursor-pointer">
-                    <div class="w-14 h-14 bg-green-50 rounded-xl flex items-center justify-center mb-5 group-hover:bg-green-100 transition-colors">
-                        <svg class="w-7 h-7 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"/>
-                        </svg>
+                <!-- Custom & ODM -->
+                <a href="/products/custom-seals.html" class="product-card">
+                    <div class="product-card-icon">
+                        <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"/></svg>
                     </div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Custom & ODM Seals</h3>
-                    <p class="text-gray-600 text-sm mb-4">Hard-to-find seals customized to fit. Flygt replacement, Grundfos OEM, and other pump-specific solutions.</p>
-                    <div class="flex flex-wrap gap-1">
-                        <span class="xref-tag bg-green-50 text-green-700">YN-FLYGT</span>
-                        <span class="xref-tag bg-green-50 text-green-700">YN-ODM-GRF</span>
+                    <h3>Custom &amp; ODM Seals</h3>
+                    <p>Hard-to-find seals customized to fit. Flygt replacement, Grundfos OEM, and other pump-specific solutions.</p>
+                    <div class="product-card-tags">
+                        <span class="tag tag-gold">YN-FLYGT</span>
+                        <span class="tag tag-gold">YN-ODM-GRF</span>
                     </div>
-                    <div class="mt-4 text-primary-600 text-sm font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">
-                        View Products <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-                    </div>
+                    <span class="product-card-link">View Products <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></span>
                 </a>
-
-                <!-- Seal Parts -->
-                <a href="/products/parts.html" class="product-card bg-white rounded-2xl p-6 group cursor-pointer">
-                    <div class="w-14 h-14 bg-purple-50 rounded-xl flex items-center justify-center mb-5 group-hover:bg-purple-100 transition-colors">
-                        <svg class="w-7 h-7 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
-                        </svg>
+                <!-- Parts -->
+                <a href="/products/parts.html" class="product-card">
+                    <div class="product-card-icon">
+                        <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
                     </div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Seal Parts & Accessories</h3>
-                    <p class="text-gray-600 text-sm mb-4">Sleeves, O-rings, springs, gland plates and other components. Sold individually to meet your repair needs.</p>
-                    <div class="flex flex-wrap gap-1">
-                        <span class="xref-tag bg-purple-50 text-purple-700">Sleeves</span>
-                        <span class="xref-tag bg-purple-50 text-purple-700">O-Rings</span>
-                        <span class="xref-tag bg-purple-50 text-purple-700">Springs</span>
+                    <h3>Seal Parts</h3>
+                    <p>Sleeves, O-rings, springs, and other components. Sold individually to meet your repair needs.</p>
+                    <div class="product-card-tags">
+                        <span class="tag tag-gold">Sleeves</span>
+                        <span class="tag tag-gold">O-Rings</span>
                     </div>
-                    <div class="mt-4 text-primary-600 text-sm font-semibold flex items-center gap-1 group-hover:gap-2 transition-all">
-                        View Products <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-                    </div>
+                    <span class="product-card-link">View Products <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></span>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Why YENNIX -->
-    <section class="py-24 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <span class="text-primary-600 font-semibold text-sm uppercase tracking-wider">Why YENNIX</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-3 mb-4">Your Agile Seal Supply Partner</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">We bridge the gap between premium quality and accessibility — whether you need 1 seal or 10,000.</p>
+    <!-- Why YENNIX — At a Glance -->
+    <section class="section section-dark">
+        <div class="section-inner">
+            <div style="text-align: center; margin-bottom: 64px;">
+                <div class="section-label">Why YENNIX</div>
+                <h2 class="section-title">At a Glance</h2>
+                <p class="section-desc" style="margin: 16px auto 0;">We bridge the gap between premium quality and accessibility — whether you need 1 seal or 10,000.</p>
             </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="feature-card bg-white rounded-2xl p-8 text-center">
-                    <div class="w-16 h-16 mx-auto bg-primary-50 rounded-2xl flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Fast Response</h3>
-                    <p class="text-gray-600 text-sm">Quotation within 12 hours. In-stock items ship within 3 days. Custom orders delivered in 15-25 days.</p>
+            <div class="big-numbers" style="justify-content: center;">
+                <div class="big-number">
+                    <div class="big-number-value">12<span class="gold">h</span></div>
+                    <div class="big-number-label">Quote Response</div>
                 </div>
-                <div class="feature-card bg-white rounded-2xl p-8 text-center">
-                    <div class="w-16 h-16 mx-auto bg-accent-50 rounded-2xl flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Quality Guaranteed</h3>
-                    <p class="text-gray-600 text-sm">ISO 9001 certified processes. Every seal inspected before shipping. 6-month warranty on all products.</p>
+                <div class="big-number">
+                    <div class="big-number-value">1 <span class="gold">Set</span></div>
+                    <div class="big-number-label">Minimum Order</div>
                 </div>
-                <div class="feature-card bg-white rounded-2xl p-8 text-center">
-                    <div class="w-16 h-16 mx-auto bg-green-50 rounded-2xl flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Cross Reference</h3>
-                    <p class="text-gray-600 text-sm">Easy-to-use cross reference system. Find the YENNIX equivalent for John Crane, Burgmann, AESSEAL and more.</p>
+                <div class="big-number">
+                    <div class="big-number-value">Same<span class="gold">-day</span></div>
+                    <div class="big-number-label">Dispatch Available</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Material Coding System Preview -->
-    <section class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <span class="text-primary-600 font-semibold text-sm uppercase tracking-wider">Material Code System</span>
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-3 mb-6">Top Material for Top Sealing Performance</h2>
-                    <p class="text-gray-600 mb-8">YENNIX understands how important material selection is for sealing performance. Our material coding system makes it easy to specify exactly what you need.</p>
-
-                    <div class="bg-gray-50 rounded-2xl p-6 mb-6">
-                        <div class="text-sm text-gray-500 mb-2">Example Code</div>
-                        <div class="flex items-center gap-2 flex-wrap">
-                            <span class="material-badge bg-blue-50 text-primary-700 border-primary-200"><strong>YN109</strong> Model</span>
-                            <span class="text-gray-400">-</span>
-                            <span class="material-badge bg-red-50 text-red-700 border-red-200"><strong>A</strong> SiC Seal Face</span>
-                            <span class="text-gray-400">-</span>
-                            <span class="material-badge bg-green-50 text-green-700 border-green-200"><strong>V</strong> Viton Elastomer</span>
-                            <span class="text-gray-400">-</span>
-                            <span class="material-badge bg-gray-50 text-gray-700 border-gray-200"><strong>S</strong> 304SS Metal</span>
-                        </div>
-                    </div>
-
-                    <a href="/products/" class="text-primary-600 font-semibold flex items-center gap-2 hover:gap-3 transition-all">
-                        Learn more about material codes <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                    </a>
+    <!-- Material Code System -->
+    <section class="section section-light">
+        <div class="section-inner" style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start;">
+            <div>
+                <div class="section-label">Material Code System</div>
+                <h2 class="section-title">Top Material for Top Sealing Performance</h2>
+                <p class="section-desc" style="margin-top: 16px;">YENNIX material coding system makes it easy to specify exactly what you need — seal face, elastomer, and metal in one concise code.</p>
+                <div style="height: 24px;"></div>
+                <div class="code-display">
+                    <span class="code-part" style="background: rgba(200,164,92,0.1); color: var(--gold);"><strong>YN109</strong> Model</span>
+                    <span class="code-sep">—</span>
+                    <span class="code-part code-part-face"><strong>A</strong> SiC</span>
+                    <span class="code-sep">—</span>
+                    <span class="code-part code-part-elastomer"><strong>V</strong> Viton</span>
+                    <span class="code-sep">—</span>
+                    <span class="code-part code-part-metal"><strong>S</strong> 304SS</span>
                 </div>
-
-                <div class="space-y-4">
-                    <div class="bg-white rounded-xl border border-gray-200 p-6">
-                        <h4 class="font-bold text-gray-900 mb-4 flex items-center gap-2">
-                            <span class="w-3 h-3 bg-red-400 rounded-full"></span>
-                            Seal Face Materials
-                        </h4>
-                        <div class="grid grid-cols-2 gap-3">
-                            <div class="flex items-center gap-2"><span class="font-mono text-primary-600 font-bold text-sm">A</span><span class="text-sm text-gray-700">Silicon Carbide (SiC)</span></div>
-                            <div class="flex items-center gap-2"><span class="font-mono text-primary-600 font-bold text-sm">B</span><span class="text-sm text-gray-700">Tungsten Carbide (TC)</span></div>
-                            <div class="flex items-center gap-2"><span class="font-mono text-primary-600 font-bold text-sm">C</span><span class="text-sm text-gray-700">Carbon Graphite</span></div>
-                            <div class="flex items-center gap-2"><span class="font-mono text-primary-600 font-bold text-sm">D</span><span class="text-sm text-gray-700">Aluminum Oxide</span></div>
-                        </div>
-                    </div>
-                    <div class="bg-white rounded-xl border border-gray-200 p-6">
-                        <h4 class="font-bold text-gray-900 mb-4 flex items-center gap-2">
-                            <span class="w-3 h-3 bg-green-400 rounded-full"></span>
-                            Elastomer Materials
-                        </h4>
-                        <div class="grid grid-cols-2 gap-3">
-                            <div class="flex items-center gap-2"><span class="font-mono text-green-600 font-bold text-sm">V</span><span class="text-sm text-gray-700">FKM (Viton)</span></div>
-                            <div class="flex items-center gap-2"><span class="font-mono text-green-600 font-bold text-sm">E</span><span class="text-sm text-gray-700">EPDM</span></div>
-                            <div class="flex items-center gap-2"><span class="font-mono text-green-600 font-bold text-sm">B</span><span class="text-sm text-gray-700">NBR (Buna-N)</span></div>
-                            <div class="flex items-center gap-2"><span class="font-mono text-green-600 font-bold text-sm">K</span><span class="text-sm text-gray-700">FFKM (Kalrez)</span></div>
-                        </div>
-                    </div>
-                    <div class="bg-white rounded-xl border border-gray-200 p-6">
-                        <h4 class="font-bold text-gray-900 mb-4 flex items-center gap-2">
-                            <span class="w-3 h-3 bg-gray-400 rounded-full"></span>
-                            Metal Materials
-                        </h4>
-                        <div class="grid grid-cols-2 gap-3">
-                            <div class="flex items-center gap-2"><span class="font-mono text-gray-600 font-bold text-sm">S</span><span class="text-sm text-gray-700">304 Stainless Steel</span></div>
-                            <div class="flex items-center gap-2"><span class="font-mono text-gray-600 font-bold text-sm">L</span><span class="text-sm text-gray-700">316 Stainless Steel</span></div>
-                            <div class="flex items-center gap-2"><span class="font-mono text-gray-600 font-bold text-sm">H</span><span class="text-sm text-gray-700">Hastelloy C276</span></div>
-                            <div class="flex items-center gap-2"><span class="font-mono text-gray-600 font-bold text-sm">M</span><span class="text-sm text-gray-700">Monel 400</span></div>
-                        </div>
-                    </div>
+                <div style="height: 24px;"></div>
+                <a href="/products/" style="font-size: 12px; font-weight: 500; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                    Learn More <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+            </div>
+            <div class="mat-grid" style="grid-template-columns: 1fr;">
+                <div class="mat-card">
+                    <h4><span class="mat-dot" style="background: #c8a45c;"></span>Seal Face Materials</h4>
+                    <ul>
+                        <li><span class="mat-code">A</span> Silicon Carbide (SiC)</li>
+                        <li><span class="mat-code">B</span> Tungsten Carbide (TC)</li>
+                        <li><span class="mat-code">C</span> Carbon Graphite</li>
+                        <li><span class="mat-code">D</span> Aluminum Oxide</li>
+                    </ul>
+                </div>
+                <div class="mat-card">
+                    <h4><span class="mat-dot" style="background: #4a994a;"></span>Elastomer Materials</h4>
+                    <ul>
+                        <li><span class="mat-code">V</span> FKM (Viton)</li>
+                        <li><span class="mat-code">E</span> EPDM</li>
+                        <li><span class="mat-code">B</span> NBR (Buna-N)</li>
+                        <li><span class="mat-code">K</span> FFKM (Kalrez)</li>
+                    </ul>
+                </div>
+                <div class="mat-card">
+                    <h4><span class="mat-dot" style="background: #5a5a99;"></span>Metal Materials</h4>
+                    <ul>
+                        <li><span class="mat-code">S</span> 304 Stainless Steel</li>
+                        <li><span class="mat-code">L</span> 316 Stainless Steel</li>
+                        <li><span class="mat-code">H</span> Hastelloy C276</li>
+                        <li><span class="mat-code">M</span> Monel 400</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Industries -->
-    <section class="py-24 bg-primary-900 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <span class="text-accent-400 font-semibold text-sm uppercase tracking-wider">Industries</span>
-                <h2 class="text-3xl md:text-4xl font-bold mt-3 mb-4">For Use in Various Industries</h2>
-                <p class="text-blue-300 max-w-2xl mx-auto">YENNIX offers a wide range of mechanical seals, satisfying clients from various industries with specific demands regarding sealing materials.</p>
+    <section class="section section-dark">
+        <div class="section-inner">
+            <div style="text-align: center; margin-bottom: 48px;">
+                <div class="section-label">Industries</div>
+                <h2 class="section-title">For Use in Various Industries</h2>
+                <p class="section-desc" style="margin: 16px auto 0;">YENNIX seals satisfy clients from various industries with specific demands regarding sealing materials.</p>
             </div>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="bg-white/5 backdrop-blur-sm rounded-xl p-6 text-center border border-white/10 hover:bg-white/10 transition-colors">
-                    <div class="text-2xl mb-3">💧</div>
-                    <div class="font-semibold text-sm">Water Treatment</div>
+            <div class="industries-grid">
+                <div class="industry-item">
+                    <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                    <span>Water Treatment</span>
                 </div>
-                <div class="bg-white/5 backdrop-blur-sm rounded-xl p-6 text-center border border-white/10 hover:bg-white/10 transition-colors">
-                    <div class="text-2xl mb-3">⚗️</div>
-                    <div class="font-semibold text-sm">Chemical Processing</div>
+                <div class="industry-item">
+                    <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                    <span>Chemical Processing</span>
                 </div>
-                <div class="bg-white/5 backdrop-blur-sm rounded-xl p-6 text-center border border-white/10 hover:bg-white/10 transition-colors">
-                    <div class="text-2xl mb-3">🛢️</div>
-                    <div class="font-semibold text-sm">Oil & Gas</div>
+                <div class="industry-item">
+                    <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12"/></svg>
+                    <span>Oil &amp; Gas</span>
                 </div>
-                <div class="bg-white/5 backdrop-blur-sm rounded-xl p-6 text-center border border-white/10 hover:bg-white/10 transition-colors">
-                    <div class="text-2xl mb-3">🍔</div>
-                    <div class="font-semibold text-sm">Food & Beverage</div>
+                <div class="industry-item">
+                    <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0M3 16v-4a1 1 0 011-1h16a1 1 0 011 1v4M3 16l1 4h16l1-4"/></svg>
+                    <span>Food &amp; Beverage</span>
                 </div>
-                <div class="bg-white/5 backdrop-blur-sm rounded-xl p-6 text-center border border-white/10 hover:bg-white/10 transition-colors">
-                    <div class="text-2xl mb-3">⛏️</div>
-                    <div class="font-semibold text-sm">Mining</div>
+                <div class="industry-item">
+                    <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    <span>Mining</span>
                 </div>
-                <div class="bg-white/5 backdrop-blur-sm rounded-xl p-6 text-center border border-white/10 hover:bg-white/10 transition-colors">
-                    <div class="text-2xl mb-3">⚡</div>
-                    <div class="font-semibold text-sm">Power Generation</div>
+                <div class="industry-item">
+                    <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    <span>Power Generation</span>
                 </div>
-                <div class="bg-white/5 backdrop-blur-sm rounded-xl p-6 text-center border border-white/10 hover:bg-white/10 transition-colors">
-                    <div class="text-2xl mb-3">💊</div>
-                    <div class="font-semibold text-sm">Pharmaceutical</div>
+                <div class="industry-item">
+                    <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                    <span>Pharmaceutical</span>
                 </div>
-                <div class="bg-white/5 backdrop-blur-sm rounded-xl p-6 text-center border border-white/10 hover:bg-white/10 transition-colors">
-                    <div class="text-2xl mb-3">🚢</div>
-                    <div class="font-semibold text-sm">Marine</div>
+                <div class="industry-item">
+                    <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/></svg>
+                    <span>Marine</span>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Reverse Engineering CTA -->
-    <section class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-gradient-to-br from-primary-800 to-primary-900 rounded-3xl p-8 md:p-12 lg:p-16 text-white">
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <span class="text-accent-400 font-semibold text-sm uppercase tracking-wider">Reverse Engineering</span>
-                        <h2 class="text-3xl md:text-4xl font-bold mt-3 mb-6">Can't Find Your Seal?</h2>
-                        <p class="text-blue-200 mb-8 leading-relaxed">Send us your sample. Our engineering team will measure, draft, manufacture, and deliver — typically in 15-25 days. From 1 piece to 10,000.</p>
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <a href="/reverse-engineering/" class="bg-accent-500 hover:bg-accent-600 text-white px-8 py-3.5 rounded-lg font-semibold text-center transition-colors">
-                                Learn More
-                            </a>
-                            <a href="/contact/" class="border-2 border-white/30 hover:border-white/60 text-white px-8 py-3.5 rounded-lg font-semibold text-center transition-colors">
-                                Send Sample
-                            </a>
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-5 text-center">
-                            <div class="text-3xl font-bold text-accent-400">100+</div>
-                            <div class="text-blue-200 text-sm mt-1">Projects Completed</div>
-                        </div>
-                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-5 text-center">
-                            <div class="text-3xl font-bold text-accent-400">15-25</div>
-                            <div class="text-blue-200 text-sm mt-1">Days Lead Time</div>
-                        </div>
-                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-5 text-center">
-                            <div class="text-3xl font-bold text-accent-400">1 PC</div>
-                            <div class="text-blue-200 text-sm mt-1">Minimum Order</div>
-                        </div>
-                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-5 text-center">
-                            <div class="text-3xl font-bold text-accent-400">9+</div>
-                            <div class="text-blue-200 text-sm mt-1">Years Experience</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="py-20 bg-gray-50">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Ready to Find Your Seal?</h2>
-            <p class="text-gray-600 mb-8 max-w-2xl mx-auto">Browse our product catalog, use our cross-reference tool, or send us your sample for reverse engineering.</p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="/products/" class="bg-primary-700 hover:bg-primary-800 text-white px-8 py-3.5 rounded-lg font-semibold text-center transition-colors shadow-lg shadow-primary-700/20">
-                    Browse Products
-                </a>
-                <a href="/cross-reference/" class="bg-white hover:bg-gray-50 text-primary-700 px-8 py-3.5 rounded-lg font-semibold text-center transition-colors border border-primary-200">
-                    Cross Reference Search
-                </a>
-                <a href="/contact/" class="bg-accent-500 hover:bg-accent-600 text-white px-8 py-3.5 rounded-lg font-semibold text-center transition-colors">
-                    Get a Quote
-                </a>
+    <section class="cta-section">
+        <div style="max-width: 640px; margin: 0 auto;">
+            <div class="section-label" style="text-align: center;">Reverse Engineering</div>
+            <h2>Can't Find Your Seal?</h2>
+            <p>Send us your sample. Our engineering team will measure, draft, manufacture, and deliver — typically in 15-25 days.</p>
+            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                <a href="/reverse-engineering/" class="btn-primary">Learn More</a>
+                <a href="/contact/" class="btn-outline">Send Sample</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-primary-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div class="md:col-span-1">
-                    <div class="flex items-center space-x-2 mb-4">
-                        <div class="w-8 h-8 bg-gradient-to-br from-accent-400 to-accent-600 rounded-lg flex items-center justify-center">
-                            <span class="text-white font-bold text-sm">Y</span>
-                        </div>
-                        <span class="text-xl font-bold tracking-tight">YENNIX</span>
-                    </div>
-                    <p class="text-blue-300 text-sm">Professional mechanical seal supplier. Fast delivery, competitive pricing, and expert technical support worldwide.</p>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-4">Products</h4>
-                    <ul class="space-y-2 text-sm text-blue-300">
-                        <li><a href="/products/component-seals.html" class="hover:text-white transition-colors">Component Seals</a></li>
-                        <li><a href="/products/cartridge-seals.html" class="hover:text-white transition-colors">Cartridge Seals</a></li>
-                        <li><a href="/products/custom-seals.html" class="hover:text-white transition-colors">Custom & ODM Seals</a></li>
-                        <li><a href="/products/parts.html" class="hover:text-white transition-colors">Seal Parts</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-4">Resources</h4>
-                    <ul class="space-y-2 text-sm text-blue-300">
-                        <li><a href="/cross-reference/" class="hover:text-white transition-colors">Cross Reference</a></li>
-                        <li><a href="/reverse-engineering/" class="hover:text-white transition-colors">Reverse Engineering</a></li>
-                        <li><a href="/quality/" class="hover:text-white transition-colors">Quality Standards</a></li>
-                        <li><a href="/about/" class="hover:text-white transition-colors">About Us</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-4">Contact</h4>
-                    <ul class="space-y-2 text-sm text-blue-300">
-                        <li><a href="mailto:sales@yennix.com" class="hover:text-white transition-colors">sales@yennix.com</a></li>
-                        <li>Response within 12 hours</li>
-                        <li><a href="/contact/" class="hover:text-white transition-colors">Get a Quote</a></li>
-                    </ul>
-                </div>
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <a href="/" class="nav-logo" style="margin-bottom: 0;">
+                    <div class="nav-logo-mark">Y</div>
+                    <span class="nav-logo-text">YENNIX</span>
+                </a>
+                <p>Professional mechanical seal supplier. Fast delivery, competitive pricing, and expert technical support worldwide.</p>
             </div>
-            <div class="border-t border-blue-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-blue-400 text-sm">
-                <p>&copy; 2026 YENNIX. All rights reserved.</p>
-                <p class="mt-2 md:mt-0">Professional Mechanical Seals for Industrial Applications</p>
+            <div>
+                <h4>Products</h4>
+                <ul>
+                    <li><a href="/products/component-seals.html">Component Seals</a></li>
+                    <li><a href="/products/cartridge-seals.html">Cartridge Seals</a></li>
+                    <li><a href="/products/custom-seals.html">Custom &amp; ODM Seals</a></li>
+                    <li><a href="/products/parts.html">Seal Parts</a></li>
+                </ul>
             </div>
+            <div>
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="/cross-reference/">Cross Reference</a></li>
+                    <li><a href="/reverse-engineering/">Reverse Engineering</a></li>
+                    <li><a href="/quality/">Quality Standards</a></li>
+                    <li><a href="/about/">About Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="mailto:sales@yennix.com">sales@yennix.com</a></li>
+                    <li><a href="/contact/">Get a Quote</a></li>
+                    <li style="font-size: 12px; color: rgba(255,255,255,0.3);">Response within 12 hours</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom" style="text-align: center;">
+            &copy; 2026 YENNIX. All rights reserved.
         </div>
     </footer>
 
     <!-- Scroll to top -->
     <div id="scroll-top" class="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
     </div>
 
     <script>
-        // Mobile menu toggle
+        // Mobile menu
         document.getElementById('mobile-menu-btn').addEventListener('click', function() {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
+            document.getElementById('mobile-menu').classList.toggle('open');
         });
 
-        // Scroll to top button
+        // Scroll effects
         window.addEventListener('scroll', function() {
-            const btn = document.getElementById('scroll-top');
-            if (window.scrollY > 400) {
-                btn.classList.add('visible');
-            } else {
-                btn.classList.remove('visible');
-            }
+            const navbar = document.getElementById('navbar');
+            const scrollTop = document.getElementById('scroll-top');
+            if (window.scrollY > 50) navbar.classList.add('scrolled');
+            else navbar.classList.remove('scrolled');
+            if (window.scrollY > 400) scrollTop.classList.add('visible');
+            else scrollTop.classList.remove('visible');
         });
     </script>
 
@@ -532,11 +352,10 @@
         "@type": "Organization",
         "name": "YENNIX",
         "url": "https://yennix.com",
-        "description": "Professional mechanical seal supplier offering high-quality industrial seals with fast global delivery. Component seals, cartridge seals, custom solutions.",
+        "description": "Professional mechanical seal supplier offering high-quality industrial seals with fast global delivery.",
         "product": [
             {"@type": "Product", "name": "YN109 Component Seal"},
             {"@type": "Product", "name": "YN21 Component Seal"},
-            {"@type": "Product", "name": "YN1 Component Seal"},
             {"@type": "Product", "name": "YN708 Cartridge Seal"},
             {"@type": "Product", "name": "YN560 Cartridge Seal"}
         ]

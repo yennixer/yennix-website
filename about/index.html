@@ -3,105 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About YENNIX - Your Agile Seal Supply Partner</title>
-    <meta name="description" content="About YENNIX: professional mechanical seal supplier with 9+ years experience, serving 50+ countries with fast delivery and competitive pricing.">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>About YENNIX — Your Agile Seal Supply Partner</title>
+    <meta name="description" content="About YENNIX: professional mechanical seal supplier with 9+ years experience, serving 50+ countries with fast delivery.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/custom.css">
-    <script>tailwind.config={theme:{extend:{colors:{primary:{50:'#eff6ff',100:'#dbeafe',200:'#bfdbfe',300:'#93c5fd',400:'#60a5fa',500:'#3b82f6',600:'#1e40af',700:'#1e3a8a',800:'#172554',900:'#0f172a'},accent:{400:'#fbbf24',500:'#f59e0b',600:'#d97706'}},fontFamily:{sans:['Inter','system-ui','sans-serif']}}}}</script>
 </head>
-<body class="font-sans text-gray-800 antialiased">
+<body>
 
-<nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="flex justify-between items-center h-16">
-        <div class="flex items-center space-x-2"><a href="/"><div class="w-8 h-8 bg-gradient-to-br from-primary-600 to-primary-800 rounded-lg flex items-center justify-center"><span class="text-white font-bold text-sm">Y</span></div></a><a href="/"><span class="text-xl font-bold text-primary-800 tracking-tight">YENNIX</span></a></div>
-        <div class="hidden lg:flex items-center space-x-6"><a href="/" class="nav-link text-gray-700 hover:text-primary-600 font-medium text-sm">Home</a><a href="/products/" class="nav-link text-gray-700 hover:text-primary-600 font-medium text-sm">Products</a><a href="/cross-reference/" class="nav-link text-gray-700 hover:text-primary-600 font-medium text-sm">Cross Reference</a><a href="/reverse-engineering/" class="nav-link text-gray-700 hover:text-primary-600 font-medium text-sm">Engineering</a><a href="/quality/" class="nav-link text-gray-700 hover:text-primary-600 font-medium text-sm">Quality</a><a href="/about/" class="nav-link text-primary-700 font-medium text-sm">About</a><a href="/contact/" class="bg-accent-500 hover:bg-accent-600 text-white px-5 py-2 rounded-lg font-medium text-sm transition-colors">Get a Quote</a></div>
-        <button id="mobile-menu-btn" class="lg:hidden p-2"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
-    </div></div>
-    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t"><div class="px-4 py-3 space-y-2"><a href="/" class="block py-2 text-gray-700">Home</a><a href="/products/" class="block py-2 text-gray-700">Products</a><a href="/about/" class="block py-2 text-primary-700 font-medium">About</a><a href="/contact/" class="block py-2 text-accent-600 font-medium">Get a Quote</a></div></div>
-</nav>
+    <nav class="nav-main" id="navbar"><div class="nav-inner"><a href="/" class="nav-logo"><div class="nav-logo-mark">Y</div><span class="nav-logo-text">YENNIX</span></a><div class="nav-links"><a href="/">Home</a><a href="/products/">Products</a><a href="/cross-reference/">Cross Reference</a><a href="/reverse-engineering/">Engineering</a><a href="/quality/">Quality</a><a href="/about/" class="active">About</a><a href="/contact/" class="nav-cta">Get a Quote</a></div><button class="nav-mobile-btn" id="mobile-menu-btn"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg></button></div><div class="nav-mobile-menu" id="mobile-menu"><a href="/">Home</a><a href="/products/">Products</a><a href="/cross-reference/">Cross Reference</a><a href="/reverse-engineering/">Engineering</a><a href="/quality/">Quality</a><a href="/about/">About</a><a href="/contact/">Get a Quote</a></div></nav>
 
-<section class="hero-gradient pt-24 pb-16 relative">
-    <div class="absolute inset-0 seal-pattern opacity-20"></div>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="breadcrumb text-sm mb-4"><a href="/">Home</a> <span class="text-blue-300 mx-2">/</span> <span class="text-white">About Us</span></div>
-        <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">About YENNIX</h1>
-        <p class="text-blue-200 text-lg max-w-2xl">Your agile seal supply partner — bridging the gap between premium quality and accessibility.</p>
-    </div>
-</section>
+    <section class="page-header">
+        <div class="page-header-inner">
+            <div class="breadcrumb"><a href="/">Top</a> <span class="sep">/</span> <span class="current">About Us</span></div>
+            <h1>About YENNIX</h1>
+            <p>Your agile seal supply partner — bridging the gap between premium quality and accessibility.</p>
+        </div>
+    </section>
 
-<section class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
+    <!-- Who We Are -->
+    <section class="section">
+        <div class="section-inner" style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;">
             <div>
-                <span class="text-primary-600 font-semibold text-sm uppercase tracking-wider">Who We Are</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-3 mb-6">Your Agile Seal Supply Partner</h2>
-                <div class="space-y-4 text-gray-600">
-                    <p>YENNIX is a professional mechanical seal supplier dedicated to serving industrial clients worldwide. We bridge the gap between premium quality and accessibility.</p>
-                    <p>Unlike large manufacturers with rigid MOQs and long lead times, we offer a flexible, responsive approach — whether you need 1 seal or 10,000. Our extensive inventory and reverse engineering capabilities mean we can match almost any seal specification.</p>
+                <div class="section-label">Who We Are</div>
+                <h2 class="section-title">Your Agile Seal Supply Partner</h2>
+                <div style="font-size:14px;color:var(--gray-600);line-height:1.8;font-weight:300;margin-top:16px;">
+                    <p style="margin-bottom:16px;">YENNIX is a professional mechanical seal supplier dedicated to serving industrial clients worldwide. We bridge the gap between premium quality and accessibility.</p>
+                    <p style="margin-bottom:16px;">Unlike large manufacturers with rigid MOQs and long lead times, we offer a flexible, responsive approach — whether you need 1 seal or 10,000.</p>
                     <p>We serve maintenance companies, equipment distributors, plant engineers, and procurement teams who value speed, reliability, and expert guidance.</p>
                 </div>
-                <div class="mt-8 grid grid-cols-2 gap-6">
-                    <div class="bg-primary-50 p-5 rounded-xl"><div class="text-3xl font-bold text-primary-700">50+</div><div class="text-gray-600 text-sm mt-1">Countries Served</div></div>
-                    <div class="bg-primary-50 p-5 rounded-xl"><div class="text-3xl font-bold text-primary-700">9+</div><div class="text-gray-600 text-sm mt-1">Years Experience</div></div>
-                    <div class="bg-primary-50 p-5 rounded-xl"><div class="text-3xl font-bold text-primary-700">35K+</div><div class="text-gray-600 text-sm mt-1">SKUs in Stock</div></div>
-                    <div class="bg-primary-50 p-5 rounded-xl"><div class="text-3xl font-bold text-primary-700">100+</div><div class="text-gray-600 text-sm mt-1">Custom Projects</div></div>
+                <div style="height:32px;"></div>
+                <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;">
+                    <div style="border:1px solid var(--gray-200);padding:20px;"><div style="font-size:28px;font-weight:300;color:var(--gold);margin-bottom:4px;">50+</div><div style="font-size:11px;color:var(--gray-400);letter-spacing:0.1em;text-transform:uppercase;">Countries Served</div></div>
+                    <div style="border:1px solid var(--gray-200);padding:20px;"><div style="font-size:28px;font-weight:300;color:var(--gold);margin-bottom:4px;">9+</div><div style="font-size:11px;color:var(--gray-400);letter-spacing:0.1em;text-transform:uppercase;">Years Experience</div></div>
+                    <div style="border:1px solid var(--gray-200);padding:20px;"><div style="font-size:28px;font-weight:300;color:var(--gold);margin-bottom:4px;">35K+</div><div style="font-size:11px;color:var(--gray-400);letter-spacing:0.1em;text-transform:uppercase;">SKUs in Stock</div></div>
+                    <div style="border:1px solid var(--gray-200);padding:20px;"><div style="font-size:28px;font-weight:300;color:var(--gold);margin-bottom:4px;">100+</div><div style="font-size:11px;color:var(--gray-400);letter-spacing:0.1em;text-transform:uppercase;">Custom Projects</div></div>
                 </div>
             </div>
-            <div class="bg-gradient-to-br from-primary-800 to-primary-900 rounded-3xl p-8 text-white">
-                <h3 class="text-xl font-bold mb-6">Industries We Serve</h3>
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="flex items-center space-x-2"><span class="w-2 h-2 bg-accent-400 rounded-full"></span><span class="text-sm">Water Treatment</span></div>
-                    <div class="flex items-center space-x-2"><span class="w-2 h-2 bg-accent-400 rounded-full"></span><span class="text-sm">Chemical Processing</span></div>
-                    <div class="flex items-center space-x-2"><span class="w-2 h-2 bg-accent-400 rounded-full"></span><span class="text-sm">Oil & Gas</span></div>
-                    <div class="flex items-center space-x-2"><span class="w-2 h-2 bg-accent-400 rounded-full"></span><span class="text-sm">Food & Beverage</span></div>
-                    <div class="flex items-center space-x-2"><span class="w-2 h-2 bg-accent-400 rounded-full"></span><span class="text-sm">Mining</span></div>
-                    <div class="flex items-center space-x-2"><span class="w-2 h-2 bg-accent-400 rounded-full"></span><span class="text-sm">Power Generation</span></div>
-                    <div class="flex items-center space-x-2"><span class="w-2 h-2 bg-accent-400 rounded-full"></span><span class="text-sm">Pharmaceutical</span></div>
-                    <div class="flex items-center space-x-2"><span class="w-2 h-2 bg-accent-400 rounded-full"></span><span class="text-sm">Pulp & Paper</span></div>
+            <div style="background:var(--navy);padding:40px;">
+                <h3 style="font-size:14px;font-weight:600;color:var(--gold);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:24px;">Industries We Serve</h3>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+                    <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.6);"><span style="width:6px;height:6px;background:var(--gold);border-radius:50%;flex-shrink:0;"></span>Water Treatment</div>
+                    <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.6);"><span style="width:6px;height:6px;background:var(--gold);border-radius:50%;flex-shrink:0;"></span>Chemical Processing</div>
+                    <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.6);"><span style="width:6px;height:6px;background:var(--gold);border-radius:50%;flex-shrink:0;"></span>Oil &amp; Gas</div>
+                    <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.6);"><span style="width:6px;height:6px;background:var(--gold);border-radius:50%;flex-shrink:0;"></span>Food &amp; Beverage</div>
+                    <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.6);"><span style="width:6px;height:6px;background:var(--gold);border-radius:50%;flex-shrink:0;"></span>Mining</div>
+                    <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.6);"><span style="width:6px;height:6px;background:var(--gold);border-radius:50%;flex-shrink:0;"></span>Power Generation</div>
+                    <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.6);"><span style="width:6px;height:6px;background:var(--gold);border-radius:50%;flex-shrink:0;"></span>Pharmaceutical</div>
+                    <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.6);"><span style="width:6px;height:6px;background:var(--gold);border-radius:50%;flex-shrink:0;"></span>Pulp &amp; Paper</div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- What makes us different -->
-<section class="py-20 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-            <span class="text-primary-600 font-semibold text-sm uppercase tracking-wider">What Makes Us Different</span>
-            <h2 class="text-3xl font-bold text-gray-900 mt-3">The YENNIX Advantage</h2>
+    <!-- What Makes Us Different -->
+    <section class="section section-light">
+        <div class="section-inner">
+            <div style="text-align:center;margin-bottom:48px;">
+                <div class="section-label">What Makes Us Different</div>
+                <h2 class="section-title">The YENNIX Advantage</h2>
+            </div>
+            <div class="grid-3">
+                <div style="text-align:center;padding:40px 24px;">
+                    <div style="width:48px;height:48px;border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
+                        <svg width="24" height="24" fill="none" stroke="var(--gold)" stroke-width="1.5" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    </div>
+                    <h3 style="font-size:16px;font-weight:600;color:var(--gray-900);margin-bottom:8px;">Speed &amp; Flexibility</h3>
+                    <p style="font-size:13px;color:var(--gray-500);line-height:1.6;font-weight:300;">12-hour quote response. 1 PC minimum. 15-25 day custom delivery. We move at your pace, not ours.</p>
+                </div>
+                <div style="text-align:center;padding:40px 24px;">
+                    <div style="width:48px;height:48px;border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
+                        <svg width="24" height="24" fill="none" stroke="var(--gold)" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                    </div>
+                    <h3 style="font-size:16px;font-weight:600;color:var(--gray-900);margin-bottom:8px;">Cross Reference Expertise</h3>
+                    <p style="font-size:13px;color:var(--gray-500);line-height:1.6;font-weight:300;">We know the equivalencies between all major brands. Tell us what you have — we'll find or make the YENNIX equivalent.</p>
+                </div>
+                <div style="text-align:center;padding:40px 24px;">
+                    <div style="width:48px;height:48px;border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
+                        <svg width="24" height="24" fill="none" stroke="var(--gold)" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                    </div>
+                    <h3 style="font-size:16px;font-weight:600;color:var(--gray-900);margin-bottom:8px;">Quality Without Compromise</h3>
+                    <p style="font-size:13px;color:var(--gray-500);line-height:1.6;font-weight:300;">ISO 9001 certified. Same quality as the big brands, but at a better price with no middleman markup.</p>
+                </div>
+            </div>
         </div>
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="feature-card bg-white rounded-2xl p-8 text-center">
-                <div class="w-16 h-16 mx-auto bg-primary-50 rounded-2xl flex items-center justify-center mb-6">
-                    <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                </div>
-                <h3 class="text-lg font-bold text-gray-900 mb-3">Speed & Flexibility</h3>
-                <p class="text-gray-600 text-sm">12-hour quote response. 1 PC minimum. 15-25 day custom delivery. We move at your pace, not ours.</p>
-            </div>
-            <div class="feature-card bg-white rounded-2xl p-8 text-center">
-                <div class="w-16 h-16 mx-auto bg-accent-50 rounded-2xl flex items-center justify-center mb-6">
-                    <svg class="w-8 h-8 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-                </div>
-                <h3 class="text-lg font-bold text-gray-900 mb-3">Cross Reference Expertise</h3>
-                <p class="text-gray-600 text-sm">We know the equivalencies between all major brands. Tell us what you have — we'll find or make the YENNIX equivalent.</p>
-            </div>
-            <div class="feature-card bg-white rounded-2xl p-8 text-center">
-                <div class="w-16 h-16 mx-auto bg-green-50 rounded-2xl flex items-center justify-center mb-6">
-                    <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-                </div>
-                <h3 class="text-lg font-bold text-gray-900 mb-3">Quality Without Compromise</h3>
-                <p class="text-gray-600 text-sm">ISO 9001 certified. Same quality as the big brands, but at a better price with no middleman markup.</p>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
-<footer class="bg-primary-900 text-white py-12"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="grid md:grid-cols-4 gap-8"><div><div class="flex items-center space-x-2 mb-4"><div class="w-8 h-8 bg-gradient-to-br from-accent-400 to-accent-600 rounded-lg flex items-center justify-center"><span class="text-white font-bold text-sm">Y</span></div><span class="text-xl font-bold tracking-tight">YENNIX</span></div><p class="text-blue-300 text-sm">Professional mechanical seal supplier.</p></div><div><h4 class="font-semibold mb-4">Products</h4><ul class="space-y-2 text-sm text-blue-300"><li><a href="/products/component-seals.html" class="hover:text-white">Component Seals</a></li><li><a href="/products/cartridge-seals.html" class="hover:text-white">Cartridge Seals</a></li><li><a href="/products/custom-seals.html" class="hover:text-white">Custom & ODM</a></li><li><a href="/products/parts.html" class="hover:text-white">Seal Parts</a></li></ul></div><div><h4 class="font-semibold mb-4">Resources</h4><ul class="space-y-2 text-sm text-blue-300"><li><a href="/cross-reference/" class="hover:text-white">Cross Reference</a></li><li><a href="/reverse-engineering/" class="hover:text-white">Reverse Engineering</a></li><li><a href="/quality/" class="hover:text-white">Quality</a></li></ul></div><div><h4 class="font-semibold mb-4">Contact</h4><ul class="space-y-2 text-sm text-blue-300"><li><a href="mailto:sales@yennix.com" class="hover:text-white">sales@yennix.com</a></li><li><a href="/contact/" class="hover:text-white">Get a Quote</a></li></ul></div></div><div class="border-t border-blue-800 mt-12 pt-8 text-center text-blue-400 text-sm">&copy; 2026 YENNIX. All rights reserved.</div></div></footer>
+    <footer class="footer"><div class="footer-inner"><div class="footer-brand"><a href="/" class="nav-logo"><div class="nav-logo-mark">Y</div><span class="nav-logo-text">YENNIX</span></a><p>Professional mechanical seal supplier.</p></div><div><h4>Products</h4><ul><li><a href="/products/component-seals.html">Component Seals</a></li><li><a href="/products/cartridge-seals.html">Cartridge Seals</a></li><li><a href="/products/custom-seals.html">Custom &amp; ODM</a></li><li><a href="/products/parts.html">Seal Parts</a></li></ul></div><div><h4>Resources</h4><ul><li><a href="/cross-reference/">Cross Reference</a></li><li><a href="/reverse-engineering/">Reverse Engineering</a></li><li><a href="/quality/">Quality</a></li></ul></div><div><h4>Contact</h4><ul><li><a href="mailto:sales@yennix.com">sales@yennix.com</a></li><li><a href="/contact/">Get a Quote</a></li></ul></div></div><div class="footer-bottom" style="text-align:center;">&copy; 2026 YENNIX. All rights reserved.</div></footer>
 
-<script>document.getElementById('mobile-menu-btn').addEventListener('click', function(){document.getElementById('mobile-menu').classList.toggle('hidden')});</script>
+    <div id="scroll-top" class="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg></div>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click',function(){document.getElementById('mobile-menu').classList.toggle('open')});
+        window.addEventListener('scroll',function(){var nb=document.getElementById('navbar'),st=document.getElementById('scroll-top');if(window.scrollY>50)nb.classList.add('scrolled');else nb.classList.remove('scrolled');if(window.scrollY>400)st.classList.add('visible');else st.classList.remove('visible')});
+    </script>
 </body>
 </html>

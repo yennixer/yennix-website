@@ -1,6 +1,5 @@
 /**
- * YENNIX Product Detail Page Renderer
- * Renders full product detail pages dynamically from the product data store
+ * YENNIX V3 Product Detail Page Renderer — NOK-inspired minimal style
  */
 
 function initProductPage(slug) {
@@ -8,18 +7,11 @@ function initProductPage(slug) {
     const app = document.getElementById('app');
 
     if (!product) {
-        app.innerHTML = `
-            <div class="min-h-screen flex items-center justify-center">
-                <div class="text-center">
-                    <h1 class="text-4xl font-bold text-gray-300 mb-4">Product Not Found</h1>
-                    <a href="/products/" class="text-primary-600 font-semibold hover:text-primary-700">Back to Products</a>
-                </div>
-            </div>`;
+        app.innerHTML = '<div style="min-height:80vh;display:flex;align-items:center;justify-content:center;text-align:center;"><div><h1 style="font-size:48px;font-weight:200;color:var(--gray-300);margin-bottom:16px;">404</h1><a href="/products/" style="color:var(--gold);font-size:12px;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;">Back to Products</a></div></div>';
         return;
     }
 
-    // Update title
-    document.title = `${product.model} - ${product.categoryName} | YENNIX`;
+    document.title = `${product.model} — ${product.categoryName} | YENNIX`;
 
     const catLinks = {
         'component-seals': { href: '/products/component-seals.html', label: 'Component Seals' },
@@ -28,14 +20,6 @@ function initProductPage(slug) {
         'parts': { href: '/products/parts.html', label: 'Seal Parts & Accessories' }
     };
     const cat = catLinks[product.category];
-
-    const catColors = {
-        'component-seals': 'bg-blue-50 text-primary-700',
-        'cartridge-seals': 'bg-amber-50 text-accent-700',
-        'custom-seals': 'bg-green-50 text-green-700',
-        'parts': 'bg-purple-50 text-purple-700'
-    };
-
     const code = product.defaultCode;
     const codeParts = code.split('-');
 
@@ -43,214 +27,191 @@ function initProductPage(slug) {
     let dimensionsHTML = '';
     if (product.dimensions.length) {
         dimensionsHTML = `
-            <h3 class="text-lg font-bold text-gray-900 mb-4">Product Dimensions (mm)</h3>
-            <div class="overflow-x-auto">
-                <table class="dim-table w-full">
+            <h3 style="font-size:16px;font-weight:600;color:var(--gray-900);margin-bottom:16px;">Dimensions (mm)</h3>
+            <div style="overflow-x:auto;">
+                <table class="dim-table">
                     <thead><tr><th>d (Shaft)</th><th>D1</th><th>D2</th><th>L1</th><th>L2</th></tr></thead>
                     <tbody>${product.dimensions.map(d => `<tr><td>${d.d}</td><td>${d.D1}</td><td>${d.D2}</td><td>${d.L1}</td><td>${d.L2}</td></tr>`).join('')}</tbody>
                 </table>
             </div>
-            <p class="text-xs text-gray-400 mt-3">* Dimensions are for reference only. Contact us for confirmed drawings.</p>`;
+            <p style="font-size:11px;color:var(--gray-400);margin-top:12px;">* Dimensions are for reference only. Contact us for confirmed drawings.</p>`;
     } else {
-        dimensionsHTML = '<p class="text-gray-500 py-8">Contact us for detailed dimension information for this product.</p>';
+        dimensionsHTML = '<p style="color:var(--gray-400);padding:40px 0;text-align:center;">Contact us for detailed dimension information for this product.</p>';
     }
 
-    // Materials grid
-    let matGrid = '';
+    // Materials
+    let matCards = '';
     if (product.materials.sealFace) {
-        matGrid += `<div class="bg-white rounded-xl border p-5"><h4 class="font-bold text-gray-900 mb-3 flex items-center gap-2"><span class="w-3 h-3 bg-red-400 rounded-full"></span>Seal Face</h4><ul class="space-y-2">${product.materials.sealFace.map(m => `<li class="text-sm text-gray-700">${m}</li>`).join('')}</ul></div>`;
+        matCards += `<div class="mat-card"><h4><span class="mat-dot" style="background:#c8a45c;"></span>Seal Face</h4><ul>${product.materials.sealFace.map(m => '<li>' + m + '</li>').join('')}</ul></div>`;
     }
     if (product.materials.elastomer) {
-        matGrid += `<div class="bg-white rounded-xl border p-5"><h4 class="font-bold text-gray-900 mb-3 flex items-center gap-2"><span class="w-3 h-3 bg-green-400 rounded-full"></span>Elastomer</h4><ul class="space-y-2">${product.materials.elastomer.map(m => `<li class="text-sm text-gray-700">${m}</li>`).join('')}</ul></div>`;
+        matCards += `<div class="mat-card"><h4><span class="mat-dot" style="background:#4a994a;"></span>Elastomer</h4><ul>${product.materials.elastomer.map(m => '<li>' + m + '</li>').join('')}</ul></div>`;
     }
     if (product.materials.metal) {
-        matGrid += `<div class="bg-white rounded-xl border p-5"><h4 class="font-bold text-gray-900 mb-3 flex items-center gap-2"><span class="w-3 h-3 bg-gray-400 rounded-full"></span>Metal</h4><ul class="space-y-2">${product.materials.metal.map(m => `<li class="text-sm text-gray-700">${m}</li>`).join('')}</ul></div>`;
+        matCards += `<div class="mat-card"><h4><span class="mat-dot" style="background:#5a5a99;"></span>Metal</h4><ul>${product.materials.metal.map(m => '<li>' + m + '</li>').join('')}</ul></div>`;
     }
 
     // Related products
     const related = YENNIX_PRODUCTS.filter(p => p.category === product.category && p.id !== product.id).slice(0, 4);
-    const relatedHTML = related.map(p => `
-        <a href="/product/${p.slug}.html" class="product-card bg-white rounded-2xl p-5 group">
-            <div class="placeholder-drawing h-32 rounded-xl !min-h-0 mb-3">
-                <svg class="w-8 h-8 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
-            </div>
-            <h4 class="font-bold text-gray-900">${p.model}</h4>
-            <p class="text-sm text-gray-500 mt-1">${p.replaces.slice(0,2).join(', ')}</p>
-            <div class="mt-2 text-primary-600 text-sm font-semibold">View Details &rarr;</div>
-        </a>
-    `).join('');
 
     app.innerHTML = `
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center space-x-2">
-                    <a href="/"><div class="w-8 h-8 bg-gradient-to-br from-primary-600 to-primary-800 rounded-lg flex items-center justify-center"><span class="text-white font-bold text-sm">Y</span></div></a>
-                    <a href="/"><span class="text-xl font-bold text-primary-800 tracking-tight">YENNIX</span></a>
-                </div>
-                <div class="hidden lg:flex items-center space-x-6">
-                    <a href="/" class="nav-link text-gray-700 hover:text-primary-600 font-medium text-sm">Home</a>
-                    <a href="/products/" class="nav-link text-gray-700 hover:text-primary-600 font-medium text-sm">Products</a>
-                    <a href="/cross-reference/" class="nav-link text-gray-700 hover:text-primary-600 font-medium text-sm">Cross Reference</a>
-                    <a href="/reverse-engineering/" class="nav-link text-gray-700 hover:text-primary-600 font-medium text-sm">Engineering</a>
-                    <a href="/quality/" class="nav-link text-gray-700 hover:text-primary-600 font-medium text-sm">Quality</a>
-                    <a href="/about/" class="nav-link text-gray-700 hover:text-primary-600 font-medium text-sm">About</a>
-                    <a href="/contact/" class="bg-accent-500 hover:bg-accent-600 text-white px-5 py-2 rounded-lg font-medium text-sm transition-colors">Get a Quote</a>
-                </div>
-                <button id="mobile-menu-btn" class="lg:hidden p-2"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
-            </div>
+    <nav class="nav-main" id="navbar">
+        <div class="nav-inner">
+            <a href="/" class="nav-logo"><div class="nav-logo-mark">Y</div><span class="nav-logo-text">YENNIX</span></a>
+            <div class="nav-links"><a href="/">Home</a><a href="/products/">Products</a><a href="/cross-reference/">Cross Reference</a><a href="/reverse-engineering/">Engineering</a><a href="/quality/">Quality</a><a href="/about/">About</a><a href="/contact/" class="nav-cta">Get a Quote</a></div>
+            <button class="nav-mobile-btn" id="mobile-menu-btn"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
         </div>
-        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t"><div class="px-4 py-3 space-y-2"><a href="/" class="block py-2 text-gray-700">Home</a><a href="/products/" class="block py-2 text-gray-700">Products</a><a href="/cross-reference/" class="block py-2 text-gray-700">Cross Reference</a><a href="/contact/" class="block py-2 text-accent-600 font-medium">Get a Quote</a></div></div>
+        <div class="nav-mobile-menu" id="mobile-menu"><a href="/">Home</a><a href="/products/">Products</a><a href="/cross-reference/">Cross Reference</a><a href="/contact/">Get a Quote</a></div>
     </nav>
 
     <!-- Breadcrumb -->
-    <section class="pt-20 bg-gray-50 border-b">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-            <div class="breadcrumb text-sm">
-                <a href="/">Home</a> <span class="text-gray-400 mx-2">/</span>
-                <a href="/products/">Products</a> <span class="text-gray-400 mx-2">/</span>
-                <a href="${cat.href}">${cat.label}</a> <span class="text-gray-400 mx-2">/</span>
-                <span class="text-gray-700">${product.model}</span>
-            </div>
+    <section class="page-header" style="padding-top:96px;padding-bottom:24px;">
+        <div class="page-header-inner">
+            <div class="breadcrumb"><a href="/">Top</a> <span class="sep">/</span> <a href="/products/">Products</a> <span class="sep">/</span> <a href="${cat.href}">${cat.label}</a> <span class="sep">/</span> <span class="current">${product.model}</span></div>
         </div>
     </section>
 
     <!-- Product Detail -->
-    <section class="py-12 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-12">
-                <div>
-                    <div class="placeholder-drawing min-h-[400px] mb-6">
-                        <svg class="w-20 h-20 text-gray-300 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
-                        <span class="text-gray-400 font-medium">Product Drawing</span>
-                        <span class="text-gray-300 text-sm mt-1">Image to be added</span>
-                    </div>
-                    <div class="grid grid-cols-4 gap-3">
-                        <div class="placeholder-drawing h-20 rounded-lg !min-h-0"><span class="text-xs text-gray-400">Photo</span></div>
-                        <div class="placeholder-drawing h-20 rounded-lg !min-h-0"><span class="text-xs text-gray-400">Photo</span></div>
-                        <div class="placeholder-drawing h-20 rounded-lg !min-h-0"><span class="text-xs text-gray-400">Photo</span></div>
-                        <div class="placeholder-drawing h-20 rounded-lg !min-h-0"><span class="text-xs text-gray-400">Drawing</span></div>
-                    </div>
+    <section class="section" style="padding-top:48px;">
+        <div class="section-inner" style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;">
+            <div>
+                <div class="placeholder-drawing" style="min-height:400px;margin-bottom:16px;">
+                    <svg fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24" style="width:64px;height:64px;color:var(--gray-300);margin-bottom:8px;"><path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                    <span>Product Drawing</span>
                 </div>
-                <div>
-                    <div class="mb-3"><span class="xref-tag ${catColors[product.category]}">${cat.label}</span></div>
-                    <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-2">${product.model}</h1>
-                    <div class="mb-4"><span class="font-mono text-primary-600 font-semibold text-sm">YENNIX Code: ${product.model} | Default: ${product.defaultCode}</span></div>
-                    <p class="text-gray-600 leading-relaxed mb-6">${product.description}</p>
-                    <div class="bg-primary-50 rounded-xl p-4 mb-6">
-                        <h4 class="font-semibold text-gray-900 text-sm mb-2">Cross Reference</h4>
-                        <div class="flex flex-wrap gap-2">${product.replaces.map(r => `<span class="xref-tag bg-white text-gray-700 border border-gray-200 text-xs">Replaces: ${r}</span>`).join('')}</div>
-                        ${product.compatiblePumps.length ? `<div class="mt-3"><span class="text-xs text-gray-500">Compatible with: </span><span class="text-xs text-primary-600 font-semibold">${product.compatiblePumps.join(', ')}</span></div>` : ''}
-                    </div>
-                    <div class="grid grid-cols-2 gap-4 mb-6">
-                        <div class="bg-gray-50 rounded-xl p-4"><div class="text-xs text-gray-400 mb-1">Shaft Diameter</div><div class="font-semibold text-gray-900">${product.specs.shaftDiameter}</div></div>
-                        <div class="bg-gray-50 rounded-xl p-4"><div class="text-xs text-gray-400 mb-1">Pressure</div><div class="font-semibold text-gray-900">${product.specs.pressure}</div></div>
-                        <div class="bg-gray-50 rounded-xl p-4"><div class="text-xs text-gray-400 mb-1">Temperature</div><div class="font-semibold text-gray-900">${product.specs.temperature}</div></div>
-                        <div class="bg-gray-50 rounded-xl p-4"><div class="text-xs text-gray-400 mb-1">Speed</div><div class="font-semibold text-gray-900">${product.specs.speed}</div></div>
-                    </div>
-                    <a href="/contact/" class="inquiry-btn inline-flex items-center gap-2 bg-accent-500 hover:bg-accent-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-colors shadow-lg shadow-amber-500/20">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                        Request Quotation
-                    </a>
+                <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;">
+                    <div class="placeholder-drawing" style="min-height:60px;"><span style="font-size:10px;">Photo</span></div>
+                    <div class="placeholder-drawing" style="min-height:60px;"><span style="font-size:10px;">Photo</span></div>
+                    <div class="placeholder-drawing" style="min-height:60px;"><span style="font-size:10px;">Photo</span></div>
+                    <div class="placeholder-drawing" style="min-height:60px;"><span style="font-size:10px;">Drawing</span></div>
                 </div>
             </div>
+            <div>
+                <span class="tag tag-gold" style="margin-bottom:12px;display:inline-block;">${cat.label}</span>
+                <h1 style="font-size:clamp(28px,4vw,42px);font-weight:300;color:var(--gray-900);margin-bottom:8px;">${product.model}</h1>
+                <div style="font-size:12px;color:var(--gray-400);margin-bottom:24px;letter-spacing:0.05em;">YENNIX Code: ${product.defaultCode}</div>
+                <p style="font-size:14px;color:var(--gray-600);line-height:1.8;margin-bottom:24px;font-weight:300;">${product.description}</p>
 
-            <!-- Tabs -->
-            <div class="mt-12 border-b border-gray-200">
-                <div class="flex gap-0 overflow-x-auto">
-                    <button class="tab-btn active" data-tab="specs">Specifications</button>
-                    <button class="tab-btn" data-tab="dimensions">Dimensions</button>
-                    <button class="tab-btn" data-tab="materials">Materials</button>
-                    <button class="tab-btn" data-tab="features">Features & Applications</button>
+                <!-- Cross Reference -->
+                <div style="border:1px solid var(--gray-200);padding:20px;margin-bottom:24px;">
+                    <div style="font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--gray-400);margin-bottom:12px;">Cross Reference</div>
+                    <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px;">
+                        ${product.replaces.map(r => `<span class="tag">${r}</span>`).join('')}
+                    </div>
+                    ${product.compatiblePumps.length ? `<div style="font-size:12px;color:var(--gray-500);margin-top:8px;">Compatible: <span style="color:var(--gold);font-weight:500;">${product.compatiblePumps.join(', ')}</span></div>` : ''}
                 </div>
+
+                <!-- Specs -->
+                <div class="spec-grid" style="margin-bottom:24px;">
+                    <div class="spec-item"><div class="spec-item-label">Shaft Diameter</div><div class="spec-item-value">${product.specs.shaftDiameter}</div></div>
+                    <div class="spec-item"><div class="spec-item-label">Pressure</div><div class="spec-item-value">${product.specs.pressure}</div></div>
+                    <div class="spec-item"><div class="spec-item-label">Temperature</div><div class="spec-item-value">${product.specs.temperature}</div></div>
+                    <div class="spec-item"><div class="spec-item-label">Speed</div><div class="spec-item-value">${product.specs.speed}</div></div>
+                </div>
+
+                <a href="/contact/" class="btn-primary" style="display:inline-flex;">Request Quotation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tabs -->
+    <section class="section section-light" style="padding-top:0;">
+        <div class="section-inner">
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="specs">Specifications</button>
+                <button class="tab-btn" data-tab="dimensions">Dimensions</button>
+                <button class="tab-btn" data-tab="materials">Materials</button>
+                <button class="tab-btn" data-tab="features">Features &amp; Applications</button>
             </div>
 
-            <div id="tab-specs" class="tab-content active py-8">
-                <div class="grid md:grid-cols-2 gap-8">
+            <div id="tab-specs" class="tab-content active" style="padding-top:32px;">
+                <div class="grid-2">
                     <div>
-                        <h3 class="text-lg font-bold text-gray-900 mb-4">Operating Conditions</h3>
-                        <div class="space-y-3">
-                            <div class="flex justify-between py-2 border-b border-gray-100"><span class="text-gray-500">Shaft Diameter</span><span class="font-semibold">${product.specs.shaftDiameter}</span></div>
-                            <div class="flex justify-between py-2 border-b border-gray-100"><span class="text-gray-500">Pressure</span><span class="font-semibold">${product.specs.pressure}</span></div>
-                            <div class="flex justify-between py-2 border-b border-gray-100"><span class="text-gray-500">Temperature</span><span class="font-semibold">${product.specs.temperature}</span></div>
-                            <div class="flex justify-between py-2 border-b border-gray-100"><span class="text-gray-500">Speed</span><span class="font-semibold">${product.specs.speed}</span></div>
+                        <h3 style="font-size:14px;font-weight:600;color:var(--gray-900);margin-bottom:16px;letter-spacing:0.05em;text-transform:uppercase;">Operating Conditions</h3>
+                        <div style="border:1px solid var(--gray-200);">
+                            <div style="display:flex;justify-content:space-between;padding:12px 16px;border-bottom:1px solid var(--gray-100);"><span style="color:var(--gray-400);font-size:13px;">Shaft Diameter</span><span style="font-weight:500;font-size:13px;">${product.specs.shaftDiameter}</span></div>
+                            <div style="display:flex;justify-content:space-between;padding:12px 16px;border-bottom:1px solid var(--gray-100);"><span style="color:var(--gray-400);font-size:13px;">Pressure</span><span style="font-weight:500;font-size:13px;">${product.specs.pressure}</span></div>
+                            <div style="display:flex;justify-content:space-between;padding:12px 16px;border-bottom:1px solid var(--gray-100);"><span style="color:var(--gray-400);font-size:13px;">Temperature</span><span style="font-weight:500;font-size:13px;">${product.specs.temperature}</span></div>
+                            <div style="display:flex;justify-content:space-between;padding:12px 16px;"><span style="color:var(--gray-400);font-size:13px;">Speed</span><span style="font-weight:500;font-size:13px;">${product.specs.speed}</span></div>
                         </div>
                     </div>
                     <div>
-                        <h3 class="text-lg font-bold text-gray-900 mb-4">Design Features</h3>
-                        <ul class="space-y-2">${product.features.map(f => `<li class="flex items-start gap-2"><svg class="w-5 h-5 text-primary-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-gray-700">${f}</span></li>`).join('')}</ul>
+                        <h3 style="font-size:14px;font-weight:600;color:var(--gray-900);margin-bottom:16px;letter-spacing:0.05em;text-transform:uppercase;">Design Features</h3>
+                        <ul class="feature-list">${product.features.map(f => '<li><svg class="feature-check" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>' + f + '</li>').join('')}</ul>
                     </div>
                 </div>
             </div>
 
-            <div id="tab-dimensions" class="tab-content py-8">${dimensionsHTML}</div>
+            <div id="tab-dimensions" class="tab-content" style="padding-top:32px;">${dimensionsHTML}</div>
 
-            <div id="tab-materials" class="tab-content py-8">
-                <h3 class="text-lg font-bold text-gray-900 mb-6">Material Options & Coding System</h3>
-                <div class="bg-gray-50 rounded-2xl p-6 mb-8">
-                    <div class="text-sm text-gray-500 mb-3">Example Material Code</div>
-                    <div class="flex items-center gap-2 flex-wrap">
-                        ${codeParts.map((p, i) => {
-                            const labels = ['Model', 'Seal Face', 'Elastomer', 'Metal'];
-                            const colors = ['bg-blue-50 text-primary-700 border-primary-200', 'bg-red-50 text-red-700 border-red-200', 'bg-green-50 text-green-700 border-green-200', 'bg-gray-50 text-gray-700 border-gray-200'];
-                            return `<span class="material-badge ${colors[i]}"><strong>${p}</strong> ${labels[i]}</span>${i < codeParts.length - 1 ? '<span class="text-gray-300">-</span>' : ''}`;
-                        }).join('')}
-                    </div>
+            <div id="tab-materials" class="tab-content" style="padding-top:32px;">
+                <h3 style="font-size:16px;font-weight:600;color:var(--gray-900);margin-bottom:24px;">Material Options &amp; Coding System</h3>
+                <div class="code-display" style="margin-bottom:32px;">
+                    ${codeParts.map((p, i) => {
+                        const labels = ['Model', 'Seal Face', 'Elastomer', 'Metal'];
+                        const classes = ['', 'code-part-face', 'code-part-elastomer', 'code-part-metal'];
+                        return `<span class="code-part ${classes[i]}"><strong>${p}</strong> ${labels[i]}</span>${i < codeParts.length - 1 ? '<span class="code-sep">—</span>' : ''}`;
+                    }).join('')}
                 </div>
-                <div class="grid md:grid-cols-3 gap-6">${matGrid}</div>
+                <div class="mat-grid">${matCards}</div>
             </div>
 
-            <div id="tab-features" class="tab-content py-8">
-                <div class="grid md:grid-cols-2 gap-8">
+            <div id="tab-features" class="tab-content" style="padding-top:32px;">
+                <div class="grid-2">
                     <div>
-                        <h3 class="text-lg font-bold text-gray-900 mb-4">Key Features</h3>
-                        <ul class="space-y-3">${product.features.map(f => `<li class="flex items-start gap-3 p-3 bg-gray-50 rounded-lg"><svg class="w-5 h-5 text-primary-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-gray-700">${f}</span></li>`).join('')}</ul>
+                        <h3 style="font-size:14px;font-weight:600;color:var(--gray-900);margin-bottom:16px;letter-spacing:0.05em;text-transform:uppercase;">Key Features</h3>
+                        <ul class="feature-list">${product.features.map(f => '<li><svg class="feature-check" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>' + f + '</li>').join('')}</ul>
                     </div>
                     <div>
-                        <h3 class="text-lg font-bold text-gray-900 mb-4">Typical Applications</h3>
-                        <div class="space-y-2 mb-8">${product.applications.map(a => `<div class="flex items-center gap-2"><span class="w-2 h-2 bg-accent-400 rounded-full"></span><span class="text-gray-700">${a}</span></div>`).join('')}</div>
-                        <h3 class="text-lg font-bold text-gray-900 mb-4">Compatible Pump Brands</h3>
-                        <div class="flex flex-wrap gap-2">${product.compatiblePumps.map(b => `<span class="xref-tag bg-primary-50 text-primary-700">${b}</span>`).join('')}</div>
+                        <h3 style="font-size:14px;font-weight:600;color:var(--gray-900);margin-bottom:16px;letter-spacing:0.05em;text-transform:uppercase;">Applications</h3>
+                        <div style="margin-bottom:24px;">${product.applications.map(a => '<div style="display:flex;align-items:center;gap:8px;padding:8px 0;border-bottom:1px solid var(--gray-100);font-size:13px;color:var(--gray-600);"><span style="width:6px;height:6px;background:var(--gold);border-radius:50%;flex-shrink:0;"></span>' + a + '</div>').join('')}</div>
+                        <h3 style="font-size:14px;font-weight:600;color:var(--gray-900);margin-bottom:16px;letter-spacing:0.05em;text-transform:uppercase;">Compatible Pump Brands</h3>
+                        <div style="display:flex;flex-wrap:wrap;gap:6px;">${product.compatiblePumps.map(b => '<span class="tag tag-gold">' + b + '</span>').join('')}</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Related Products -->
     ${related.length ? `
-    <section class="py-12 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Products</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">${relatedHTML}</div>
+    <section class="section">
+        <div class="section-inner">
+            <div class="section-label">Related Products</div>
+            <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;">
+                ${related.map(p => `
+                    <a href="/product/${p.slug}.html" class="product-card">
+                        <div class="placeholder-drawing" style="min-height:120px;border-bottom:1px dashed var(--gray-300);margin:-32px -28px 16px;border-left:0;border-right:0;border-top:0;border-radius:0;">
+                            <svg fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24" style="width:24px;height:24px;color:var(--gray-300);"><path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                        </div>
+                        <h3 style="font-size:16px;font-weight:600;color:var(--gray-900);margin-bottom:4px;">${p.model}</h3>
+                        <p style="font-size:12px;color:var(--gray-400);">${p.replaces.slice(0,2).join(', ')}</p>
+                    </a>
+                `).join('')}
+            </div>
         </div>
     </section>` : ''}
 
     <!-- Footer -->
-    <footer class="bg-primary-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div><div class="flex items-center space-x-2 mb-4"><div class="w-8 h-8 bg-gradient-to-br from-accent-400 to-accent-600 rounded-lg flex items-center justify-center"><span class="text-white font-bold text-sm">Y</span></div><span class="text-xl font-bold tracking-tight">YENNIX</span></div><p class="text-blue-300 text-sm">Professional mechanical seal supplier.</p></div>
-                <div><h4 class="font-semibold mb-4">Products</h4><ul class="space-y-2 text-sm text-blue-300"><li><a href="/products/component-seals.html" class="hover:text-white">Component Seals</a></li><li><a href="/products/cartridge-seals.html" class="hover:text-white">Cartridge Seals</a></li><li><a href="/products/custom-seals.html" class="hover:text-white">Custom & ODM</a></li><li><a href="/products/parts.html" class="hover:text-white">Seal Parts</a></li></ul></div>
-                <div><h4 class="font-semibold mb-4">Resources</h4><ul class="space-y-2 text-sm text-blue-300"><li><a href="/cross-reference/" class="hover:text-white">Cross Reference</a></li><li><a href="/reverse-engineering/" class="hover:text-white">Reverse Engineering</a></li><li><a href="/quality/" class="hover:text-white">Quality</a></li></ul></div>
-                <div><h4 class="font-semibold mb-4">Contact</h4><ul class="space-y-2 text-sm text-blue-300"><li><a href="mailto:sales@yennix.com" class="hover:text-white">sales@yennix.com</a></li><li><a href="/contact/" class="hover:text-white">Get a Quote</a></li></ul></div>
-            </div>
-            <div class="border-t border-blue-800 mt-12 pt-8 text-center text-blue-400 text-sm">&copy; 2026 YENNIX. All rights reserved.</div>
-        </div>
-    </footer>`;
+    <footer class="footer"><div class="footer-inner"><div class="footer-brand"><a href="/" class="nav-logo"><div class="nav-logo-mark">Y</div><span class="nav-logo-text">YENNIX</span></a><p>Professional mechanical seal supplier.</p></div><div><h4>Products</h4><ul><li><a href="/products/component-seals.html">Component Seals</a></li><li><a href="/products/cartridge-seals.html">Cartridge Seals</a></li><li><a href="/products/custom-seals.html">Custom &amp; ODM</a></li><li><a href="/products/parts.html">Seal Parts</a></li></ul></div><div><h4>Resources</h4><ul><li><a href="/cross-reference/">Cross Reference</a></li><li><a href="/reverse-engineering/">Reverse Engineering</a></li><li><a href="/quality/">Quality</a></li></ul></div><div><h4>Contact</h4><ul><li><a href="mailto:sales@yennix.com">sales@yennix.com</a></li><li><a href="/contact/">Get a Quote</a></li></ul></div></div><div class="footer-bottom" style="text-align:center;">&copy; 2026 YENNIX. All rights reserved.</div></footer>
 
-    // Wire up interactions
+    <div id="scroll-top" class="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg></div>`;
+
+    // Wire interactions
     document.getElementById('mobile-menu-btn').addEventListener('click', function() {
-        document.getElementById('mobile-menu').classList.toggle('hidden');
+        document.getElementById('mobile-menu').classList.toggle('open');
     });
-
-    document.querySelectorAll('.tab-btn').forEach(btn => {
+    window.addEventListener('scroll', function() {
+        var nb = document.getElementById('navbar'), st = document.getElementById('scroll-top');
+        if (window.scrollY > 50) nb.classList.add('scrolled'); else nb.classList.remove('scrolled');
+        if (window.scrollY > 400) st.classList.add('visible'); else st.classList.remove('visible');
+    });
+    document.querySelectorAll('.tab-btn').forEach(function(btn) {
         btn.addEventListener('click', function() {
-            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-            this.classList.add('active');
-            document.getElementById('tab-' + this.dataset.tab).classList.add('active');
+            document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
+            document.querySelectorAll('.tab-content').forEach(function(c) { c.classList.remove('active'); });
+            btn.classList.add('active');
+            document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
         });
     });
 }
