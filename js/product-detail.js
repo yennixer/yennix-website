@@ -93,12 +93,10 @@ function initProductPage(slug) {
                     <svg fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24" style="width:64px;height:64px;color:var(--gray-300);margin-bottom:8px;"><path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
                     <span>Product Drawing</span>
                 </div>`}
-                <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;">
-                    <div class="placeholder-drawing" style="min-height:60px;"><span style="font-size:10px;">Photo</span></div>
-                    <div class="placeholder-drawing" style="min-height:60px;"><span style="font-size:10px;">Photo</span></div>
-                    <div class="placeholder-drawing" style="min-height:60px;"><span style="font-size:10px;">Photo</span></div>
-                    <div class="placeholder-drawing" style="min-height:60px;"><span style="font-size:10px;">Drawing</span></div>
-                </div>
+                ${product.image ? `<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+                    <img src="${product.image}" alt="${product.model}" style="width:100%;height:auto;object-fit:contain;border:1px solid var(--gray-100);">
+                    ${product.image.replace('.jpg','-real1.jpg') !== product.image ? `<img src="${product.image.replace('.jpg','-real1.jpg')}" alt="${product.model} photo" style="width:100%;height:auto;object-fit:contain;border:1px solid var(--gray-100);" onerror="this.style.display='none'">` : ''}
+                </div>` : ''}
             </div>
             <div>
                 <span class="tag tag-gold" style="margin-bottom:12px;display:inline-block;">${cat.label}</span>
