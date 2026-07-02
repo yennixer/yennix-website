@@ -1545,11 +1545,106 @@ const YENNIX_MATERIAL_CODES = {
 
 // Cross-reference data
 const YENNIX_CROSS_REF = [
-  { brand: "Burgmann (EagleBurgmann)", models: ["M7N", "M92N", "MG1", "MG12", "MG13"], yennixProducts: ["M7N", "MJ92N", "MG01", "MG02", "MG03"] },
-  { brand: "John Crane", models: ["Type 1", "Type 21", "Type 502", "Type 4610"], yennixProducts: ["MR3", "MT502"] },
-  { brand: "AESSEAL", models: ["B02", "B05", "CDSA"], yennixProducts: ["M7N", "M680"] },
-  { brand: "Flygt (Xylem)", models: ["2051", "2052", "2055"], yennixProducts: ["YN-FLYGT"] }
+  { brand: "Burgmann (EagleBurgmann)", models: ["M7N", "M74D", "MG1", "MG12", "MG13", "M92N"], yennixProducts: ["M7N", "M74D", "MG01", "MG02", "MG03", "MJ92N"] },
+  { brand: "John Crane", models: ["Type 1", "Type 6", "Type 10", "Type 11", "Type 21", "Type 32", "Type 4610", "Type 5611"], yennixProducts: ["MR3", "MT1", "MT2", "MT37", "M680", "MT32", "M2100K", "M2100S"] },
+  { brand: "AESSEAL", models: ["B02", "B05", "CDSA", "SD002", "SD006"], yennixProducts: ["M7N", "M7N", "M680", "MR3", "MT1"] },
+  { brand: "Flowserve", models: ["PAC-SEAL 203", "PAC-SEAL 207", "JD300"], yennixProducts: ["M7N", "MG01", "M680"] },
+  { brand: "Vulcan", models: ["Type 48", "Type 49"], yennixProducts: ["M7N", "M74D"] },
+  { brand: "Flygt (Xylem)", models: ["2051", "2052", "2055"], yennixProducts: ["YN-FLYGT", "YN-FLYGT", "YN-FLYGT"] }
 ];
+
+
+// Industry Applications mapping
+const YENNIX_INDUSTRIES = {
+  "Water Treatment": {
+    icon: "water",
+    description: "Municipal and industrial water treatment plants rely on YENNIX seals for pump reliability in filtration, chemical dosing, and wastewater processing.",
+    applications: ["Centrifugal pumps", "Chemical dosing pumps", "Filtration systems", "Wastewater processing"]
+  },
+  "Chemical Processing": {
+    icon: "chemistry",
+    description: "YENNIX seals handle aggressive chemicals, acids, and solvents with compatible materials like SiC, Hastelloy, and FFKM elastomers.",
+    applications: ["Chemical transfer pumps", "Reactor vessels", "Acid circulation", "Solvent handling"]
+  },
+  "Oil & Gas": {
+    icon: "oil",
+    description: "API 682 compliant cartridge seals for upstream, midstream, and downstream applications including refineries and petrochemical plants.",
+    applications: ["Refinery pumps", "Pipeline compressors", "Crude oil transfer", "Petrochemical processing"]
+  },
+  "Food & Beverage": {
+    icon: "food",
+    description: "FDA-compliant materials and hygienic seal designs for food processing, dairy, and beverage production equipment.",
+    applications: ["Food processing pumps", "Dairy equipment", "Beverage production", "CIP systems"]
+  },
+  "Mining": {
+    icon: "mining",
+    description: "Heavy-duty seals designed to withstand abrasive slurries, high pressures, and harsh operating conditions in mining operations.",
+    applications: ["Slurry pumps", "Dewatering pumps", "Ore processing", "Tailings management"]
+  },
+  "Power Generation": {
+    icon: "power",
+    description: "High-temperature and high-pressure seals for boilers, condensers, cooling water, and auxiliary systems in power plants.",
+    applications: ["Boiler feed pumps", "Condensate pumps", "Cooling water systems", "Turbine auxiliary"]
+  },
+  "Pharmaceutical": {
+    icon: "pharma",
+    description: "Sanitary-grade seals with FDA/USP Class VI compliant materials for sterile processing and clean-in-place systems.",
+    applications: ["Sterile process pumps", "CIP/SIP systems", "Bioreactor vessels", "Purified water loops"]
+  },
+  "Marine": {
+    icon: "marine",
+    description: "Corrosion-resistant seals for seawater, ballast, and engine cooling systems in marine and offshore environments.",
+    applications: ["Ballast pumps", "Seawater cooling", "Engine cooling", "Bilge pumps"]
+  }
+};
+
+// Map product applications to relevant industries
+const APPLICATION_TO_INDUSTRY = {
+  "Water treatment": "Water Treatment",
+  "Wastewater treatment": "Water Treatment",
+  "Chemical processing": "Chemical Processing",
+  "Petrochemical": "Oil & Gas",
+  "Oil & gas": "Oil & Gas",
+  "Food processing": "Food & Beverage",
+  "Beverage": "Food & Beverage",
+  "Mining": "Mining",
+  "Mining dewatering": "Mining",
+  "Power generation": "Power Generation",
+  "Pharmaceutical": "Pharmaceutical",
+  "Marine": "Marine",
+  "Submersible pumps": "Marine",
+  "HVAC systems": "Water Treatment",
+  "General industrial pumps": "Water Treatment",
+  "Toxic/hazardous media": "Chemical Processing",
+  "High-temperature applications": "Power Generation",
+  "API 682 applications": "Oil & Gas",
+  "Special pump shaft configurations": "Oil & Gas",
+  "Multistage pumps": "Water Treatment",
+  "Water supply": "Water Treatment",
+  "Industrial circulation": "Chemical Processing",
+  "Booster systems": "Water Treatment",
+  "Construction": "Mining",
+  "Seal repair": "Water Treatment",
+  "OEM replacement": "Water Treatment",
+  "Small centrifugal pumps": "Water Treatment",
+  "Pool & spa": "Water Treatment",
+  "General industrial": "Water Treatment",
+  "Chemical resistant applications": "Chemical Processing",
+  "Seal secondary sealing": "Chemical Processing",
+  "Pump repair": "Water Treatment",
+  "Shaft protection": "Water Treatment"
+};
+
+function getIndustriesForProduct(product) {
+  const industries = new Set();
+  if (product.applications) {
+    product.applications.forEach(function(app) {
+      const industry = APPLICATION_TO_INDUSTRY[app];
+      if (industry) industries.add(industry);
+    });
+  }
+  return Array.from(industries);
+}
 
 // Pump brands
 const YENNIX_PUMP_BRANDS = [
