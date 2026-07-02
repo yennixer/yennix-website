@@ -192,11 +192,12 @@ function initProductPage(slug) {
             <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;">
                 ${related.map(p => `
                     <a href="/product/${p.slug}.html" class="product-card">
-                        ${p.image ? `<img src="${p.image}" alt="${p.model}" style="width:100%;height:120px;object-fit:contain;border-bottom:1px dashed var(--gray-300);margin:-32px -28px 16px;" onerror="this.outerHTML='<div class=placeholder-drawing style=min-height:120px;border-bottom:1px dashed var(--gray-300);margin:-32px -28px 16px;border-left:0;border-right:0;border-top:0;border-radius:0;><svg fill=none stroke=currentColor stroke-width=1 viewBox=0 0 24 24 style=width:24px;height:24px;color:var(--gray-300);><path d=M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z/></svg></div>'">` : `<div class="placeholder-drawing" style="min-height:120px;border-bottom:1px dashed var(--gray-300);margin:-32px -28px 16px;border-left:0;border-right:0;border-top:0;border-radius:0;">
-                            <svg fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24" style="width:24px;height:24px;color:var(--gray-300);"><path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
-                        </div>`}
-                        <h3 style="font-size:16px;font-weight:600;color:var(--gray-900);margin-bottom:4px;">${p.model}</h3>
-                        <p style="font-size:12px;color:var(--gray-400);">${p.replaces.slice(0,2).join(', ')}</p>
+                        <div class="product-card-icon"><img src="${p.image || ''}" alt="${p.model}" onerror="this.parentElement.innerHTML='<svg fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1&quot; viewBox=&quot;0 0 24 24&quot; style=&quot;width:32px;height:32px;color:var(--gray-300);&quot;><path d=&quot;M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z&quot;/></svg>'"></div>
+                        <div class="product-card-body">
+                            <h3>${p.model}</h3>
+                            <p>${p.description.length > 80 ? p.description.substring(0, 80) + '...' : p.description}</p>
+                            <span class="product-card-link">View Details →</span>
+                        </div>
                     </a>
                 `).join('')}
             </div>
