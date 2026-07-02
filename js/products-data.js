@@ -622,30 +622,6 @@ const YENNIX_PRODUCTS = [
     applications: ["Water pumps", "Industrial circulation", "Cooling systems", "General purpose pumps"],
     image: "/images/products/mr3.jpg"
   },
-  {
-    id: "mu3",
-    model: "MU3",
-    slug: "mu3",
-    category: "component-seals",
-    categoryName: "Component Seals",
-    name: "MU3 Chemical Component Seal",
-    shortName: "MU3",
-    replaces: [],
-    compatiblePumps: [],
-    description: "The MU3 is a chemical service component seal designed for aggressive media and corrosive environments. Its compact design with PTFE or elastomeric secondary sealing options makes it ideal for chemical pumps and similar demanding applications.",
-    features: [
-      "Chemical-resistant design",
-      "PTFE and elastomer secondary seal options",
-      "Compact installation length",
-      "Balanced seal face geometry",
-      "Suitable for corrosive media"
-    ],
-    specs: {
-      shaftDiameter: "10.0–40.0 mm",
-      pressure: "≤ 1.6 MPa (16 bar)",
-      temperature: "-20°C to +180°C",
-      speed: "≤ 12 m/s"
-    },
     dimensions: [
       { d: 10, D1: 20, D2: 21, L1: 15, L2: 7, TotalWL: 22 },
       { d: 12, D1: 22, D2: 23, L1: 18, L2: 7, TotalWL: 25 },
@@ -1001,30 +977,6 @@ const YENNIX_PRODUCTS = [
     applications: ["North American pumps", "Chemical processing", "Water treatment", "General industrial"],
     image: "/images/products/mt21.jpg"
   },
-  {
-    id: "mt21d",
-    model: "MT21D",
-    slug: "mt21d",
-    category: "cartridge-seals",
-    categoryName: "Cartridge Seals",
-    name: "MT21D Metric Cartridge Seal",
-    shortName: "MT21D",
-    replaces: [],
-    compatiblePumps: [],
-    description: "The MT21D is the metric version of the MT21 cartridge seal. Designed for European and Asian pump models, it shares the same reliable cartridge design with metric shaft sizing for seamless integration.",
-    features: [
-      "Metric shaft design (16 to 75 mm)",
-      "Pre-assembled cartridge unit",
-      "No dimensional measuring required",
-      "Same design as MT21 in metric sizing",
-      "Wide range of pump compatibility"
-    ],
-    specs: {
-      shaftDiameter: "16.0–75.0 mm",
-      pressure: "≤ 2.0 MPa (20 bar)",
-      temperature: "-30°C to +180°C",
-      speed: "≤ 15 m/s"
-    },
     dimensions: [
       { d: 16, D1: 26.5, D2: 27, L1: 25.7, L2: 10.3, L: 36 },
       { d: 18, D1: 30.5, D2: 33, L1: 27.2, L2: 10.3, L: 37.5 },
@@ -1063,30 +1015,6 @@ const YENNIX_PRODUCTS = [
     applications: ["European/Asian pumps", "Chemical processing", "Water treatment", "General industrial"],
     image: "/images/products/mt21d.jpg"
   },
-  {
-    id: "mt32",
-    model: "MT32",
-    slug: "mt32",
-    category: "cartridge-seals",
-    categoryName: "Cartridge Seals",
-    name: "MT32 Cartridge Seal",
-    shortName: "MT32",
-    replaces: [],
-    compatiblePumps: [],
-    description: "The MT32 is a compact cartridge seal designed for small to medium pump sizes. Its pre-assembled design with integrated sleeve ensures correct installation, while the compact dimensions make it suitable for space-constrained applications.",
-    features: [
-      "Pre-assembled cartridge unit",
-      "Compact design for small pumps",
-      "O-ring secondary sealing",
-      "Integrated sleeve",
-      "Easy installation and removal"
-    ],
-    specs: {
-      shaftDiameter: "10.0–80.0 mm",
-      pressure: "≤ 1.6 MPa (16 bar)",
-      temperature: "-20°C to +180°C",
-      speed: "≤ 12 m/s"
-    },
     dimensions: [
       { d: 10, D1: 20, D2: 19.2, L1: 16.9, L2: 6.6 },
       { d: 12, D1: 22, D2: 21.6, L1: 17.4, L2: 5.6 },
@@ -1124,30 +1052,6 @@ const YENNIX_PRODUCTS = [
     applications: ["Small centrifugal pumps", "Water treatment", "Chemical processing", "General industrial"],
     image: "/images/products/mt32.jpg"
   },
-  {
-    id: "mt37",
-    model: "MT37",
-    slug: "mt37",
-    category: "cartridge-seals",
-    categoryName: "Cartridge Seals",
-    name: "MT37 Cartridge Seal",
-    shortName: "MT37",
-    replaces: [],
-    compatiblePumps: [],
-    description: "The MT37 is a cartridge seal sharing the same dimension platform as the MT32. Designed for medium to large pump sizes, it provides the same reliable cartridge sealing performance with extended size coverage.",
-    features: [
-      "Pre-assembled cartridge unit",
-      "Same platform as MT32",
-      "O-ring secondary sealing",
-      "Integrated sleeve",
-      "Extended size range"
-    ],
-    specs: {
-      shaftDiameter: "10.0–80.0 mm",
-      pressure: "≤ 1.6 MPa (16 bar)",
-      temperature: "-20°C to +180°C",
-      speed: "≤ 12 m/s"
-    },
     dimensions: [
       { d: 10, D1: 20, D2: 19.2, L1: 16.9, L2: 6.6 },
       { d: 12, D1: 22, D2: 21.6, L1: 17.4, L2: 5.6 },
@@ -1185,30 +1089,6 @@ const YENNIX_PRODUCTS = [
     applications: ["Medium centrifugal pumps", "Water treatment", "Chemical processing", "General industrial"],
     image: "/images/products/mt37.jpg"
   },
-  {
-    id: "mt80",
-    model: "MT80",
-    slug: "mt80",
-    category: "cartridge-seals",
-    categoryName: "Cartridge Seals",
-    name: "MT80 Cartridge Seal",
-    shortName: "MT80",
-    replaces: [],
-    compatiblePumps: [],
-    description: "The MT80 is a cartridge seal designed for heavy-duty industrial pump applications. Its robust pre-assembled construction ensures reliable sealing performance in demanding operating conditions.",
-    features: [
-      "Pre-assembled cartridge unit",
-      "Heavy-duty construction",
-      "O-ring secondary sealing",
-      "No dimensional measuring required",
-      "Designed for demanding applications"
-    ],
-    specs: {
-      shaftDiameter: "Contact us for details",
-      pressure: "≤ 2.5 MPa (25 bar)",
-      temperature: "-40°C to +220°C",
-      speed: "≤ 20 m/s"
-    },
     dimensions: [],
     materials: {
       sealFace: ["A - Silicon Carbide (SiC)", "B - Tungsten Carbide (TC)", "C - Carbon Graphite"],
@@ -1219,30 +1099,6 @@ const YENNIX_PRODUCTS = [
     applications: ["Heavy-duty pumps", "Chemical processing", "Petrochemical", "Refining"],
     image: "/images/products/mt80.jpg"
   },
-  {
-    id: "mt560dc",
-    model: "MT560DC",
-    slug: "mt560dc",
-    category: "cartridge-seals",
-    categoryName: "Cartridge Seals",
-    name: "MT560DC Double Cartridge Seal",
-    shortName: "MT560DC",
-    replaces: [],
-    compatiblePumps: [],
-    description: "The MT560DC is a double cartridge seal designed for submersible pump applications. It features separate inboard and outboard seal configurations with various seat types (vulcanized and cup) for optimal performance in pump shaft sealing arrangements.",
-    features: [
-      "Double cartridge seal design",
-      "Separate inboard and outboard configurations",
-      "Multiple seat type options (vulcanized / cup)",
-      "Designed for submersible pump applications",
-      "Configurable pump shaft arrangements"
-    ],
-    specs: {
-      shaftDiameter: "25–50 mm (per shaft)",
-      pressure: "≤ 1.6 MPa (16 bar)",
-      temperature: "-20°C to +150°C",
-      speed: "≤ 10 m/s"
-    },
     dimensions: [],
     materials: {
       sealFace: ["A - Silicon Carbide (SiC)", "B - Tungsten Carbide (TC)", "C - Carbon Graphite"],
@@ -1253,30 +1109,6 @@ const YENNIX_PRODUCTS = [
     applications: ["Submersible pumps", "Wastewater treatment", "Mining dewatering", "Flygt-type pumps"],
     image: "/images/products/mt560dc.jpg"
   },
-  {
-    id: "mt560d",
-    model: "MT560D",
-    slug: "mt560d",
-    category: "cartridge-seals",
-    categoryName: "Cartridge Seals",
-    name: "MT560D Double Cartridge Seal",
-    shortName: "MT560D",
-    replaces: [],
-    compatiblePumps: [],
-    description: "The MT560D is a double cartridge seal designed for demanding double-seal applications. It provides dual barrier protection for hazardous and toxic media services, ensuring zero emissions to the environment.",
-    features: [
-      "Double cartridge seal design",
-      "Dual barrier protection",
-      "Pre-assembled unit",
-      "For hazardous/toxic media",
-      "API 682 compliant"
-    ],
-    specs: {
-      shaftDiameter: "Contact us for details",
-      pressure: "≤ 4.0 MPa (40 bar)",
-      temperature: "-40°C to +250°C",
-      speed: "≤ 15 m/s"
-    },
     dimensions: [],
     materials: {
       sealFace: ["A - Silicon Carbide (SiC)", "B - Tungsten Carbide (TC)", "C - Carbon Graphite"],
@@ -1287,30 +1119,6 @@ const YENNIX_PRODUCTS = [
     applications: ["Hazardous media", "Toxic service", "API refinery pumps", "Double-seal applications"],
     image: "/images/products/mt560d.jpg"
   },
-  {
-    id: "mt502",
-    model: "MT502",
-    slug: "mt502",
-    category: "cartridge-seals",
-    categoryName: "Cartridge Seals",
-    name: "MT502 Cartridge Seal",
-    shortName: "MT502",
-    replaces: [],
-    compatiblePumps: [],
-    description: "The MT502 is a cartridge seal designed for a wide range of pump applications. Its pre-assembled cartridge unit simplifies installation and ensures correct seal setting, while the robust construction provides reliable sealing across demanding operating conditions.",
-    features: [
-      "Pre-assembled cartridge unit",
-      "No dimensional measuring required",
-      "Wide size range from 14 to 100 mm",
-      "O-ring secondary sealing",
-      "Easy installation and removal"
-    ],
-    specs: {
-      shaftDiameter: "14.0–100.0 mm",
-      pressure: "≤ 2.5 MPa (25 bar)",
-      temperature: "-40°C to +220°C",
-      speed: "≤ 20 m/s"
-    },
     dimensions: [
       { d: 14, D1: 24, D2: 25, L1: 23, L2: 12, L: 35 },
       { d: 16, D1: 26, D2: 27, L1: 23, L2: 12, L: 35 },
