@@ -22,7 +22,7 @@
 
 /* Base */
 html { scroll-behavior: smooth; }
-body { font-family: 'Inter', system-ui, -apple-system, sans-serif; color: var(--gray-700); }
+body { font-family: 'Inter', system-ui, -apple-system, sans-serif; color: var(--gray-700); margin: 0; padding: 0; }
 
 /* ===== NAVIGATION ===== */
 .nav-main {
