@@ -214,6 +214,13 @@ section, header, footer, nav, main { margin: 0; }
   background: linear-gradient(170deg, rgba(10,22,40,0.75) 0%, rgba(20,33,56,0.7) 100%);
 }
 
+.page-header-products {
+  background: url('../images/products-banner.jpg') center center / cover no-repeat;
+}
+.page-header-products::before {
+  background: linear-gradient(170deg, rgba(10,22,40,0.75) 0%, rgba(20,33,56,0.7) 100%);
+}
+
 /* ===== SECTION ===== */
 .section {
   padding: 96px 24px;
