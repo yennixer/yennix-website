@@ -187,6 +187,26 @@ body { font-family: 'Inter', system-ui, -apple-system, sans-serif; color: var(--
   max-width: 560px; line-height: 1.7; font-weight: 300;
 }
 
+/* Page header cover images */
+.page-header-component {
+  background: url('../images/cover-component-seals.jpg') center center / cover no-repeat;
+}
+.page-header-cartridge {
+  background: url('../images/cover-cartridge-seals.jpg') center center / cover no-repeat;
+}
+.page-header-custom {
+  background: url('../images/cover-custom-seals.jpg') center center / cover no-repeat;
+}
+.page-header-parts {
+  background: url('../images/cover-seal-parts.jpg') center center / cover no-repeat;
+}
+.page-header-component::before,
+.page-header-cartridge::before,
+.page-header-custom::before,
+.page-header-parts::before {
+  background: linear-gradient(170deg, rgba(10,22,40,0.75) 0%, rgba(20,33,56,0.7) 100%);
+}
+
 /* ===== SECTION ===== */
 .section {
   padding: 96px 24px;
