@@ -278,7 +278,7 @@ section, header, footer, nav, main { margin: 0; }
   margin-bottom: 0; transition: border-color 0.3s;
   overflow: hidden; border-radius: 0;
   position: relative;
-  background: #f5f7fa;
+  background: #ffffff;
   border-bottom: 1px solid #e8eaed;
 }
 .product-card:hover .product-card-icon { border-color: var(--gold); }
