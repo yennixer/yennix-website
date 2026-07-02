@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/custom.css?v=20260702e">
+    <link rel="stylesheet" href="/css/custom.css?v=20260702g">
 </head>
 <body>
     <nav class="nav-main" id="navbar"><div class="nav-inner"><a href="/" class="nav-logo"><div class="nav-logo-mark">Y</div><span class="nav-logo-text">YENNIX</span></a><div class="nav-links"><a href="/">Home</a><a href="/products/" class="active">Products</a><a href="/cross-reference/">Cross Reference</a><a href="/reverse-engineering/">Engineering</a><a href="/quality/">Quality</a><a href="/about/">About</a><a href="/contact/" class="nav-cta">Get a Quote</a></div><button class="nav-mobile-btn" id="mobile-menu-btn"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg></button></div><div class="nav-mobile-menu" id="mobile-menu"><a href="/">Home</a><a href="/products/">Products</a><a href="/cross-reference/">Cross Reference</a><a href="/reverse-engineering/">Engineering</a><a href="/quality/">Quality</a><a href="/about/">About</a><a href="/contact/">Get a Quote</a></div></nav>
@@ -32,7 +32,26 @@
     <script>
         document.getElementById('mobile-menu-btn').addEventListener('click',function(){document.getElementById('mobile-menu').classList.toggle('open')});
         window.addEventListener('scroll',function(){var nb=document.getElementById('navbar'),st=document.getElementById('scroll-top');if(window.scrollY>50)nb.classList.add('scrolled');else nb.classList.remove('scrolled');if(window.scrollY>400)st.classList.add('visible');else st.classList.remove('visible')});
-        var products=YENNIX_PRODUCTS.filter(function(p){return p.category==='custom-seals'});
-        document.getElementById('product-list').innerHTML=products.map(function(p){return '<a href="/product/'+p.slug+'.html" class="product-card"><div class="placeholder-drawing" style="min-height:180px;border-bottom:1px dashed var(--gray-300);margin:-32px -28px 20px;border-left:0;border-right:0;border-top:0;border-radius:0;"><svg fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24" style="width:32px;height:32px;color:var(--gray-300);"><path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg></div><h3 style="font-size:20px;font-weight:600;color:var(--gray-900);margin-bottom:8px;">'+p.model+'</h3><p style="font-size:13px;color:var(--gray-500);line-height:1.6;margin-bottom:12px;">'+p.description.substring(0,120)+'...</p>'+(p.replaces.length?'<div style="font-size:12px;color:var(--gray-400);margin-bottom:12px;">Replaces: '+p.replaces.join(', ')+'</div>':'')+'<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:12px;color:var(--gray-500);"><div><span style="color:var(--gray-400)">Shaft:</span> '+p.specs.shaftDiameter+'</div><div><span style="color:var(--gray-400)">Pressure:</span> '+p.specs.pressure+'</div></div><span class="product-card-link" style="margin-top:16px;display:inline-flex;">View Details <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></span></a>'}).join('');
+
+        var products = YENNIX_PRODUCTS.filter(function(p){return p.category==='custom-seals'});
+        document.getElementById('product-list').innerHTML = products.map(function(p){
+            return '<a href="/product/'+p.slug+'.html" class="product-card">'+
+                '<div class="product-card-icon">'+
+                    (p.image ? '<img src="'+p.image+'" alt="'+p.model+'" onerror="this.style.display=\'none\'">' : '')+
+                '</div>'+
+                '<div class="product-card-body">'+
+                    '<span class="tag tag-gold">Custom / ODM</span>'+
+                    '<h3>'+p.model+'</h3>'+
+                    '<p>'+(p.description.length > 100 ? p.description.substring(0,100)+'...' : p.description)+'</p>'+
+                    '<div class="product-card-specs">'+
+                        '<div><span>Shaft:</span> '+p.specs.shaftDiameter+'</div>'+
+                        '<div><span>Pressure:</span> '+p.specs.pressure+'</div>'+
+                        '<div><span>Temp:</span> '+p.specs.temperature+'</div>'+
+                        '<div><span>Speed:</span> '+p.specs.speed+'</div>'+
+                    '</div>'+
+                    '<span class="product-card-link">View Details <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></span>'+
+                '</div>'+
+            '</a>';
+        }).join('');
     </script>
 </body></html>

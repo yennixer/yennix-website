@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/custom.css?v=20260702e">
+    <link rel="stylesheet" href="/css/custom.css?v=20260702g">
 </head>
 <body>
 
@@ -69,25 +69,25 @@
             <div id="category-overview">
                 <div class="product-grid" style="margin-bottom: 64px;">
                     <a href="/products/component-seals.html" class="product-card">
-                        <div class="product-card-icon"><img src="/images/cover-component-seals.jpg?v=20260702f" alt="Component Seals"></div>
+                        <div class="product-card-icon"><img src="/images/cover-component-seals.jpg?v=20260702g" alt="Component Seals"></div>
                         <h3>Component Seals</h3>
                         <p>Bellows and pusher type seals for general industrial pumps</p>
                         <span class="product-card-link" style="color: var(--gray-400);">11 models</span>
                     </a>
                     <a href="/products/cartridge-seals.html" class="product-card">
-                        <div class="product-card-icon"><img src="/images/cover-cartridge-seals.jpg?v=20260702f" alt="Cartridge Seals"></div>
+                        <div class="product-card-icon"><img src="/images/cover-cartridge-seals.jpg?v=20260702g" alt="Cartridge Seals"></div>
                         <h3>Cartridge Seals</h3>
                         <p>Pre-assembled single and double cartridge seals</p>
                         <span class="product-card-link" style="color: var(--gray-400);">12 models</span>
                     </a>
                     <a href="/products/custom-seals.html" class="product-card">
-                        <div class="product-card-icon"><img src="/images/cover-custom-seals.jpg?v=20260702f" alt="Custom & ODM Seals"></div>
+                        <div class="product-card-icon"><img src="/images/cover-custom-seals.jpg?v=20260702g" alt="Custom & ODM Seals"></div>
                         <h3>Custom &amp; ODM Seals</h3>
                         <p>Hard-to-find and OEM replacement seals</p>
                         <span class="product-card-link" style="color: var(--gray-400);">2 models</span>
                     </a>
                     <a href="/products/parts.html" class="product-card">
-                        <div class="product-card-icon"><img src="/images/cover-seal-parts.jpg?v=20260702f" alt="Seal Parts"></div>
+                        <div class="product-card-icon"><img src="/images/cover-seal-parts.jpg?v=20260702g" alt="Seal Parts"></div>
                         <h3>Seal Parts</h3>
                         <p>Sleeves, O-rings, springs, and components</p>
                         <span class="product-card-link" style="color: var(--gray-400);">2 items</span>
@@ -146,18 +146,21 @@
 
         function renderProduct(p) {
             return `<a href="/product/${p.slug}.html" class="product-card">
-                ${p.image ? `<img src="${p.image}" alt="${p.model}" style="width:100%;height:180px;object-fit:contain;display:block;margin:-32px -28px 20px;border-bottom:1px dashed var(--gray-300);border-left:0;border-right:0;border-top:0;" onerror="this.style.display='none'">` : `<div class="placeholder-drawing" style="min-height: 180px; border-bottom: 1px dashed var(--gray-300); margin: -32px -28px 20px; border-left:0; border-right:0; border-top:0; border-radius: 0;">
-                    <svg fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24" style="width:32px;height:32px;color:var(--gray-300);"><path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
-                </div>`}
-                <span class="tag tag-gold" style="margin-bottom: 12px; display: inline-block;">${getCatLabel(p.category)}</span>
-                <h3 style="font-size: 20px; font-weight: 600; color: var(--gray-900); margin-bottom: 8px;">${p.model}</h3>
-                <p style="font-size: 13px; color: var(--gray-500); line-height: 1.6; margin-bottom: 12px;">${p.description.substring(0,90)}...</p>
-                ${p.replaces.length ? `<div style="font-size: 12px; color: var(--gray-400); margin-bottom: 12px;">Replaces: ${p.replaces.slice(0,2).join(', ')}${p.replaces.length>2?'...':''}</div>` : ''}
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 12px; color: var(--gray-500);">
-                    <div><span style="color:var(--gray-400)">Shaft:</span> ${p.specs.shaftDiameter}</div>
-                    <div><span style="color:var(--gray-400)">Pressure:</span> ${p.specs.pressure}</div>
+                <div class="product-card-icon">
+                    ${p.image ? `<img src="${p.image}" alt="${p.model}" onerror="this.parentElement.innerHTML='<svg fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1&quot; viewBox=&quot;0 0 24 24&quot; style=&quot;width:32px;height:32px;color:var(--gray-300)&quot;><path d=&quot;M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z&quot;/></svg>'">` : ''}
                 </div>
-                <span class="product-card-link" style="margin-top: 16px; display: inline-flex;">View Details <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></span>
+                <div class="product-card-body">
+                    <span class="tag tag-gold">${getCatLabel(p.category)}</span>
+                    <h3>${p.model}</h3>
+                    <p>${p.description.length > 100 ? p.description.substring(0, 100) + '...' : p.description}</p>
+                    <div class="product-card-specs">
+                        <div><span>Shaft:</span> ${p.specs.shaftDiameter}</div>
+                        <div><span>Pressure:</span> ${p.specs.pressure}</div>
+                        <div><span>Temp:</span> ${p.specs.temperature}</div>
+                        <div><span>Speed:</span> ${p.specs.speed}</div>
+                    </div>
+                    <span class="product-card-link">View Details <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></span>
+                </div>
             </a>`;
         }
 
