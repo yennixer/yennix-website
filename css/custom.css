@@ -273,19 +273,19 @@ section, header, footer, nav, main { margin: 0; }
   box-shadow: 0 20px 40px rgba(0,0,0,0.08);
 }
 .product-card-icon {
-  width: 100%; height: 180px;
+  width: 100%; height: 200px;
   display: flex; align-items: center; justify-content: center;
   margin-bottom: 0; transition: border-color 0.3s;
   overflow: hidden; border-radius: 0;
   position: relative;
+  background: #f5f7fa;
+  border-bottom: 1px solid #e8eaed;
 }
 .product-card:hover .product-card-icon { border-color: var(--gold); }
 .product-card-icon img {
-  width: 100%; height: 100%; object-fit: contain;
+  width: 100%; height: 100%; object-fit: contain; padding: 12px;
 }
-.product-card-icon {
-  background: #f8f9fa;
-}
+
 .product-card-icon svg { width: 24px; height: 24px; color: var(--gold); }
 .product-card-body { padding: 20px 24px 28px; }
 .product-card h3 {
