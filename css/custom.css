@@ -314,6 +314,13 @@ section, header, footer, nav, main { margin: 0; }
 .product-card-specs span { color: var(--gray-400); }
 .product-card-link { gap: 10px; }
 
+/* Category overview cards (Products page) */
+.category-card .product-card-icon { height: 220px; }
+.category-card .product-card-icon img { object-fit: cover; }
+.category-card .product-card-body { padding: 20px 24px 24px; }
+.category-card h3 { font-size: 16px; margin-bottom: 6px; }
+.category-card p { font-size: 13px; margin-bottom: 14px; }
+
 /* ===== MATERIAL CODE SECTION ===== */
 .code-display {
   display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
