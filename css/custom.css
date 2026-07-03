@@ -364,10 +364,46 @@ section, header, footer, nav, main { margin: 0; }
 .code-part-metal { background: rgba(100,100,180,0.1); color: #5a5a99; }
 .code-sep { color: var(--gray-300); font-weight: 300; }
 
-.mat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-@media (max-width: 767px) { .mat-grid { grid-template-columns: 1fr; } }
+/* Material Section Layout */
+.mat-header-row {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
+  align-items: start; margin-bottom: 48px;
+}
+.mat-header-left { /* left column: label + title + desc */ }
+.mat-header-right { /* right column: code display + learn more */ }
+.mat-learn-more {
+  font-size: 12px; font-weight: 500; color: var(--gold);
+  letter-spacing: 0.1em; text-transform: uppercase;
+  text-decoration: none; display: inline-flex; align-items: center; gap: 6px;
+}
+
+/* Material Cards Row */
+.mat-cards-row {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+}
+
+/* Material Card - new design with image */
 .mat-card {
-  border: 1px solid var(--gray-200); padding: 24px;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 3px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.mat-card-img {
+  width: 100%;
+  height: 190px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--gray-100);
+}
+.mat-card-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.mat-card-body {
+  padding: 24px;
 }
 .mat-card h4 {
   font-size: 13px; font-weight: 600; color: var(--gray-900);
@@ -675,8 +711,10 @@ section, header, footer, nav, main { margin: 0; }
   .spec-item-value { font-size: 13px !important; }
   .dim-table { font-size: 12px !important; }
   .dim-table th, .dim-table td { padding: 8px 10px !important; }
-  .mat-grid { gap: 16px !important; }
-  .mat-card { padding: 16px !important; }
+  .mat-cards-row { grid-template-columns: 1fr !important; gap: 16px !important; }
+  .mat-header-row { grid-template-columns: 1fr !important; gap: 32px !important; margin-bottom: 32px !important; }
+  .mat-card-img { height: 160px !important; }
+  .mat-card-body { padding: 16px !important; }
 
   /* --- Mobile: Forms --- */
   .form-input { padding: 10px 14px !important; font-size: 15px !important; }
@@ -707,6 +745,8 @@ section, header, footer, nav, main { margin: 0; }
   .section-title { font-size: 26px !important; }
   .product-card-icon { height: 160px !important; }
   .tab-btn { font-size: 12px !important; padding: 10px 16px !important; }
+  .mat-cards-row { grid-template-columns: repeat(2, 1fr) !important; }
+  .mat-header-row { gap: 32px !important; }
 }
 
 /* ===== FAQ PAGE ===== */

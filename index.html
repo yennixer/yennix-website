@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/custom.css?v=20260703c">
+    <link rel="stylesheet" href="/css/custom.css?v=20260703g">
 
     <meta property="og:title" content="YENNIX — Precision Mechanical Seals">
     <meta property="og:description" content="Professional mechanical seal supplier offering high-quality industrial seals with fast global delivery. Component seals, cartridge seals, custom solutions.">
@@ -191,53 +191,74 @@
 
     <!-- Material Code System -->
     <section class="section section-light">
-        <div class="section-inner" style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start;">
-            <div>
-                <div class="section-label">Material Code System</div>
-                <h2 class="section-title">Top Material for Top Sealing Performance</h2>
-                <p class="section-desc" style="margin-top: 16px;">YENNIX material coding system makes it easy to specify exactly what you need — seal face, elastomer, and metal in one concise code.</p>
-                <div style="height: 24px;"></div>
-                <div class="code-display">
-                    <span class="code-part" style="background: rgba(200,164,92,0.1); color: var(--gold);"><strong>M7N</strong> Model</span>
-                    <span class="code-sep">—</span>
-                    <span class="code-part code-part-face"><strong>A</strong> SiC</span>
-                    <span class="code-sep">—</span>
-                    <span class="code-part code-part-elastomer"><strong>V</strong> Viton</span>
-                    <span class="code-sep">—</span>
-                    <span class="code-part code-part-metal"><strong>S</strong> 304SS</span>
+        <div class="section-inner">
+            <!-- Top: Header + Code Display -->
+            <div class="mat-header-row">
+                <div class="mat-header-left">
+                    <div class="section-label">Material Code System</div>
+                    <h2 class="section-title">Top Material for Top Sealing Performance</h2>
+                    <p class="section-desc" style="margin-top: 16px;">YENNIX material coding system makes it easy to specify exactly what you need — seal face, elastomer, and metal in one concise code.</p>
                 </div>
-                <div style="height: 24px;"></div>
-                <a href="/products/" style="font-size: 12px; font-weight: 500; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
-                    Learn More <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                </a>
+                <div class="mat-header-right">
+                    <div class="code-display">
+                        <span class="code-part" style="background: rgba(200,164,92,0.1); color: var(--gold);"><strong>M7N</strong> Model</span>
+                        <span class="code-sep">—</span>
+                        <span class="code-part code-part-face"><strong>A</strong> SiC</span>
+                        <span class="code-sep">—</span>
+                        <span class="code-part code-part-elastomer"><strong>V</strong> Viton</span>
+                        <span class="code-sep">—</span>
+                        <span class="code-part code-part-metal"><strong>S</strong> 304SS</span>
+                    </div>
+                    <div style="height: 24px;"></div>
+                    <a href="/products/" class="mat-learn-more">
+                        Learn More <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </a>
+                </div>
             </div>
-            <div class="mat-grid" style="grid-template-columns: 1fr;">
+
+            <!-- Bottom: Material Cards (3 columns) -->
+            <div class="mat-cards-row">
                 <div class="mat-card">
-                    <h4><span class="mat-dot" style="background: #c8a45c;"></span>Seal Face Materials</h4>
-                    <ul>
-                        <li><span class="mat-code">A</span> Silicon Carbide (SiC)</li>
-                        <li><span class="mat-code">B</span> Tungsten Carbide (TC)</li>
-                        <li><span class="mat-code">C</span> Carbon Graphite</li>
-                        <li><span class="mat-code">D</span> Aluminum Oxide</li>
-                    </ul>
+                    <div class="mat-card-img">
+                        <img src="/images/material-seal-face.jpg" alt="Seal Face Materials">
+                    </div>
+                    <div class="mat-card-body">
+                        <h4><span class="mat-dot" style="background: #c8a45c;"></span>Seal Face Materials</h4>
+                        <ul>
+                            <li><span class="mat-code">A</span> Silicon Carbide (SiC)</li>
+                            <li><span class="mat-code">B</span> Tungsten Carbide (TC)</li>
+                            <li><span class="mat-code">C</span> Carbon Graphite</li>
+                            <li><span class="mat-code">D</span> Aluminum Oxide</li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="mat-card">
-                    <h4><span class="mat-dot" style="background: #4a994a;"></span>Elastomer Materials</h4>
-                    <ul>
-                        <li><span class="mat-code">V</span> FKM (Viton)</li>
-                        <li><span class="mat-code">E</span> EPDM</li>
-                        <li><span class="mat-code">B</span> NBR (Buna-N)</li>
-                        <li><span class="mat-code">K</span> FFKM (Kalrez)</li>
-                    </ul>
+                    <div class="mat-card-img">
+                        <img src="/images/material-elastomer.jpg" alt="Elastomer Materials">
+                    </div>
+                    <div class="mat-card-body">
+                        <h4><span class="mat-dot" style="background: #4a994a;"></span>Elastomer Materials</h4>
+                        <ul>
+                            <li><span class="mat-code">V</span> FKM (Viton)</li>
+                            <li><span class="mat-code">E</span> EPDM</li>
+                            <li><span class="mat-code">B</span> NBR (Buna-N)</li>
+                            <li><span class="mat-code">K</span> FFKM (Kalrez)</li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="mat-card">
-                    <h4><span class="mat-dot" style="background: #5a5a99;"></span>Metal Materials</h4>
-                    <ul>
-                        <li><span class="mat-code">S</span> 304 Stainless Steel</li>
-                        <li><span class="mat-code">L</span> 316 Stainless Steel</li>
-                        <li><span class="mat-code">H</span> Hastelloy C276</li>
-                        <li><span class="mat-code">M</span> Monel 400</li>
-                    </ul>
+                    <div class="mat-card-img">
+                        <img src="/images/material-metal.jpg" alt="Metal Materials">
+                    </div>
+                    <div class="mat-card-body">
+                        <h4><span class="mat-dot" style="background: #5a5a99;"></span>Metal Materials</h4>
+                        <ul>
+                            <li><span class="mat-code">S</span> 304 Stainless Steel</li>
+                            <li><span class="mat-code">L</span> 316 Stainless Steel</li>
+                            <li><span class="mat-code">H</span> Hastelloy C276</li>
+                            <li><span class="mat-code">M</span> Monel 400</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
