@@ -50,6 +50,14 @@ section, header, footer, nav, main { margin: 0; }
   display: flex; align-items: center; gap: 10px;
   text-decoration: none; color: var(--white);
 }
+.nav-logo-img {
+  height: 32px;
+  width: auto;
+  display: block;
+}
+.footer-brand .nav-logo-img {
+  height: 40px;
+}
 .nav-logo-mark {
   width: 32px; height: 32px; border: 1.5px solid var(--gold);
   display: flex; align-items: center; justify-content: center;
