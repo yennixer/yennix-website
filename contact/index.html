@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/custom.css?v=20260703d">
+    <link rel="stylesheet" href="/css/custom.css?v=20260703e">
 
     <meta property="og:title" content="Contact — YENNIX Mechanical Seals">
     <meta property="og:description" content="Contact YENNIX for mechanical seal inquiries. Free quotes within 12 hours.">
@@ -68,6 +68,12 @@
                         <label class="form-label">What do you need? *</label>
                         <textarea required rows="5" class="form-input" style="resize:none;" name="message" placeholder="Describe the seal you need: model number, dimensions, quantity, application, original brand/model..."></textarea>
                     </div>
+                                        <div style="margin-bottom:20px;">
+                        <label style="display:flex;align-items:flex-start;gap:10px;font-size:12px;color:rgba(255,255,255,0.5);line-height:1.6;cursor:pointer;">
+                            <input type="checkbox" required name="privacy_consent" style="margin-top:2px;flex-shrink:0;">
+                            <span>I confirm that I have read and agree to the <a href="/privacy/" target="_blank" style="color:var(--gold);text-decoration:none;">YENNIX Privacy Policy</a> and consent to the processing of my personal data for the purpose of responding to my inquiry.</span>
+                        </label>
+                    </div>
                     <button type="submit" class="btn-primary" style="width:100%;justify-content:center;" id="submit-btn">Submit Inquiry</button>
                     <div id="form-status" class="form-status"></div>
                     <p style="text-align:center;font-size:11px;color:var(--gray-400);margin-top:12px;">We typically respond within 12 hours. Your information is kept confidential.</p>
@@ -113,6 +119,20 @@
     <footer class="footer"><div class="footer-inner"><div class="footer-brand"><a href="/" class="nav-logo">
                     <img src="/images/logo/logo-gold-nav.png" alt="YENNIX" class="nav-logo-img">
                 </a><p>Professional mechanical seal supplier. Fast delivery, competitive pricing, and expert technical support worldwide.</p></div><div><h4>Products</h4><ul><li><a href="/products/component-seals.html">Component Seals</a></li><li><a href="/products/cartridge-seals.html">Cartridge Seals</a></li><li><a href="/products/custom-seals.html">Custom &amp; ODM Seals</a></li><li><a href="/products/parts.html">Seal Parts</a></li></ul></div><div><h4>Resources</h4><ul><li><a href="/resources/">Resource Center</a></li><li><a href="/industries/">Industries</a></li><li><a href="/cross-reference/">Cross Reference</a></li><li><a href="/reverse-engineering/">Reverse Engineering</a></li><li><a href="/quality/">Quality Standards</a></li><li><a href="/faq/">FAQ</a></li></ul></div><div><h4>Contact</h4><ul><li><a href="mailto:sales@yennix.com">sales@yennix.com</a></li><li><a href="/contact/">Get a Quote</a></li><li style="font-size:12px;color:rgba(255,255,255,0.3);">Response within 12 hours</li></ul></div></div><div class="footer-bottom" style="text-align:center;">&copy; 2026 YENNIX. All rights reserved.</div></footer>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-banner-inner">
+            <div class="cookie-banner-text">
+                <strong>Privacy & Cookies</strong><br>
+                We use essential cookies to make our site work. We don't use tracking or advertising cookies. By clicking "Accept", you consent to our use of necessary cookies.
+            </div>
+            <div class="cookie-banner-buttons">
+                <a href="/privacy/" class="cookie-btn cookie-btn-text">Learn more</a>
+                <button class="cookie-btn cookie-btn-accept" onclick="setCookieConsent()">Accept</button>
+            </div>
+        </div>
+    </div>
 
     <div id="scroll-top" class="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg></div>
 
