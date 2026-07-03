@@ -206,7 +206,7 @@ function initProductPage(slug) {
     </section>` : ''}
 
     <!-- Footer -->
-    <footer class="footer"><div class="footer-inner"><div class="footer-brand"><a href="/" class="nav-logo" style="margin-bottom: 0;"><img src="/images/logo/logo-gold-footer.png" alt="YENNIX" class="nav-logo-img"></a><p>Professional mechanical seal supplier.</p></div><div><h4>Products</h4><ul><li><a href="/products/component-seals.html">Component Seals</a></li><li><a href="/products/cartridge-seals.html">Cartridge Seals</a></li><li><a href="/products/custom-seals.html">Custom &amp; ODM</a></li><li><a href="/products/parts.html">Seal Parts</a></li></ul></div><div><h4>Resources</h4><ul><li><a href="/cross-reference/">Cross Reference</a></li><li><a href="/reverse-engineering/">Reverse Engineering</a></li><li><a href="/quality/">Quality</a></li><li><a href="/faq/">FAQ</a></li></ul></div><div><h4>Contact</h4><ul><li><a href="mailto:sales@yennix.com">sales@yennix.com</a></li><li><a href="/contact/">Get a Quote</a></li></ul></div></div><div class="footer-bottom" style="text-align:center;">&copy; 2026 YENNIX. All rights reserved.</div></footer>
+    <footer class="footer"><div class="footer-inner"><div class="footer-brand"><a href="/" class="nav-logo" style="margin-bottom: 0;"><img src="/images/logo/logo-gold-footer.png" alt="YENNIX" class="nav-logo-img"></a><p>Professional mechanical seal supplier. Fast delivery, competitive pricing, and expert technical support worldwide.</p></div><div><h4>Products</h4><ul><li><a href="/products/component-seals.html">Component Seals</a></li><li><a href="/products/cartridge-seals.html">Cartridge Seals</a></li><li><a href="/products/custom-seals.html">Custom &amp; ODM Seals</a></li><li><a href="/products/parts.html">Seal Parts</a></li></ul></div><div><h4>Resources</h4><ul><li><a href="/resources/">Resource Center</a></li><li><a href="/industries/">Industries</a></li><li><a href="/cross-reference/">Cross Reference</a></li><li><a href="/reverse-engineering/">Reverse Engineering</a></li><li><a href="/quality/">Quality Standards</a></li><li><a href="/faq/">FAQ</a></li></ul></div><div><h4>Contact</h4><ul><li><a href="mailto:sales@yennix.com">sales@yennix.com</a></li><li><a href="/contact/">Get a Quote</a></li><li style="font-size:12px;color:rgba(255,255,255,0.3);">Response within 12 hours</li></ul></div></div><div class="footer-bottom" style="text-align:center;">&copy; 2026 YENNIX. All rights reserved.</div></footer>
 
     <a href="https://wa.me/8613800000000" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32" width="28" height="28" fill="white"><path d="M16.004 0h-.008C7.174 0 0 7.176 0 16c0 3.5 1.132 6.742 3.054 9.378L1.056 31.168l6.09-1.952A15.9 15.9 0 0016.004 32C24.826 32 32 24.824 32 16S24.826 0 16.004 0zm9.314 22.61c-.39 1.1-1.932 2.014-3.17 2.28-.846.18-1.95.322-5.67-1.218-4.762-1.97-7.826-6.81-8.064-7.126-.23-.316-1.928-2.568-1.928-4.896s1.22-3.474 1.654-3.95c.39-.432.926-.624 1.368-.624.166 0 .314.008.448.014.434.018.652.044.938.73.358.86 1.23 3.01 1.338 3.228.11.22.22.52.066.826-.146.314-.274.454-.49.7-.22.248-.428.44-.646.708-.2.232-.426.482-.178.912.248.422 1.104 1.822 2.37 2.948 1.63 1.452 3.004 1.902 3.432 2.116.338.168.74.13.992-.152.324-.362.716-.962 1.114-1.556.284-.426.644-.478.992-.328.354.142 2.238 1.056 2.62 1.248.382.192.636.288.73.448.094.16.094.924-.296 2.024z"/></svg></a><div id="scroll-top" class="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">,behavior:'smooth'})"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg></div>`;
 
@@ -228,6 +228,18 @@ function initProductPage(slug) {
         });
     });
 
+    // Industry name to slug mapping
+    var INDUSTRY_SLUG_MAP = {
+        "Water Treatment": "water-treatment",
+        "Chemical Processing": "chemical-processing",
+        "Mining": "mining-mineral",
+        "Oil & Gas": "oil-gas",
+        "Food & Beverage": "food-beverage",
+        "Pharmaceutical": "pharmaceutical",
+        "Marine": "marine",
+        "Pulp & Paper": "pulp-paper"
+    };
+
     // Render Industry Applications
     if (typeof getIndustriesForProduct === 'function' && typeof YENNIX_INDUSTRIES !== 'undefined') {
         var industries = getIndustriesForProduct(product);
@@ -237,17 +249,25 @@ function initProductPage(slug) {
             indHTML += '<div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:24px;">';
             industries.forEach(function(indName) {
                 var ind = YENNIX_INDUSTRIES[indName];
+                var slug = INDUSTRY_SLUG_MAP[indName];
                 if (ind) {
-                    indHTML += '<div style="border:1px solid var(--gray-200);padding:20px;">';
-                    indHTML += '<div style="font-size:13px;font-weight:600;color:var(--gray-900);margin-bottom:8px;display:flex;align-items:center;gap:8px;">';
-                    indHTML += '<span style="width:8px;height:8px;background:var(--gold);border-radius:50%;flex-shrink:0;"></span>';
-                    indHTML += indName + '</div>';
+                    var tag = slug ? '<a href="/industries/' + slug + '.html" style="text-decoration:none;color:inherit;display:block;" class="industry-app-card">' : '<div style="cursor:default;">';
+                    var closeTag = slug ? '</a>' : '</div>';
+                    indHTML += tag;
+                    indHTML += '<div style="border:1px solid var(--gray-200);padding:20px;transition:border-color .2s;" onmouseover="this.style.borderColor=\\'var(--gold)\\'" onmouseout="this.style.borderColor=\\'var(--gray-200)\\'">';
+                    indHTML += '<div style="font-size:13px;font-weight:600;color:var(--gray-900);margin-bottom:8px;display:flex;align-items:center;gap:8px;justify-content:space-between;">';
+                    indHTML += '<span style="display:flex;align-items:center;gap:8px;"><span style="width:8px;height:8px;background:var(--gold);border-radius:50%;flex-shrink:0;"></span>';
+                    indHTML += indName + '</span>';
+                    if (slug) {
+                        indHTML += '<svg width="14" height="14" fill="none" stroke="var(--gold)" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>';
+                    }
+                    indHTML += '</div>';
                     indHTML += '<p style="font-size:12px;color:var(--gray-500);line-height:1.6;margin-bottom:8px;font-weight:300;">' + ind.description + '</p>';
                     indHTML += '<div style="display:flex;flex-wrap:wrap;gap:4px;">';
                     ind.applications.forEach(function(a) {
                         indHTML += '<span class="tag" style="font-size:10px;">' + a + '</span>';
                     });
-                    indHTML += '</div></div>';
+                    indHTML += '</div></div>' + closeTag;
                 }
             });
             indHTML += '</div>';
