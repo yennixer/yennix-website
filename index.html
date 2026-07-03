@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/custom.css?v=20260703d">
+    <link rel="stylesheet" href="/css/custom.css?v=20260703e">
     <meta property="og:title" content="YENNIX — Precision Mechanical Seals | Global Supplier">
     <meta property="og:description" content="YENNIX — Professional mechanical seal supplier. Component seals, cartridge seals, custom solutions. 35,000+ SKUs, 12-hour quote response, 1 set MOQ, 50+ countries served.">
     <meta property="og:type" content="website">
@@ -27,16 +27,52 @@
             <a href="/" class="nav-logo">
                 <img src="/images/logo/logo-gold-nav.png" alt="YENNIX" class="nav-logo-img">
             </a>
-            <div class="nav-links"><a href="/" class="active">Home</a><a href="/products/">Products</a><a href="/cross-reference/">Cross Reference</a><a href="/reverse-engineering/">Engineering</a><a href="/quality/">Quality</a><a href="/faq/">FAQ</a><a href="/about/">About</a><a href="/contact/" class="nav-cta">Get a Quote</a></div>
+            <div class="nav-links"><a href="/" class="active">Home</a><a href="/products/">Products</a><a href="/cross-reference/">Cross Reference<span class="nav-new-badge">NEW</span></a><a href="/reverse-engineering/">Engineering</a><a href="/quality/">Quality</a><a href="/faq/">FAQ</a><a href="/about/">About</a><a href="/contact/" class="nav-cta">Get a Quote</a></div>
             <button class="nav-mobile-btn" id="mobile-menu-btn">
                 <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
             </button>
         </div>
-        <div class="nav-mobile-menu" id="mobile-menu"><a href="/">Home</a><a href="/products/">Products</a><a href="/cross-reference/">Cross Reference</a><a href="/reverse-engineering/">Engineering</a><a href="/quality/">Quality</a><a href="/faq/">FAQ</a><a href="/about/">About</a><a href="/contact/">Get a Quote</a></div>
+        <div class="nav-mobile-menu" id="mobile-menu"><a href="/">Home</a><a href="/products/">Products</a><a href="/cross-reference/">Cross Reference<span class="nav-new-badge">NEW</span></a><a href="/reverse-engineering/">Engineering</a><a href="/quality/">Quality</a><a href="/faq/">FAQ</a><a href="/about/">About</a><a href="/contact/">Get a Quote</a></div>
     </nav>
 
     <!-- Hero -->
     <section class="hero-section">
+        
+        <!-- Hero Geometric Decoration -->
+        <div class="hero-decor" aria-hidden="true">
+            <svg class="hero-decor-svg" viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#c8a45c;stop-opacity:0.6" />
+                        <stop offset="100%" style="stop-color:#c8a45c;stop-opacity:0.1" />
+                    </linearGradient>
+                    <linearGradient id="navyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#1a2744;stop-opacity:0.8" />
+                        <stop offset="100%" style="stop-color:#0a1628;stop-opacity:0.3" />
+                    </linearGradient>
+                </defs>
+                <!-- Abstract seal ring outer -->
+                <ellipse cx="200" cy="250" rx="160" ry="120" stroke="url(#goldGrad)" stroke-width="2" fill="none" />
+                <ellipse cx="200" cy="250" rx="130" ry="95" stroke="url(#goldGrad)" stroke-width="1" fill="none" opacity="0.5" />
+                <ellipse cx="200" cy="250" rx="100" ry="70" stroke="url(#goldGrad)" stroke-width="1.5" fill="none" opacity="0.7" />
+                <!-- Inner seal face -->
+                <ellipse cx="200" cy="250" rx="60" ry="40" stroke="url(#goldGrad)" stroke-width="1" fill="url(#navyGrad)" opacity="0.6" />
+                <!-- Spring element -->
+                <path d="M60 250 Q 80 220 100 250 T 140 250 T 180 250" stroke="url(#goldGrad)" stroke-width="1.5" fill="none" opacity="0.4" />
+                <path d="M220 250 Q 240 280 260 250 T 300 250 T 340 250" stroke="url(#goldGrad)" stroke-width="1.5" fill="none" opacity="0.4" />
+                <!-- Vertical center line -->
+                <line x1="200" y1="100" x2="200" y2="400" stroke="url(#goldGrad)" stroke-width="1" stroke-dasharray="4 8" opacity="0.3" />
+                <!-- Horizontal center line -->
+                <line x1="20" y1="250" x2="380" y2="250" stroke="url(#goldGrad)" stroke-width="1" stroke-dasharray="4 8" opacity="0.2" />
+                <!-- Small decorative circles -->
+                <circle cx="140" cy="200" r="4" fill="url(#goldGrad)" opacity="0.5" />
+                <circle cx="260" cy="200" r="4" fill="url(#goldGrad)" opacity="0.5" />
+                <circle cx="140" cy="300" r="4" fill="url(#goldGrad)" opacity="0.5" />
+                <circle cx="260" cy="300" r="4" fill="url(#goldGrad)" opacity="0.5" />
+                <!-- O-ring accent -->
+                <circle cx="200" cy="250" r="80" stroke="url(#goldGrad)" stroke-width="3" fill="none" opacity="0.25" />
+            </svg>
+        </div>
         <div class="hero-inner">
             <div class="hero-label">Precision Mechanical Seals</div>
             <h1 class="hero-title">Essential <strong>Sealing</strong> Solutions</h1>
@@ -212,6 +248,63 @@
         </div>
     </section>
 
+
+    <!-- Manufacturing Process -->
+    <section class="section manufacturing-section section-dark">
+        <div class="section-inner">
+            <div class="section-header-center">
+                <div class="section-label">Manufacturing Process</div>
+                <h2 class="section-title">Precision Engineering at Every Step</h2>
+                <p class="section-desc">From raw material inspection to final packaging, every YENNIX seal is crafted with meticulous attention to detail and Japanese-grade precision standards.</p>
+            </div>
+            <div class="mfg-timeline">
+                <div class="mfg-step">
+                    <div class="mfg-step-number">01</div>
+                    <div class="mfg-step-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <h4>Raw Material Inspection</h4>
+                    <p>Incoming materials verified with hardness testing, chemical analysis, and dimensional certification before entering production.</p>
+                    <div class="mfg-step-connector"></div>
+                </div>
+                <div class="mfg-step">
+                    <div class="mfg-step-number">02</div>
+                    <div class="mfg-step-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    </div>
+                    <h4>Precision Machining</h4>
+                    <p>CNC turning and milling with ±0.001mm tolerance ensures every component meets exact specification requirements.</p>
+                    <div class="mfg-step-connector"></div>
+                </div>
+                <div class="mfg-step">
+                    <div class="mfg-step-number">03</div>
+                    <div class="mfg-step-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                    </div>
+                    <h4>Lapping &amp; Assembly</h4>
+                    <p>Seal faces lapped to 0.3 helium band flatness; expert hand-assembly with precise spring compression calibration.</p>
+                    <div class="mfg-step-connector"></div>
+                </div>
+                <div class="mfg-step">
+                    <div class="mfg-step-number">04</div>
+                    <div class="mfg-step-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                    </div>
+                    <h4>Quality Testing</h4>
+                    <p>100% face flatness inspection, dimensional verification, and pressure leak testing on every finished seal.</p>
+                    <div class="mfg-step-connector"></div>
+                </div>
+                <div class="mfg-step">
+                    <div class="mfg-step-number">05</div>
+                    <div class="mfg-step-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+                    </div>
+                    <h4>Packaging &amp; Delivery</h4>
+                    <p>Anti-rust packaging with traceability codes; fast global shipping from stock with 12-hour order processing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Industries -->
     <section class="section">
         <div class="section-inner">
@@ -364,7 +457,7 @@
                 <h4>Resources</h4>
                 <ul>
                     <li><a href="/resources/">Resource Center</a></li>
-                    <li><a href="/cross-reference/">Cross Reference</a></li>
+                    <li><a href="/cross-reference/">Cross Reference<span class="nav-new-badge">NEW</span></a></li>
                     <li><a href="/reverse-engineering/">Reverse Engineering</a></li>
                     <li><a href="/quality/">Quality Standards</a></li>
                     <li><a href="/faq/">FAQ</a></li>
