@@ -43,8 +43,12 @@ section, header, footer, nav, main { margin: 0; }
 }
 .nav-inner {
   max-width: 1200px; margin: 0 auto;
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 0 24px; height: 64px;
+  display: flex; align-items: center;
+  padding: 0 32px; height: 60px;
+  gap: 48px;
+}
+.nav-inner .nav-links {
+  flex: 1;
 }
 .nav-logo {
   display: flex; align-items: center; gap: 10px;
@@ -75,6 +79,7 @@ section, header, footer, nav, main { margin: 0; }
 }
 .nav-links a:hover, .nav-links a.active { color: var(--gold); }
 .nav-cta {
+  margin-left: auto;
   font-size: 12px !important; font-weight: 500 !important;
   letter-spacing: 0.12em !important; text-transform: uppercase !important;
   color: var(--gold) !important; border: 1px solid var(--gold);
