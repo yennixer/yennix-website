@@ -235,6 +235,7 @@ section, header, footer, nav, main { margin: 0; }
 }
 .section-dark { background: var(--navy); color: var(--white); }
 .section-light { background: var(--gray-50); }
+.section-at-a-glance { padding-top: 64px; padding-bottom: 64px; }
 .section-inner { max-width: 1200px; margin: 0 auto; }
 .section-label {
   font-size: 11px; font-weight: 500; letter-spacing: 0.25em;
