@@ -983,3 +983,48 @@ section, header, footer, nav, main { margin: 0; }
   display: block; background: rgba(200, 80, 80, 0.08); color: #c85050;
   border: 1px solid rgba(200, 80, 80, 0.2);
 }
+
+/* ===== CUSTOM CAPABILITIES GRID ===== */
+.capabilities-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.capabilities-swipe-hint {
+  display: none;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 12px;
+  color: var(--gray-400);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* Mobile: vertical stacked layout */
+@media (max-width: 767px) {
+  .capabilities-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 0 4px;
+  }
+
+  .capabilities-grid > div {
+    width: 100%;
+    padding: 24px 20px !important;
+  }
+
+  .capabilities-grid > div h3 {
+    font-size: 17px !important;
+  }
+
+  .capabilities-grid > div p {
+    font-size: 14px !important;
+  }
+
+  .capabilities-swipe-hint {
+    display: none;
+  }
+}
