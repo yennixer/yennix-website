@@ -378,10 +378,10 @@ section, header, footer, nav, main { margin: 0; }
 .mat-header-row {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
-  gap: 64px;
+  gap: 48px;
   align-items: center;
-  margin-bottom: 56px;
-  padding-bottom: 48px;
+  margin-bottom: 40px;
+  padding-bottom: 32px;
   border-bottom: 1px solid var(--gray-200);
 }
 .mat-header-left .section-desc { max-width: 480px; }
@@ -400,7 +400,7 @@ section, header, footer, nav, main { margin: 0; }
 .mat-cards-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
+  gap: 20px;
 }
 
 /* --- Material Card --- */
@@ -422,19 +422,15 @@ section, header, footer, nav, main { margin: 0; }
 /* Card Image Area */
 .mat-card-img {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 10;
   overflow: hidden;
-  background: linear-gradient(180deg, #fafbfc 0%, #f5f6f8 100%);
+  background: var(--white);
   border-bottom: 1px solid var(--gray-100);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
 }
 .mat-card-img img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   display: block;
   transition: transform 0.5s ease;
 }
@@ -444,7 +440,7 @@ section, header, footer, nav, main { margin: 0; }
 
 /* Card Body */
 .mat-card-body {
-  padding: 28px 28px 32px;
+  padding: 20px 22px 24px;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -453,8 +449,8 @@ section, header, footer, nav, main { margin: 0; }
   font-size: 12px;
   font-weight: 600;
   color: var(--gray-900);
-  margin-bottom: 20px;
-  padding-bottom: 16px;
+  margin-bottom: 14px;
+  padding-bottom: 12px;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -477,7 +473,7 @@ section, header, footer, nav, main { margin: 0; }
 .mat-card li {
   font-size: 13px;
   color: var(--gray-600);
-  padding: 8px 0;
+  padding: 6px 0;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -846,7 +842,7 @@ section, header, footer, nav, main { margin: 0; }
     margin-bottom: 36px !important;
     padding-bottom: 32px !important;
   }
-  .mat-card-img { aspect-ratio: 16 / 10 !important; padding: 16px !important; }
+  .mat-card-img { aspect-ratio: 16 / 10 !important; }
   .mat-card-body { padding: 20px !important; }
   .mat-card h4 { font-size: 11px !important; margin-bottom: 14px !important; padding-bottom: 12px !important; }
   .mat-card li { font-size: 12px !important; padding: 7px 0 !important; }
@@ -890,7 +886,7 @@ section, header, footer, nav, main { margin: 0; }
     margin-bottom: 40px !important;
     padding-bottom: 36px !important;
   }
-  .mat-card-img { padding: 20px !important; }
+  .mat-card-img { padding: 0 !important; }
   .mat-card-body { padding: 20px 22px 24px !important; }
   .code-display { padding: 22px 24px !important; }
 }
