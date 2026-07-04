@@ -805,10 +805,10 @@ section, header, footer, nav, main { margin: 0; }
   .btn-primary, .btn-outline { width: 100%; justify-content: center; }
 
   /* --- Mobile: Typography & Spacing --- */
-  .page-header { padding: 80px 0 20px !important; }
+  .page-header { padding: 80px 20px 20px !important; }
   .page-header h1 { font-size: 28px !important; }
   .page-header p { font-size: 13px !important; }
-  .section { padding: 40px 0 !important; }
+  .section { padding: 40px 20px !important; }
   .section-title { font-size: 22px !important; }
   .section-label { font-size: 10px !important; letter-spacing: 0.15em !important; }
   h1 { font-size: 26px !important; }
@@ -874,7 +874,7 @@ section, header, footer, nav, main { margin: 0; }
   .faq-answer { padding: 0 16px 14px !important; font-size: 13px !important; }
 
   /* --- Mobile: Footer --- */
-  .footer { padding: 40px 0 24px !important; }
+  .footer { padding: 40px 20px 24px !important; }
   .footer-inner { gap: 24px !important; }
   .footer h4 { font-size: 11px !important; margin-bottom: 12px !important; }
   .footer ul li a { font-size: 13px !important; }
