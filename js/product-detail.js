@@ -72,10 +72,10 @@ function initProductPage(slug) {
     <nav class="nav-main" id="navbar">
         <div class="nav-inner">
             <a href="/" class="nav-logo"><img src="/images/logo/logo-gold-nav.png" alt="YENNIX" class="nav-logo-img"></a>
-            <div class="nav-links"><a href="/">Home</a><a href="/products/">Products</a><a href="/cross-reference/">Cross Reference</a><a href="/reverse-engineering/">Engineering</a><a href="/quality/">Quality</a><a href="/faq/">FAQ</a><a href="/about/">About</a><a href="/contact/" class="nav-cta">Get a Quote</a></div>
+            <div class="nav-links"><a href="/">Home</a><a href="/products/">Products</a><a href="/cross-reference/">Cross Reference</a><a href="/reverse-engineering/">Engineering</a><a href="/quality/">Quality</a><a href="/faq/">FAQ</a><a href="/blog/">Resources</a><a href="/about/">About</a><a href="/contact/" class="nav-cta">Get a Quote</a><button class="nav-search-icon" data-search-trigger aria-label="Search"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg></button></div>
             <button class="nav-mobile-btn" id="mobile-menu-btn"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
         </div>
-        <div class="nav-mobile-menu" id="mobile-menu"><a href="/">Home</a><a href="/products/">Products</a><a href="/cross-reference/">Cross Reference</a><a href="/reverse-engineering/">Engineering</a><a href="/quality/">Quality</a><a href="/faq/">FAQ</a><a href="/about/">About</a><a href="/contact/">Get a Quote</a></div>
+        <div class="nav-mobile-menu" id="mobile-menu"><a href="/">Home</a><a href="/products/">Products</a><a href="/cross-reference/">Cross Reference</a><a href="/reverse-engineering/">Engineering</a><a href="/quality/">Quality</a><a href="/faq/">FAQ</a><a href="/blog/">Resources</a><a href="/about/">About</a><a href="/contact/">Get a Quote</a></div>
     </nav>
 
     <!-- Breadcrumb -->
@@ -254,4 +254,139 @@ function initProductPage(slug) {
             indEl.innerHTML = indHTML;
         }
     }
+
+    // === Structured Data: Product Schema + BreadcrumbList ===
+    injectProductSchema(product);
+}
+
+/**
+ * Inject JSON-LD structured data for Product and BreadcrumbList
+ */
+function injectProductSchema(product) {
+    const baseUrl = 'https://yennix.com';
+    const productUrl = baseUrl + '/product/' + product.slug + '.html';
+    const imageUrl = baseUrl + (product.image || '/images/products/' + product.slug + '.jpg');
+
+    const catLinks = {
+        'component-seals': { href: '/products/component-seals.html', label: 'Component Seals' },
+        'cartridge-seals': { href: '/products/cartridge-seals.html', label: 'Cartridge Seals' },
+        'custom-seals': { href: '/products/custom-seals.html', label: 'Custom & ODM Seals' },
+        'parts': { href: '/products/parts.html', label: 'Seal Parts & Accessories' }
+    };
+    const cat = catLinks[product.category] || { href: '/products/', label: 'Products' };
+
+    // --- Product Schema ---
+    const productSchema = {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": product.name,
+        "alternateName": product.model,
+        "description": product.description,
+        "image": imageUrl,
+        "url": productUrl,
+        "sku": product.defaultCode || product.model,
+        "mpn": product.model,
+        "brand": {
+            "@type": "Organization",
+            "name": "YENNIX",
+            "url": baseUrl
+        },
+        "category": product.categoryName,
+        "brand": {
+            "@type": "Organization",
+            "name": "YENNIX",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Jiaxing",
+                "addressRegion": "Zhejiang",
+                "addressCountry": "CN"
+            }
+        },
+        "material": product.materials ? Object.keys(product.materials).map(function(k) {
+            return product.materials[k].join(', ');
+        }).join(', ') : '',
+        "applicationCategory": product.applications ? product.applications.join(', ') : '',
+        "additionalProperty": []
+    };
+
+    // Add specs as additionalProperty
+    if (product.specs) {
+        if (product.specs.shaftDiameter) {
+            productSchema.additionalProperty.push({
+                "@type": "PropertyValue",
+                "name": "Shaft Diameter",
+                "value": product.specs.shaftDiameter
+            });
+        }
+        if (product.specs.pressure) {
+            productSchema.additionalProperty.push({
+                "@type": "PropertyValue",
+                "name": "Pressure Rating",
+                "value": product.specs.pressure
+            });
+        }
+        if (product.specs.temperature) {
+            productSchema.additionalProperty.push({
+                "@type": "PropertyValue",
+                "name": "Temperature Range",
+                "value": product.specs.temperature
+            });
+        }
+        if (product.specs.speed) {
+            productSchema.additionalProperty.push({
+                "@type": "PropertyValue",
+                "name": "Speed Rating",
+                "value": product.specs.speed
+            });
+        }
+    }
+
+    // Add product features
+    if (product.features && product.features.length) {
+        productSchema.features = product.features;
+    }
+
+    const productScript = document.createElement('script');
+    productScript.type = 'application/ld+json';
+    productScript.id = 'schema-product';
+    productScript.textContent = JSON.stringify(productSchema);
+    document.head.appendChild(productScript);
+
+    // --- BreadcrumbList Schema ---
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": baseUrl + "/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Products",
+                "item": baseUrl + "/products/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": cat.label,
+                "item": baseUrl + cat.href
+            },
+            {
+                "@type": "ListItem",
+                "position": 4,
+                "name": product.model,
+                "item": productUrl
+            }
+        ]
+    };
+
+    const breadcrumbScript = document.createElement('script');
+    breadcrumbScript.type = 'application/ld+json';
+    breadcrumbScript.id = 'schema-breadcrumb';
+    breadcrumbScript.textContent = JSON.stringify(breadcrumbSchema);
+    document.head.appendChild(breadcrumbScript);
 }
