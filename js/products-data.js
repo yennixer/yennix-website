@@ -56,7 +56,7 @@ const YENNIX_PRODUCTS = [
     shortName: "M7N",
     replaces: [],
     compatiblePumps: [],
-    description: "The M7N is an elastomeric bellows mechanical seal designed as a direct replacement for Burgmann M7N. Its robust bellows design provides excellent shaft followability and is insensitive to shaft deflections, making it ideal for a wide range of industrial pump applications.",
+    description: "The M7N is an elastomeric bellows mechanical seal designed as an alternative for Burgmann M7N. Its robust bellows design provides excellent shaft followability and is insensitive to shaft deflections, making it ideal for a wide range of industrial pump applications.",
     features: [
       "Elastomeric bellows construction",
       "Independent of direction of rotation",
@@ -447,7 +447,7 @@ const YENNIX_PRODUCTS = [
     shortName: "MJ92N",
     replaces: [],
     compatiblePumps: [],
-    description: "The MJ92N is a metal bellows mechanical seal designed as a direct replacement for Burgmann M92N. Its welded metal bellows construction eliminates dynamic O-rings, providing exceptional reliability in high-temperature and corrosive environments.",
+    description: "The MJ92N is a metal bellows mechanical seal designed as an alternative for Burgmann M92N. Its welded metal bellows construction eliminates dynamic O-rings, providing exceptional reliability in high-temperature and corrosive environments.",
     features: [
       "Welded metal bellows construction",
       "No dynamic O-rings — reduced hang-up risk",
@@ -939,7 +939,7 @@ const YENNIX_PRODUCTS = [
       metal: ["S - 304 Stainless Steel", "L - 316 Stainless Steel", "H - Hastelloy C276"]
     },
     defaultCode: "M680-A-V-L",
-    applications: ["General industrial pumps", "Chemical processing", "Water treatment", "API 682 compliant"],
+    applications: ["General industrial pumps", "Chemical processing", "Water treatment", "suitable for API 682 applications"],
     image: "/images/products/m680.jpg"
   },
   {
@@ -1263,8 +1263,8 @@ const YENNIX_PRODUCTS = [
     shortName: "MT502",
     replaces: [],
     compatiblePumps: [],
-    description: "The MT502 is a cartridge seal designed as a direct replacement for John Crane Type 502. Its pre-assembled cartridge design eliminates field measuring and installation errors, providing reliable sealing for a wide range of industrial pump applications.",
-    features: ["Pre-assembled cartridge unit", "Direct replacement for John Crane Type 502", "Elastomeric bellows construction", "No dimensional measuring required", "Easy installation and removal"],
+    description: "The MT502 is a cartridge seal designed as an alternative for John Crane Type 502. Its pre-assembled cartridge design eliminates field measuring and installation errors, providing reliable sealing for a wide range of industrial pump applications.",
+    features: ["Pre-assembled cartridge unit", "Interchangeable with John Crane Type 502", "Elastomeric bellows construction", "No dimensional measuring required", "Easy installation and removal"],
     specs: { shaftDiameter: "14.0–100.0 mm", pressure: "≤ 2.0 MPa (20 bar)", temperature: "-30°C to +180°C", speed: "≤ 15 m/s" },
     dimensions: [
       { d: 14, D1: 24, D2: 25, L1: 23, L2: 12, L: 35 },
@@ -1394,7 +1394,7 @@ const YENNIX_PRODUCTS = [
     compatiblePumps: ["Flygt (Xylem)", "ABS", "Grindex"],
     description: "YN-FLYGT series are custom-designed replacement seals for Flygt submersible pumps. Cost-effective alternatives to original Flygt seals, offering equivalent quality at 3-4x lower price.",
     features: [
-      "Direct replacement for Flygt pump seals",
+      "Interchangeable with Flygt pump seals",
       "Cost-effective alternative",
       "Submersible pump specific design",
       "Available for full Flygt pump range",
@@ -1428,7 +1428,7 @@ const YENNIX_PRODUCTS = [
     compatiblePumps: ["Grundfos CR", "Grundfos NK", "Grundfos HS"],
     description: "YN-ODM series for Grundfos pumps. Available as OEM replacement seals for Grundfos multistage centrifugal pumps and other popular Grundfos pump models.",
     features: [
-      "OEM quality for Grundfos pumps",
+      "High-quality alternatives for Grundfos pumps",
       "Full range of Grundfos pump coverage",
       "Material options for different media",
       "Lower cost than original",
@@ -1568,12 +1568,12 @@ const YENNIX_INDUSTRIES = {
   },
   "Oil & Gas": {
     icon: "oil",
-    description: "API 682 compliant cartridge seals for upstream, midstream, and downstream applications including refineries and petrochemical plants.",
+    description: "Cartridge seals for API 682 service — upstream, midstream, and downstream including refineries and petrochemical plants.",
     applications: ["Refinery pumps", "Pipeline compressors", "Crude oil transfer", "Petrochemical processing"]
   },
   "Food & Beverage": {
     icon: "food",
-    description: "FDA-compliant materials and hygienic seal designs for food processing, dairy, and beverage production equipment.",
+    description: "Food-grade materials and hygienic seal designs for food processing, dairy, and beverage production equipment.",
     applications: ["Food processing pumps", "Dairy equipment", "Beverage production", "CIP systems"]
   },
   "Mining": {
@@ -1588,7 +1588,7 @@ const YENNIX_INDUSTRIES = {
   },
   "Pharmaceutical": {
     icon: "pharma",
-    description: "Sanitary-grade seals with FDA/USP Class VI compliant materials for sterile processing and clean-in-place systems.",
+    description: "Sanitary-grade seals with food-grade hygienic materials for sterile processing and clean-in-place systems.",
     applications: ["Sterile process pumps", "CIP/SIP systems", "Bioreactor vessels", "Purified water loops"]
   },
   "Marine": {
