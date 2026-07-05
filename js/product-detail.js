@@ -79,7 +79,7 @@ function initProductPage(slug) {
     </nav>
 
     <!-- Breadcrumb -->
-    <section class="page-header" style="padding-top:120px;padding-bottom:24px;">
+    <section class="page-header" style="padding-top:96px;padding-bottom:24px;">
         <div class="page-header-inner">
             <div class="breadcrumb"><a href="/">Top</a> <span class="sep">/</span> <a href="/products/">Products</a> <span class="sep">/</span> <a href="${cat.href}">${cat.label}</a> <span class="sep">/</span> <span class="current">${product.model}</span></div>
         </div>
