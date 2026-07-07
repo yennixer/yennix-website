@@ -51,9 +51,7 @@
             <div>
                 <div class="section-label" style="margin-bottom:8px;">Get Your Free Quote</div>
                 <p style="font-size:14px;color:var(--gray-500);margin-bottom:32px;font-weight:300;">Tell us what you need — we'll respond within 12 hours with a detailed quote.</p>
-                <form id="contact-form" action="https://formspree.io/f/xqapvrdy" method="POST">
-                    <!-- Honeypot anti-spam -->
-                    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+                <form id="contact-form">
                     <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
                         <div class="form-group"><label class="form-label">Your Name *</label><input type="text" required class="form-input" placeholder="John Smith" name="name"></div>
                         <div class="form-group"><label class="form-label">Company</label><input type="text" class="form-input" placeholder="Your company name" name="company"></div>
@@ -64,7 +62,7 @@
                     </div>
                     <div class="form-group">
                         <label class="form-label">Product Interest</label>
-                        <select class="form-input" style="background:var(--white);" name="product_interest">
+                        <select class="form-input" style="background:var(--white);" name="product">
                             <option value="">Select a product category</option>
                             <option>Component Seals</option>
                             <option>Cartridge Seals</option>
@@ -76,7 +74,7 @@
                     </div>
                     <div class="form-group">
                         <label class="form-label">What do you need? *</label>
-                        <textarea required rows="5" class="form-input" style="resize:none;" name="message" placeholder="Describe the seal you need: model number, dimensions, quantity, application, original brand/model..."></textarea>
+                        <textarea name="message" required rows="5" class="form-input" style="resize:none;" name="message" placeholder="Describe the seal you need: model number, dimensions, quantity, application, original brand/model..."></textarea>
                     </div>
                     <button type="submit" class="btn-primary" style="width:100%;justify-content:center;" id="submit-btn">Submit Inquiry</button>
                     <div id="form-status" class="form-status"></div>
@@ -155,10 +153,9 @@
             status.className = 'form-status';
             status.style.display = 'none';
             status.textContent = '';
-            fetch('https://formspree.io/f/xqapvrdy', {
+            fetch('/api/contact', {
                 method: 'POST',
-                body: formData,
-                headers: { 'Accept': 'application/json' }
+                body: formData
             }).then(function(response) {
                 if (response.ok) {
                     status.className = 'form-status success';
@@ -171,7 +168,7 @@
                 }
             }).catch(function(err) {
                 status.className = 'form-status error';
-                status.textContent = 'There was an error sending your message. Redirecting to email...';
+                status.textContent = 'There was an error sending your message. Opening your email client...';
                 setTimeout(function() {
                     window.location.href = 'mailto:sales@yennix.com?subject=Inquiry from YENNIX Website&body=' + encodeURIComponent(formData.get('message') || '');
                 }, 2000);
